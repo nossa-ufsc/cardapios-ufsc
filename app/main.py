@@ -4,8 +4,8 @@ import app.cca as cca
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv()
+
 app = Flask(__name__)
 
 @app.route("/gerar_cardapio_trindade", methods=["GET"])
@@ -19,12 +19,10 @@ def gerar_cardapio_trindade():
     os.remove(pdf)
     return jsonify(resultado)
 
-
 @app.route("/gerar_cardapio_cca", methods=["GET"])
 def gerar_cardapio_cca():
     resultado = cca.gerar_cardapio_cca_via_groq()
     return jsonify(resultado)
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5003)
