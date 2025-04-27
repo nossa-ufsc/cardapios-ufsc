@@ -4,7 +4,4 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    envVars:
-      - key: GROQ_API_KEY
-        sync: false
+    startCommand: gunicorn app.app:app
