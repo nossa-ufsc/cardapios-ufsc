@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
-import trindade as trindade
-import cca as cca
+import app.trindade as trindade
+import app.cca as cca
 import os
 from dotenv import load_dotenv
 
