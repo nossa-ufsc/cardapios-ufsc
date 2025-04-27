@@ -5,10 +5,9 @@ import json
 from bs4 import BeautifulSoup
 from markitdown import MarkItDown
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Recomendado usar variável de ambiente
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-# Dias fixos
 DIAS_FIXOS = [
     "Segunda feira",
     "Terça feira",
@@ -19,7 +18,6 @@ DIAS_FIXOS = [
     "Domingo"
 ]
 
-# Campos padrão
 CAMPOS_PADRAO = [
     "carne",
     "salada",
@@ -29,8 +27,13 @@ CAMPOS_PADRAO = [
 ]
 
 def baixar_ultimo_cardapio_cca(url_site):
-    response = requests.get(url_site)
-    response.raise_for_status()
+    try:
+        response = requests.get(url_site, timeout=5)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Erro ao acessar a página: {e}")
+        raise Exception("Erro ao tentar acessar o site da UFSC.")
+
     soup = BeautifulSoup(response.content, "html.parser")
     lista_links = soup.select(".content li a[href$='.pdf']")
 
@@ -40,8 +43,12 @@ def baixar_ultimo_cardapio_cca(url_site):
     primeiro_link = lista_links[0]['href']
     nome_arquivo = primeiro_link.split("/")[-1]
 
-    pdf_response = requests.get(primeiro_link)
-    pdf_response.raise_for_status()
+    try:
+        pdf_response = requests.get(primeiro_link, timeout=5)
+        pdf_response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Erro ao baixar o PDF: {e}")
+        raise Exception("Erro ao tentar baixar o PDF do site da UFSC.")
 
     with open(nome_arquivo, "wb") as f:
         f.write(pdf_response.content)
@@ -94,8 +101,13 @@ Regras importantes:
         "max_tokens": 800
     }
 
-    response = requests.post(GROQ_API_URL, headers=headers, json=body)
-    response.raise_for_status()
+    try:
+        response = requests.post(GROQ_API_URL, headers=headers, json=body, timeout=5)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Erro na requisição para o GROQ: {e}")
+        raise Exception("Erro na chamada à API do GROQ.")
+
     content = response.json()['choices'][0]['message']['content']
 
     try:
@@ -136,7 +148,7 @@ def ler_pdf_com_markitdown(caminho_pdf):
     result = md.convert(caminho_pdf)
     return result.text_content
 
-# 🔥 ESTA É A FUNÇÃO FINAL que chamaremos no endpoint:
+# 🔥 Função final usada no endpoint
 def gerar_cardapio_cca_via_groq():
     url_site = "https://ru.ufsc.br/cca-2/"
     pdf_filename = baixar_ultimo_cardapio_cca(url_site)
