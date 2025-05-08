@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 import app.trindade as trindade
 import app.cca as cca
+import app.joinville as joinville
+
 import os
 from dotenv import load_dotenv
 
@@ -23,6 +25,21 @@ def gerar_cardapio_trindade():
 def gerar_cardapio_cca():
     resultado = cca.gerar_cardapio_cca_via_groq()
     return jsonify(resultado)
+
+@app.route("/gerar_cardapio_joinville")
+def get_cardapio_joinville():
+    try:
+        url = "https://restaurante.joinville.ufsc.br/cardapio-da-semana/"
+
+        nome_arquivo = joinville.baixar_ultimo_cardapio_joinville(url)
+        
+        cardapio = joinville.extrair_tabela_pdf(nome_arquivo)
+        if not cardapio:
+            return jsonify({"error": "Cardápio não encontrado"}), 404
+            
+        return jsonify(cardapio)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5003)

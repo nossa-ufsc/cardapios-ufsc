@@ -23,13 +23,13 @@ def baixar_ultimo_cardapio_trindade(url_site):
     if not lista_links:
         raise Exception("Nenhum link para PDF encontrado no site.")
 
-    primeiro_link = lista_links[0]['href']
-    nome_arquivo = primeiro_link.split("/")[-1]
+    ultimo_link = lista_links[-1]['href']
+    nome_arquivo = ultimo_link.split("/")[-1]
 
-    print(f"📥 Último PDF encontrado: {primeiro_link}")
+    print(f"📥 Último PDF encontrado: {ultimo_link}")
 
     try:
-        pdf_response = requests.get(primeiro_link, timeout=5)
+        pdf_response = requests.get(ultimo_link, timeout=5)
         pdf_response.raise_for_status()
     except requests.exceptions.RequestException as e:
         print(f"❌ Erro ao tentar baixar o PDF: {e}")

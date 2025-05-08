@@ -4,3 +4,5 @@ beautifulsoup4
 markitdown
 python-dotenv
 gunicorn
+tabula-py
+pandas
