@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 import app.trindade as trindade
 import app.cca as cca
 import app.joinville as joinville
+import app.ararangua as ararangua
 
 import os
 from dotenv import load_dotenv
@@ -37,6 +38,21 @@ def get_cardapio_joinville():
         if not cardapio:
             return jsonify({"error": "Cardápio não encontrado"}), 404
             
+        return jsonify(cardapio)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/gerar_cardapio_ararangua")
+def get_cardapio_ararangua():
+    try:
+        url = "https://ara.ufsc.br/ru/"
+        
+        nome_arquivo = ararangua.baixar_ultimo_cardapio_ararangua(url)
+        tabelas = ararangua.ler_docx(nome_arquivo)
+        cardapio = ararangua.parsear_cardapio_ararangua(tabelas[0], nome_arquivo)
+        
+        os.remove(nome_arquivo)
+        
         return jsonify(cardapio)
     except Exception as e:
         return jsonify({"error": str(e)}), 500

@@ -6,3 +6,4 @@ python-dotenv
 gunicorn
 tabula-py
 pandas
+python-docx
