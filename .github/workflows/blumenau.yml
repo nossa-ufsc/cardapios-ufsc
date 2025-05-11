@@ -1,0 +1,14 @@
+name: Gerar Cardápio Blumenau
+
+on:
+  schedule:
+    - cron: "0 14 * * 1,3" # Executa às 11:00 GMT-3 (14:00 UTC) nas segundas e quartas
+
+jobs:
+  generate-menu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gerar cardápio Blumenau
+        run: |
+          curl -X GET "https://cardapios-ufsc-o9xn.onrender.com/gerar_cardapio_blumenau" \
+          -H "X-API-Key: ${{ secrets.API_KEY }}"
