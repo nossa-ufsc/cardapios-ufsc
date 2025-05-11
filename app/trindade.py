@@ -58,11 +58,11 @@ def parsear_cardapio(texto):
     linhas = texto.splitlines()
     linhas = [linha.strip() for linha in linhas if linha.strip()]
     dias_cardapio, dia_atual = [], None
-
+    ultimo_item = ''
     for linha in linhas:
         linha_upper = linha.upper()
-
-        if linha_upper.startswith("CARNE:") or linha_upper.startswith("CARNE ALMOÇO:") or linha_upper.startswith("CARNE JANTAR:"):
+        print(ultimo_item)
+        if not ultimo_item.startswith("CARNE")  and (linha_upper.startswith("CARNE:") or linha_upper.startswith("CARNE ALMOÇO:") or linha_upper.startswith("CARNE JANTAR:")):
             if dia_atual:
                 dias_cardapio.append(dia_atual)
 
@@ -76,7 +76,7 @@ def parsear_cardapio(texto):
                 dia_atual["itens"].append(linha.split(":", 1)[1].strip())
             elif linha_upper.startswith("CARNE JANTAR:"):
                 dia_atual["itens"].append(linha.split(":", 1)[1].strip())
-
+            ultimo_item = linha_upper
         elif dia_atual:
             if "SOBREMESA:" in linha_upper and "MOLHO SALADA" in linha_upper:
                 partes = linha.split("MOLHO SALADA")
@@ -91,11 +91,11 @@ def parsear_cardapio(texto):
             elif linha_upper.startswith("SALADA 1:") or linha_upper.startswith("SALADA 2:") or linha_upper.startswith("SALADA:"):
                 dia_atual["itens"].append(linha.split(":", 1)[1].strip())
             else:
-                dia_atual["itens"].append(linha)
+                dia_atual["itens"].append(linha)   
+            ultimo_item = linha_upper
 
     if dia_atual:
         dias_cardapio.append(dia_atual)
-
     return dias_cardapio
 
 def montar_cardapio_trindade(parsed_cardapio, datas_iniciais):
