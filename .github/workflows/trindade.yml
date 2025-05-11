@@ -3,7 +3,6 @@ name: Gerar Cardápio Trindade
 on:
   schedule:
     - cron: "0 14 * * 1,3" # Executa às 11:00 GMT-3 (14:00 UTC) nas segundas e quartas
-    - cron: "0 22 * * 0" # Executa às 19:00 GMT-3 (22:00 UTC) nos domingos
 
 jobs:
   generate-menu:
