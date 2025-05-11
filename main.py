@@ -4,6 +4,7 @@ import app.cca as cca
 import app.joinville as joinville
 import app.ararangua as ararangua
 from app.curitibanos import baixar_ultimo_cardapio_curitibanos, ler_pdf, processar_tabela_semana, processar_array_tabelas
+from app.blumenau import gerar_cardapio_blumenau
 
 import os
 from dotenv import load_dotenv
@@ -65,6 +66,14 @@ def cardapio_curitibanos():
                 os.remove(pdf_file)
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
+
+@app.route("/gerar_cardapio_blumenau")
+def get_cardapio_blumenau():
+    try:
+        cardapio = gerar_cardapio_blumenau()
+        return jsonify(cardapio)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5003)
