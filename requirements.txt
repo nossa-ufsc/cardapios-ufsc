@@ -1,9 +1,10 @@
 Flask
 requests
 beautifulsoup4
-markitdown
+markitdown[pdf]
 python-dotenv
 gunicorn
 tabula-py
 pandas
 python-docx
+supabase

@@ -105,6 +105,12 @@ def extrair_tabela_pdf(caminho_pdf):
             except Exception as e:
                 print(f"⚠️ Não foi possível remover o arquivo PDF: {e}")
             
-            return objetos_dias
+            datas = [dia['data'] for dia in objetos_dias if dia.get('data')]
+            
+            return {
+                "diaInicial": datas[0] if datas else None,
+                "diaFinal": datas[-1] if datas else None,
+                "cardapio": objetos_dias
+            }
     except Exception as e:
         raise Exception(f"Erro ao extrair tabela do PDF: {e}")

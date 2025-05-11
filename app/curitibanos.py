@@ -4,9 +4,6 @@ from bs4 import BeautifulSoup
 import tabula
 import pandas as pd
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-
 DIAS_FIXOS = [
     "Segunda feira",
     "Terça feira",
@@ -15,14 +12,6 @@ DIAS_FIXOS = [
     "Sexta feira",
     "Sábado",
     "Domingo"
-]
-
-CAMPOS_PADRAO = [
-    "carne",
-    "salada",
-    "molho_salada",
-    "sobremesa",
-    "complementos"
 ]
 
 def baixar_ultimo_cardapio_curitibanos(url_site):
@@ -192,10 +181,17 @@ def processar_array_tabelas(tabelas):
         objetos = transformar_em_objetos(tabela)
         resultados.extend(objetos)
     
-    return resultados
+    # Extract dates from the results
+    datas = [dia['data'] for dia in resultados if dia.get('data')]
+    
+    return {
+        "diaInicial": datas[0] if datas else None,
+        "diaFinal": datas[-1] if datas else None,
+        "cardapio": resultados
+    }
 
 # 🔥 Função final usada no endpoint
-def gerar_cardapio_curitibanos_via_groq():
+def gerar_cardapio_curitibanos():
     url_site = "https://ru.curitibanos.ufsc.br/cardapio"
     pdf_filename = baixar_ultimo_cardapio_curitibanos(url_site)
 

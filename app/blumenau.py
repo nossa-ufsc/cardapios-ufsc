@@ -26,4 +26,10 @@ def baixar_ultimo_cardapio_blumenau(url_site):
 
 def gerar_cardapio_blumenau():
     url_site = "https://ru.blumenau.ufsc.br/cardapios/"
-    return baixar_ultimo_cardapio_blumenau(url_site)
+    resultado = baixar_ultimo_cardapio_blumenau(url_site)
+    
+    return {
+        "diaInicial": None,
+        "diaFinal": None,
+        "cardapio": resultado
+    }

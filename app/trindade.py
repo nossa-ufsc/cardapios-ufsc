@@ -99,7 +99,11 @@ def parsear_cardapio(texto):
     return dias_cardapio
 
 def montar_cardapio_trindade(parsed_cardapio, datas_iniciais):
-    cardapio_final = []
+    cardapio_final = {
+        "diaInicial": datas_iniciais[0] if datas_iniciais else None,
+        "diaFinal": datas_iniciais[-1] if datas_iniciais else None,
+        "cardapio": []
+    }
 
     for idx, dia_nome in enumerate(DIAS_FIXOS):
         cardapio_dia = {
@@ -112,6 +116,6 @@ def montar_cardapio_trindade(parsed_cardapio, datas_iniciais):
             dia = parsed_cardapio[idx]
             cardapio_dia["itens"] = dia.get("itens", [])
 
-        cardapio_final.append(cardapio_dia)
+        cardapio_final["cardapio"].append(cardapio_dia)
 
     return cardapio_final

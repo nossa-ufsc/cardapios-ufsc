@@ -131,7 +131,7 @@ def parsear_cardapio_ararangua(tabela, nome_arquivo=None):
         nome_arquivo (str, optional): Nome do arquivo para extrair o ano
         
     Returns:
-        list: Lista de dicionários com o cardápio de cada dia
+        dict: Dicionário contendo o cardápio e as datas inicial e final
     """
     if not tabela or len(tabela) < 6:
         raise Exception("❌ Formato de tabela inválido")
@@ -175,4 +175,8 @@ def parsear_cardapio_ararangua(tabela, nome_arquivo=None):
         
         cardapio_final.append(cardapio_dia)
     
-    return cardapio_final
+    return {
+        "diaInicial": datas[0] if datas else None,
+        "diaFinal": datas[-1] if datas else None,
+        "cardapio": cardapio_final
+    }
