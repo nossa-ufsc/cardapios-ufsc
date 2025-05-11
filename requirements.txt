@@ -4,3 +4,4 @@ markitdown[pdf]
 python-dotenv
 pandas
 supabase
+gunicorn
