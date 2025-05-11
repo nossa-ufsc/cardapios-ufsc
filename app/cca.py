@@ -70,22 +70,13 @@ Organize o cardápio no seguinte formato JSON:
 {{
   "dia": "",
   "data": "",
-  "cardapio": {{
-    "carne": "",
-    "salada": "",
-    "molho_salada": "",
-    "sobremesa": "",
-    "complementos": []
-  }}
+  "itens": []
 }}
 
 Regras importantes:
 - Pegue apenas o nome principal do alimento (exemplo: "Arroz integral", "Feijão", etc).
 - Ignore listas de ingredientes.
-- Se existir "Fruta: X", considere "X" como sobremesa se o campo sobremesa estiver vazio.
-- Una saladas ("Salada 1", "Salada 2") em uma string única separada por vírgula.
-- Se não houver algum item, preencha com "None".
-- "Complementos" são acompanhamentos que não sejam carne, salada, molho ou sobremesa.
+- Se não houver algum item, retorne um array vazio.
 - Responda apenas o JSON, sem explicações.
 """
 
@@ -127,7 +118,7 @@ def criar_objeto_none(dia_nome):
     return {
         "dia": dia_nome.upper() + "-FEIRA",
         "data": None,
-        "cardapio": {campo: None if campo != "complementos" else [] for campo in CAMPOS_PADRAO}
+        "itens": []
     }
 
 def extrair_dias_texto(texto_completo):

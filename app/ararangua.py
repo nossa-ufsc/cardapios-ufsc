@@ -159,33 +159,19 @@ def parsear_cardapio_ararangua(tabela, nome_arquivo=None):
         cardapio_dia = {
             "dia": DIAS_FIXOS[i],
             "data": datas[i],
-            "cardapio": {
-                "carne": None,
-                "salada": None,
-                "sobremesa": None,
-                "complementos": []
-            }
+            "itens": []
         }
         
-        # FIXO (linha 1) - complementos
-        fixo = tabela[1][i+1].split('\n')
-        cardapio_dia["cardapio"]["complementos"].extend(fixo)
-        
-        # CARNE (linha 2)
-        carne = tabela[2][i+1].split('\n')[0]  # Pega apenas o nome do prato
-        cardapio_dia["cardapio"]["carne"] = carne
-        
-        # GUARNIÇÃO (linha 3) - adiciona aos complementos
-        guarnicao = tabela[3][i+1].split('\n')[0]  # Pega apenas o nome da guarnição
-        cardapio_dia["cardapio"]["complementos"].append(guarnicao)
-        
-        # SALADAS (linha 4)
-        salada = tabela[4][i+1]
-        cardapio_dia["cardapio"]["salada"] = salada
-        
-        # SOBREMESA (linha 5)
-        sobremesa = tabela[5][i+1]
-        cardapio_dia["cardapio"]["sobremesa"] = sobremesa
+        # Adiciona todos os itens do dia
+        for linha in tabela[1:]:  # Pula a primeira linha (dias e datas)
+            if i+1 < len(linha):  # Verifica se existe item para este dia
+                # Pega todos os itens da célula, não apenas o primeiro
+                itens_celula = linha[i+1].split('\n')
+                for item in itens_celula:
+                    item = item.strip()
+                    # Ignora itens vazios, 'nan' e itens que começam com "CONTÉM"
+                    if item and item.lower() != 'nan' and not item.upper().startswith('CONTÉM'):
+                        cardapio_dia["itens"].append(item)
         
         cardapio_final.append(cardapio_dia)
     

@@ -167,11 +167,7 @@ def transformar_em_objetos(colunas):
         dia = {
             "dia": colunas[0][dia_idx],
             "data": colunas[1][dia_idx],
-            "carne": None,
-            "complemento": [],
-            "salada": None,
-            "sobremesa": None,
-            "bebida": None
+            "itens": []
         }
         
         for coluna in colunas:
@@ -181,20 +177,7 @@ def transformar_em_objetos(colunas):
             valor = str(coluna[dia_idx]).strip() if coluna[dia_idx] and str(coluna[dia_idx]).lower() != 'nan' else None
             
             if valor:
-                cabecalho = str(coluna[0]).strip().lower()
-                
-                if 'proteína' in cabecalho:
-                    dia['carne'] = valor
-                elif 'guarnição' in cabecalho:
-                    dia['complemento'].append(valor)
-                elif 'salada' in cabecalho:
-                    dia['salada'] = valor
-                elif 'sobremesa' in cabecalho:
-                    dia['sobremesa'] = valor
-                elif 'bebida' in cabecalho:
-                    dia['bebida'] = valor
-                elif cabecalho == 'nan':
-                    dia['complemento'].append(valor)
+                dia['itens'].append(valor)
         
         dias.append(dia)
     

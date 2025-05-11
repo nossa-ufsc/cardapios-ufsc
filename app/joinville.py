@@ -50,35 +50,15 @@ def criar_objetos_dias(linhas):
         dia_obj = {
             "dia": dias[i],
             "data": datas[i],
-            "cardapio": {
-                "carne": "",
-                "salada": "",
-                "molho_salada": "",
-                "sobremesa": "",
-                "complementos": []
-            }
+            "itens": []
         }
         
         # Adiciona os itens de cada linha para este dia
         for j, linha in enumerate(linhas[2:]):  # Pula as duas primeiras linhas (dias e datas)
             if i < len(linha):  # Verifica se existe item para este dia
                 item = linha[i]
-                
-                # Organiza os itens nas categorias corretas
-                if j == 3:  # 4º item é a carne
-                    dia_obj["cardapio"]["carne"] = item
-                elif j == 6:  # 7º item é o molho da salada
-                    dia_obj["cardapio"]["molho_salada"] = item
-                elif j == 7:  # 8º item é a primeira salada
-                    dia_obj["cardapio"]["salada"] = item
-                elif j == 8:  # 9º item é a segunda salada
-                    dia_obj["cardapio"]["salada"] += f", {item}"
-                elif j == 9:  # 10º item é a sobremesa
-                    dia_obj["cardapio"]["sobremesa"] = item
-                elif j < 3:  # Primeiros 3 itens são complementos (arroz, arroz integral, feijão)
-                    dia_obj["cardapio"]["complementos"].append(item)
-                elif j == 4 or j == 5:  # 5º e 6º itens são complementos
-                    dia_obj["cardapio"]["complementos"].append(item)
+                if item:  # Só adiciona se o item não for vazio
+                    dia_obj["itens"].append(item)
         
         objetos_dias.append(dia_obj)
     
