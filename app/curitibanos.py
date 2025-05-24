@@ -1,7 +1,7 @@
 import requests
 import os
 from bs4 import BeautifulSoup
-import tabula
+import camelot
 import pandas as pd
 
 DIAS_FIXOS = [
@@ -43,13 +43,10 @@ def baixar_ultimo_cardapio_curitibanos(url_site):
 
 def ler_pdf(caminho_pdf):
     try:
-        tabelas = tabula.read_pdf(
+        tabelas = camelot.read_pdf(
             caminho_pdf,
             pages='all',
-            multiple_tables=True,
-            lattice=True,
-            guess=True,
-            pandas_options={'header': None}
+            flavor='lattice'
         )
         
         if not tabelas:
@@ -59,7 +56,8 @@ def ler_pdf(caminho_pdf):
         i = 0
         
         while i < len(tabelas):
-            tabela = tabelas[i].dropna(how='all').dropna(axis=1, how='all')
+            df = tabelas[i].df
+            tabela = df.dropna(how='all').dropna(axis=1, how='all')
             
             for col in tabela.columns:
                 tabela[col] = tabela[col].astype(str).apply(lambda x: x.replace('\r', ' ').strip())
@@ -75,7 +73,8 @@ def ler_pdf(caminho_pdf):
                 continue
             
             if len(linhas) < 5 and i + 1 < len(tabelas):
-                proxima_tabela = tabelas[i + 1].dropna(how='all').dropna(axis=1, how='all')
+                proxima_df = tabelas[i + 1].df
+                proxima_tabela = proxima_df.dropna(how='all').dropna(axis=1, how='all')
                 for col in proxima_tabela.columns:
                     proxima_tabela[col] = proxima_tabela[col].astype(str).apply(lambda x: x.replace('\r', ' ').strip())
                 

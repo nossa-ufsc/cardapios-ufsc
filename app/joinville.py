@@ -1,7 +1,7 @@
 import requests
 import os
 import pandas as pd
-import tabula
+import camelot
 from bs4 import BeautifulSoup
 
 def baixar_ultimo_cardapio_joinville(url_site):
@@ -67,13 +67,10 @@ def criar_objetos_dias(linhas):
 def extrair_tabela_pdf(caminho_pdf):
     try:
         # Extrai todas as tabelas do PDF
-        tabelas = tabula.read_pdf(
+        tabelas = camelot.read_pdf(
             caminho_pdf,
             pages='all',  # Lê todas as páginas
-            multiple_tables=True,  # Extrai múltiplas tabelas
-            lattice=True,  # Usa detecção de linhas da tabela
-            guess=True,  # Tenta adivinhar a estrutura da tabela
-            pandas_options={'header': None}  # Não usa a primeira linha como cabeçalho
+            flavor='lattice'  # Usa detecção de linhas da tabela
         )
         
         if not tabelas:
@@ -81,16 +78,19 @@ def extrair_tabela_pdf(caminho_pdf):
         
         # Processa cada tabela
         for i, tabela in enumerate(tabelas):
+            # Converte a tabela do camelot para pandas DataFrame
+            df = tabela.df
+            
             # Remove linhas vazias e colunas vazias
-            tabela = tabela.dropna(how='all').dropna(axis=1, how='all')
+            df = df.dropna(how='all').dropna(axis=1, how='all')
             
             # Limpa a formatação dos dados
-            for col in tabela.columns:
-                tabela[col] = tabela[col].astype(str).apply(lambda x: x.replace('\r', ' ').strip())
+            for col in df.columns:
+                df[col] = df[col].astype(str).apply(lambda x: x.replace('\r', ' ').strip())
             
             # Converte cada linha em um array de strings
             linhas = []
-            for _, row in tabela.iterrows():
+            for _, row in df.iterrows():
                 linha = [str(val).strip() for val in row if pd.notna(val) and str(val).strip()]
                 if linha:  # Só adiciona se houver valores não vazios
                     linhas.append(linha)
