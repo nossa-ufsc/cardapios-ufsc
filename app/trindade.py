@@ -44,7 +44,16 @@ def ler_pdf(caminho_pdf):
     print(f"\n📄 Lendo e convertendo arquivo: {caminho_pdf}\n")
     md = MarkItDown(enable_plugins=False)
     result = md.convert(caminho_pdf)
-    return result.text_content
+    texto = result.text_content
+    
+    # Remove tudo que vem após "Ingredientes" (case insensitive)
+    ingredientes_pattern = re.compile(r'ingredientes', re.IGNORECASE)
+    match = ingredientes_pattern.search(texto)
+    if match:
+        texto = texto[:match.start()]
+        print("🧹 Removendo seção de ingredientes (tudo após 'Ingredientes')")
+    
+    return texto
 
 def extrair_datas(texto):
     padrao_data = r"\b\d{2}/\d{2}/\d{4}\b"
@@ -61,8 +70,7 @@ def parsear_cardapio(texto):
     ultimo_item = ''
     for linha in linhas:
         linha_upper = linha.upper()
-        print(ultimo_item)
-        if not ultimo_item.startswith("CARNE")  and (linha_upper.startswith("CARNE:") or linha_upper.startswith("CARNE ALMOÇO:") or linha_upper.startswith("CARNE JANTAR:")):
+        if not ultimo_item.startswith("CARNE") and (linha_upper.startswith("CARNE:") or linha_upper.startswith("CARNE ALMOÇO:") or linha_upper.startswith("CARNE JANTAR:")):
             if dia_atual:
                 dias_cardapio.append(dia_atual)
 
