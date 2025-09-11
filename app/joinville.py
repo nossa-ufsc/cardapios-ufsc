@@ -46,23 +46,26 @@ def criar_objetos_dias(linhas):
     
     # Cria um objeto para cada dia
     objetos_dias = []
-    for i in range(len(dias)):
+    num_dias = len(dias)
+    for i in range(num_dias):
         dia_obj = {
             "dia": dias[i],
             "data": datas[i],
             "itens": []
         }
         
-        # Adiciona os itens de cada linha para este dia
+        # Adiciona os itens de cada linha para este dia, corrigindo deslocamento de +1 coluna no PDF
         for j, linha in enumerate(linhas[2:]):  # Pula as duas primeiras linhas (dias e datas)
-            if i < len(linha):  # Verifica se existe item para este dia
-                item = linha[i]
+            idx_coluna_item = (i - 1) % num_dias
+            if idx_coluna_item < len(linha):  # Verifica se existe item para este dia
+                item = linha[idx_coluna_item]
                 if item:  # Só adiciona se o item não for vazio
                     dia_obj["itens"].append(item)
         
         objetos_dias.append(dia_obj)
     
     return objetos_dias
+
 
 def extrair_tabela_pdf(caminho_pdf):
     try:

@@ -58,10 +58,10 @@ def ler_pdf(caminho_pdf):
 def extrair_datas(texto):
     padrao_data = r"\b\d{2}/\d{2}/\d{4}\b"
     datas = re.findall(padrao_data, texto)
-    if len(datas) >= 7:
-        return datas[:7]
-    else:
-        raise Exception("❌ Não foi possível extrair 7 datas do texto.")
+    if not datas:
+        print("⚠️ Nenhuma data encontrada no texto do cardápio.")
+        return []
+    return datas[:7]
 
 def parsear_cardapio(texto):
     linhas = texto.splitlines()
