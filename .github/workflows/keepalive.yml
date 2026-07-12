@@ -1,0 +1,21 @@
+name: Keepalive
+
+# Mantém o repositório "ativo" para o GitHub não desabilitar os workflows
+# agendados (schedule). Em repositórios públicos, o GitHub desativa os cron
+# workflows após 60 dias sem atividade (commits) no repositório.
+# Este workflow cria um commit automático antes desse limite, reiniciando o contador.
+
+on:
+  schedule:
+    - cron: "0 12 * * 1" # Toda segunda-feira às 12:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
