@@ -9,7 +9,9 @@ jobs:
   generate-menu:
     runs-on: ubuntu-latest
     steps:
-      - name: Gerar cardápio Joinville
-        run: |
-          curl -X GET "https://cardapios-ufsc-o9xn.onrender.com/gerar_cardapio_joinville" \
-          -H "X-API-Key: ${{ secrets.API_KEY }}"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/fetch-menu
+        with:
+          campus: Joinville
+          endpoint: gerar_cardapio_joinville
+          api-key: ${{ secrets.API_KEY }}

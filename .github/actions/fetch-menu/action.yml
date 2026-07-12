@@ -1,0 +1,71 @@
+name: Fetch menu
+description: >-
+  Solicita o cardápio de um campus, registra a resposta (status + corpo) no log
+  e no resumo da execução, e falha o job em caso de erro.
+
+inputs:
+  campus:
+    description: Nome do campus, usado apenas para exibição nos logs.
+    required: true
+  endpoint:
+    description: "Caminho do endpoint (ex.: gerar_cardapio_trindade)."
+    required: true
+  api-key:
+    description: Chave de API do serviço de cardápios.
+    required: true
+  base-url:
+    description: URL base do serviço de cardápios.
+    required: false
+    default: https://cardapios-ufsc-o9xn.onrender.com
+
+runs:
+  using: composite
+  steps:
+    - name: Buscar cardápio ${{ inputs.campus }}
+      shell: bash
+      run: |
+        set -uo pipefail
+        URL="${{ inputs.base-url }}/${{ inputs.endpoint }}"
+        echo "Solicitando cardápio de ${{ inputs.campus }}: $URL"
+
+        # Captura corpo (response.json) e status HTTP separadamente.
+        # `|| echo 000` garante um status mesmo em falha de conexão/timeout.
+        HTTP_CODE=$(curl -sS -m 120 -w "%{http_code}" -o response.json -X GET \
+          "$URL" -H "X-API-Key: ${{ inputs.api-key }}" || echo "000")
+
+        echo "Status HTTP: $HTTP_CODE"
+        echo "----- Corpo da resposta -----"
+        cat response.json 2>/dev/null || echo "(sem corpo)"
+        echo ""
+        echo "-----------------------------"
+
+        # Registra a resposta no resumo da execução (aba Summary do job).
+        {
+          echo "### Cardápio ${{ inputs.campus }}"
+          echo ""
+          echo "- **Endpoint:** \`$URL\`"
+          echo "- **Status HTTP:** \`$HTTP_CODE\`"
+          echo ""
+          echo "<details><summary>Resposta</summary>"
+          echo ""
+          echo '```json'
+          cat response.json 2>/dev/null || echo "(sem corpo)"
+          echo ""
+          echo '```'
+          echo "</details>"
+        } >> "$GITHUB_STEP_SUMMARY"
+
+        # Falha em status não-2xx.
+        if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+          echo "::error::Falha ao gerar cardápio de ${{ inputs.campus }} (HTTP $HTTP_CODE)"
+          exit 1
+        fi
+
+        # Falha se o corpo indicar erro, mesmo com HTTP 200
+        # (alguns endpoints retornam { "error": ... } / { "erro": ... }).
+        if jq -e 'type == "object" and (has("error") or has("erro"))' response.json >/dev/null 2>&1; then
+          echo "::error::Resposta de ${{ inputs.campus }} contém um erro."
+          exit 1
+        fi
+
+        echo "Cardápio de ${{ inputs.campus }} gerado com sucesso."

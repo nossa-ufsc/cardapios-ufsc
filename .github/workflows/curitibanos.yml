@@ -9,7 +9,9 @@ jobs:
   generate-menu:
     runs-on: ubuntu-latest
     steps:
-      - name: Gerar cardápio Curitibanos
-        run: |
-          curl -X GET "https://cardapios-ufsc-o9xn.onrender.com/gerar_cardapio_curitibanos" \
-          -H "X-API-Key: ${{ secrets.API_KEY }}"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/fetch-menu
+        with:
+          campus: Curitibanos
+          endpoint: gerar_cardapio_curitibanos
+          api-key: ${{ secrets.API_KEY }}
