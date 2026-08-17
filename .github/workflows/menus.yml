@@ -50,32 +50,40 @@ jobs:
       contents: write
     steps:
       # Checkout via deploy key SSH: o push com ela conta como atividade e reinicia
-      # o contador de 60 dias (o GITHUB_TOKEN NÃO conta).
+      # o contador de 60 dias (o GITHUB_TOKEN NÃO conta). `ref: main` garante a ponta
+      # da branch mesmo em RERUNS (o default seria o SHA do run original → detached
+      # HEAD e push impossível).
       - uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.MENU_COMMIT_SSH_KEY }}
+          ref: main
       - uses: actions/download-artifact@v4
         with:
           path: artifacts
-      - name: Consolidar snapshots
-        run: |
-          mkdir -p data
-          for f in artifacts/snapshot-*/*.json; do
-            [ -e "$f" ] && cp "$f" data/
-          done
-          date -u +"%Y-%m-%dT%H:%M:%SZ" > data/last-run.txt
       - name: Commit e push
         run: |
           git config user.name "cardapios-ufsc-bot"
           git config user.email "cardapios-ufsc-bot@users.noreply.github.com"
-          git add data/
-          if git diff --cached --quiet; then
-            echo "Nada para commitar."
-          else
-            git commit -m "chore: atualiza cardápios ($(date -u +%F))"
-            # Retry com rebase: cobre corrida com um push humano entre checkout e push.
-            for i in 1 2 3; do
-              git push && break
-              git pull --rebase && continue
+          # Estratégia à prova de corrida/rerun: a cada tentativa, realinha na ponta
+          # da main e RECONSTRÓI o commit por cima (sem rebase → sem conflito possível).
+          for i in 1 2 3; do
+            git fetch origin main
+            git checkout -B main origin/main
+            mkdir -p data
+            for f in artifacts/snapshot-*/*.json; do
+              [ -e "$f" ] && cp "$f" data/
             done
-          fi
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > data/last-run.txt
+            git add data/
+            if git diff --cached --quiet; then
+              echo "Nada para commitar."
+              exit 0
+            fi
+            git commit -m "chore: atualiza cardápios ($(date -u +%F))"
+            if git push origin main; then
+              exit 0
+            fi
+            echo "Push falhou (corrida?); tentativa $i/3…"
+          done
+          echo "::error::Não foi possível pushar os snapshots."
+          exit 1
