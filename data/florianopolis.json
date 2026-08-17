@@ -1,0 +1,98 @@
+{
+  "diaInicial": "17/08/2026",
+  "diaFinal": "23/08/2026",
+  "cardapio": [
+    {
+      "dia": "SEGUNDA-FEIRA",
+      "data": "17/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral (Jantar) / Feijão preto",
+        "Bife acebolado",
+        "COMPLEMENTO: Abóbora ao forno",
+        "Chicória",
+        "Cenoura ralada",
+        "Vinagrete",
+        "Maçã"
+      ]
+    },
+    {
+      "dia": "TERÇA-FEIRA",
+      "data": "18/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral (Jantar) / Feijão com vegetais (Almoço)",
+        "Carne moída com milho",
+        "Almondegas",
+        "COMPLEMENTO ALMOÇO: Farofa com azeitonas",
+        "COMPLEMENTO JANTAR: Canja",
+        "Alface",
+        "Rabanete",
+        "Molho de mostarda",
+        "Laranja"
+      ]
+    },
+    {
+      "dia": "QUARTA-FEIRA",
+      "data": "19/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral (Jantar) / Feijão carioca",
+        "Frango à portuguesa",
+        "COMPLEMENTO: Legumes refogados II",
+        "Acelga",
+        "Beterraba ralada",
+        "Molho de ervas",
+        "Banana"
+      ]
+    },
+    {
+      "dia": "QUINTA-FEIRA",
+      "data": "20/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral (Jantar) / Feijão preto",
+        "Quibe",
+        "COMPLEMENTO: Lentilha com legumes",
+        "Rúcula",
+        "Cenoura ralada",
+        "Vinagrete",
+        "Morgote"
+      ]
+    },
+    {
+      "dia": "SEXTA-FEIRA",
+      "data": "21/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral (Jantar) / Feijão carioca",
+        "Filé mignon suíno acebolado ao m. agridoce",
+        "COMPLEMENTO: Batata doce cozida",
+        "Repolho roxo",
+        "Pepino",
+        "Molho de mostarda",
+        "Maçã"
+      ]
+    },
+    {
+      "dia": "SÁBADO",
+      "data": "22/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral / Feijão preto",
+        "Carne ensopada",
+        "COMPLEMENTO: Macarrão ao alho e óleo com ervas",
+        "Alface",
+        "Beterraba ralada",
+        "Molho de ervas",
+        "Mamão"
+      ]
+    },
+    {
+      "dia": "DOMINGO",
+      "data": "23/08/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral",
+        "Feijoada / Feijoada vegetariana",
+        "COMPLEMENTO: Farofa",
+        "Couve folha",
+        "Vinagrete",
+        "Laranja"
+      ]
+    }
+  ]
+}

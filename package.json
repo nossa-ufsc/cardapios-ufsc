@@ -1,0 +1,20 @@
+{
+  "name": "cardapios-ufsc",
+  "version": "2.0.0",
+  "description": "Raspagem dos cardápios dos Restaurantes Universitários da UFSC, direto no GitHub Actions (sem Python/Render).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "menu": "bun src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "cheerio": "^1.0.0",
+    "unpdf": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "typescript": "^5.5.0"
+  }
+}
