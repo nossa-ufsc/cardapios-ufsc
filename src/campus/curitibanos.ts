@@ -8,7 +8,7 @@ import { carregarPagina, resolverUrl } from '../lib/html.js';
 import { fetchBinary } from '../lib/http.js';
 import { extrairItens, numeroDePaginas } from '../lib/pdf.js';
 import { extrairSemana, DIAS_TITLE_FEIRA } from '../lib/table.js';
-import { extrairData, hojeBrasilia } from '../lib/dates.js';
+import { extrairData, anoParaMes, hojeBrasilia } from '../lib/dates.js';
 import { selecionarSemanaAtual } from '../lib/week.js';
 
 const URL_SITE = 'https://ru.curitibanos.ufsc.br/cardapio';
@@ -25,7 +25,8 @@ const ehRuido = (s: string) => RUIDO_EXATO.test(s.trim()) || RUIDO_PARCIAL.test(
 /** Parse puro a partir do buffer do PDF; `hoje` é injetável para backtest. */
 export async function parseCuritibanosPdf(buf: Uint8Array, hoje?: Date): Promise<Menu> {
   const ref = hoje ?? hojeBrasilia();
-  const ano = ref.getFullYear();
+  // dd/mm ou dd/mmm sem ano: resolve por mês (virada de ano dez↔jan correta).
+  const ano = anoParaMes(ref);
   const totalPaginas = await numeroDePaginas(buf);
 
   const semanas: MenuItem[][] = [];

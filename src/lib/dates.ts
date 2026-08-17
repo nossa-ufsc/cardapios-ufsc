@@ -59,23 +59,43 @@ export function parseDataFlex(raw: string, anoPadrao: number): string | null {
   return normalizarData(limpo, anoPadrao);
 }
 
+/** Ano padrão fixo, ou resolvido em função do mês da data (p/ virada de ano). */
+export type AnoPadrao = number | ((mes: number) => number);
+
+const resolverAno = (a: AnoPadrao, mes: number) => String(typeof a === 'function' ? a(mes) : a);
+
+/**
+ * Resolvedor de ano para fontes que publicam só dd/mm: uma data de dezembro vista
+ * em janeiro pertence ao ano ANTERIOR; uma de janeiro vista em dezembro, ao
+ * PRÓXIMO. Evita "03/01/2026" vir depois de "28/12/2026" na semana da virada.
+ */
+export function anoParaMes(hoje: Date): (mes: number) => number {
+  const ano = hoje.getFullYear();
+  const mesHoje = hoje.getMonth() + 1;
+  return (mes) => {
+    if (mes === 12 && mesHoje === 1) return ano - 1;
+    if (mes === 1 && mesHoje === 12) return ano + 1;
+    return ano;
+  };
+}
+
 /**
  * Busca uma data DENTRO de um texto (não-ancorado — sobrevive a células com texto
  * extra, ex. "18/08 Almoço"). Aceita dd/mm/yyyy, dd/mm, dd-mmm-yy e dd/mmm.
  */
-export function extrairData(raw: string, anoPadrao: number): string | null {
+export function extrairData(raw: string, anoPadrao: AnoPadrao): string | null {
   const numerica = raw.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
   const extensa = raw.toLowerCase().match(/(\d{1,2})[\/-]([a-zç]{3,})(?:[\/-](\d{2,4}))?/);
   // Preferência: o match mais específico (com mês por extenso só se o numérico falhar
   // ou se o "mês" numérico for inválido).
   if (numerica && Number(numerica[2]) >= 1 && Number(numerica[2]) <= 12) {
-    const ano = numerica[3] ? expandirAno(numerica[3]) : String(anoPadrao);
+    const ano = numerica[3] ? expandirAno(numerica[3]) : resolverAno(anoPadrao, Number(numerica[2]));
     return `${pad2(numerica[1])}/${pad2(numerica[2])}/${ano}`;
   }
   if (extensa) {
     const mes = MESES_PT[extensa[2].slice(0, 3)];
     if (mes) {
-      const ano = extensa[3] ? expandirAno(extensa[3]) : String(anoPadrao);
+      const ano = extensa[3] ? expandirAno(extensa[3]) : resolverAno(anoPadrao, Number(mes));
       return `${pad2(extensa[1])}/${mes}/${ano}`;
     }
   }

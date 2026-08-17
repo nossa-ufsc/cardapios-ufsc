@@ -23,9 +23,7 @@
         "Feijão",
         "Proteína Vegetal",
         "ALMÔNDEGA AO MOLHO SUGO",
-        "POLENTA AO TRADICIONAL",
-        "SEM",
-        "ANIMAL"
+        "POLENTA AO TRADICIONAL"
       ]
     },
     {
@@ -37,8 +35,7 @@
         "Feijão",
         "Proteína Vegetal",
         "FILÉ DE FRANGO GRELHADO ACEBOLADAS",
-        "MACARRÃO AO MOLHO BRANCO",
-        "COM"
+        "MACARRÃO AO MOLHO BRANCO"
       ]
     },
     {
@@ -48,11 +45,9 @@
         "Arroz branco",
         "Arroz integral",
         "Feijão",
-        "Proteína",
-        "vegetal",
+        "Proteína vegetal",
         "CHILLI DE CARNE SIMPLES",
-        "PURÊ DE MORANGA",
-        "COM"
+        "PURÊ DE MORANGA"
       ]
     },
     {
@@ -64,9 +59,7 @@
         "Feijão",
         "Proteína Vegetal",
         "PEIXE GRELHADO",
-        "PIRÃO DE PEIXE",
-        "COM",
-        "ANIMAL DE"
+        "PIRÃO DE PEIXE"
       ]
     },
     {
@@ -76,12 +69,10 @@
         "Arroz branco",
         "Arroz integral",
         "Feijão",
-        "Proteína",
-        "vegetal",
+        "Proteína vegetal",
         "FRANGO À",
         "PORTUGUESA",
-        "MACARRÃO PRIMAVERA",
-        "COM"
+        "MACARRÃO PRIMAVERA"
       ]
     },
     {
@@ -91,11 +82,9 @@
         "Arroz branco",
         "Arroz integral",
         "Feijão",
-        "Proteína",
-        "vegetal",
+        "Proteína vegetal",
         "CHULETA SUINA NA CHAPA",
-        "À FAROFA TRADICIONAL",
-        "SEM DE"
+        "À FAROFA TRADICIONAL"
       ]
     }
   ]
