@@ -11,7 +11,51 @@
         "Feijão",
         "Proteína Vegetal",
         "FRANGO ASSADO COM GERGELIM",
-        "MACARRÃO MOLHO POMODORO"
+        "MACARRÃO AO MOLHO POMODORO"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína Vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "FRANGO ASSADO COM GERGELIM",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          }
+        },
+        {
+          "nome": "MACARRÃO AO MOLHO POMODORO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true,
+            "origemAnimal": true
+          },
+          "ingredientes": "MACARRÃO, MOLHO POMODORO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -23,7 +67,52 @@
         "Feijão",
         "Proteína Vegetal",
         "ALMÔNDEGA AO MOLHO SUGO",
-        "POLENTA AO TRADICIONAL"
+        "POLENTA TRADICIONAL"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína Vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "ALMÔNDEGA AO MOLHO SUGO",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true
+          },
+          "ingredientes": "ALMÔNDEGAS, MOLHO SUGO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "POLENTA TRADICIONAL",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "FARINHA DE MILHO, E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -36,6 +125,49 @@
         "Proteína Vegetal",
         "FILÉ DE FRANGO GRELHADO ACEBOLADAS",
         "MACARRÃO AO MOLHO BRANCO"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína Vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "FILÉ DE FRANGO GRELHADO ACEBOLADAS",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          }
+        },
+        {
+          "nome": "MACARRÃO AO MOLHO BRANCO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": true
+          },
+          "ingredientes": "MACARRÃO, MOLHO BRANCO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -48,6 +180,51 @@
         "Proteína vegetal",
         "CHILLI DE CARNE SIMPLES",
         "PURÊ DE MORANGA"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "CHILLI DE CARNE SIMPLES",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          },
+          "ingredientes": "CARNE MOÍDA, CEBOLA, PIMENTÃO, PIMENTA, ALHO, TOMATE, MOLHO SUGO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "PURÊ DE MORANGA",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": false,
+            "origemAnimal": true
+          },
+          "ingredientes": "MARANGA, LEITE, CREME DE LEITE, E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -60,6 +237,51 @@
         "Proteína Vegetal",
         "PEIXE GRELHADO",
         "PIRÃO DE PEIXE"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína Vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "PEIXE GRELHADO",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true
+          },
+          "ingredientes": "FILÉ DE PEIXE E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "PIRÃO DE PEIXE",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false,
+            "origemAnimal": true
+          },
+          "ingredientes": "PEIXE, FARINHA DE MANDIOCA E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -72,7 +294,52 @@
         "Proteína vegetal",
         "FRANGO À",
         "PORTUGUESA",
-        "MACARRÃO PRIMAVERA"
+        "MACARRÃO À PRIMAVERA"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "FRANGO À PORTUGUESA",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          },
+          "ingredientes": "FRANGO, PIMENTÃO, TOMATE, MOLHO TOMATE E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "MACARRÃO À PRIMAVERA",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true,
+            "origemAnimal": true
+          },
+          "ingredientes": "MACARRÃO, MILHO, ERVILA, CENOURA E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -84,8 +351,56 @@
         "Feijão",
         "Proteína vegetal",
         "CHULETA SUINA NA CHAPA",
-        "À FAROFA TRADICIONAL"
+        "FAROFA TRADICIONAL"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "CHULETA SUINA NA CHAPA",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          },
+          "ingredientes": "CHULETA SUINA E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "FAROFA TRADICIONAL",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "FARINHA DE MANDIOCA, MANTEIGA, CEBOLA, E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        },
+        {
+          "nome": "1 opção",
+          "categoria": "sobremesa"
+        }
       ]
     }
-  ]
+  ],
+  "fonteUrl": "http://ararangua.paginas.ufsc.br/files/2024/07/CARDAPIO-17-a-23-AGOS.pdf",
+  "versao": 2,
+  "atualizadoEm": "2026-08-17T18:14:22.674Z"
 }

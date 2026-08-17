@@ -3,5 +3,8 @@
   "diaFinal": null,
   "cardapio": {
     "url_imagem": "https://rublumenau.paginas.ufsc.br/files/2018/02/cardapio1708.png"
-  }
+  },
+  "fonteUrl": "https://ru.blumenau.ufsc.br/cardapios/",
+  "versao": 2,
+  "atualizadoEm": "2026-08-17T18:14:20.739Z"
 }

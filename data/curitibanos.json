@@ -16,6 +16,48 @@
         "Macarrão ao molho rose",
         "Sassami acebolado",
         "Grão de bico"
+      ],
+      "pratos": [
+        {
+          "nome": "Folhas",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão vermelho",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Macarrão ao molho rose",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Sassami acebolado",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Grão de bico",
+          "categoria": "vegetariano"
+        }
       ]
     },
     {
@@ -32,6 +74,48 @@
         "Polenta gratinada",
         "Almondegas sugo",
         "PTS"
+      ],
+      "pratos": [
+        {
+          "nome": "Legumes cru",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Polenta gratinada",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Almondegas sugo",
+          "categoria": "carne"
+        },
+        {
+          "nome": "PTS",
+          "categoria": "vegetariano"
+        }
       ]
     },
     {
@@ -48,6 +132,48 @@
         "Nhoque ao molho",
         "Frango a passarinho",
         "Lentilha"
+      ],
+      "pratos": [
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Refogado",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Preparada",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Nhoque ao molho",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Frango a passarinho",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Lentilha",
+          "categoria": "vegetariano"
+        }
       ]
     },
     {
@@ -64,6 +190,48 @@
         "Quirerinha com calabresa",
         "Suino assado",
         "Bolinho pts"
+      ],
+      "pratos": [
+        {
+          "nome": "Mix",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão vermelho",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Quirerinha com calabresa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Suino assado",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Bolinho pts",
+          "categoria": "vegetariano"
+        }
       ]
     },
     {
@@ -80,6 +248,48 @@
         "Polenta",
         "Peixe frito",
         "Grao de bico"
+      ],
+      "pratos": [
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Tabule",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Polenta",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Peixe frito",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Grao de bico",
+          "categoria": "vegetariano"
+        }
       ]
     },
     {
@@ -97,6 +307,48 @@
         "Strogonoff",
         "Frango",
         "Quibe c lentilha assado"
+      ],
+      "pratos": [
+        {
+          "nome": "Mix",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Pudim de chocolate",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão carioca",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Batata frita",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Strogonoff Frango",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Quibe c lentilha assado",
+          "categoria": "vegetariano"
+        }
       ]
     },
     {
@@ -114,7 +366,60 @@
         "Acebolado",
         "Carne assada",
         "Bolinho pts"
+      ],
+      "pratos": [
+        {
+          "nome": "Maionese",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Sagú",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Legumes",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Acebolado",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Carne assada",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Bolinho pts",
+          "categoria": "vegetariano"
+        }
       ]
     }
-  ]
+  ],
+  "refeicoes": [
+    "almoco",
+    "jantar"
+  ],
+  "fonteUrl": "http://restaurante.paginas.ufsc.br/files/2026/08/Cardapio-Agosto-2026.pdf",
+  "versao": 2,
+  "atualizadoEm": "2026-08-17T18:14:19.372Z"
 }
