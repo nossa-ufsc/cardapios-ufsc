@@ -2,7 +2,7 @@
 // (Seg–Sex, Qua–Dom, feriados) e layouts que mudam; alinhar POR NOME do dia evita o
 // erro clássico de alinhar por posição (terça aparecendo no slot de segunda).
 
-import type { MenuItem } from './types.js';
+import type { MenuItem, MenuPrato } from './types.js';
 
 const NOMES: [RegExp, number][] = [
   [/segunda/i, 0],
@@ -25,6 +25,8 @@ export interface DiaParseado {
   nomeDetectado: string;
   data: string; // dd/mm/yyyy ou ''
   itens: string[];
+  /** v2 (opcional): os mesmos itens, estruturados. */
+  pratos?: MenuPrato[];
 }
 
 /**
@@ -39,6 +41,7 @@ export function alocarSlots(dias: DiaParseado[], labels: string[]): MenuItem[] {
     if (idx === null) continue;
     if (slots[idx].itens.length > 0 || slots[idx].data) continue; // primeira ocorrência vence
     slots[idx] = { dia: labels[idx], data: d.data, itens: d.itens };
+    if (d.pratos) slots[idx].pratos = d.pratos;
   }
   return slots;
 }

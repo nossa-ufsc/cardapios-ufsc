@@ -83,13 +83,22 @@ async function main() {
         erros = [`EXCEÇÃO: ${e instanceof Error ? e.message : String(e)}`];
       }
 
-      const nItens = resultado && Array.isArray(resultado.cardapio)
-        ? (resultado.cardapio as MenuItem[]).reduce((s, d) => s + d.itens.length, 0)
-        : 0;
+      const dias = resultado && Array.isArray(resultado.cardapio) ? (resultado.cardapio as MenuItem[]) : [];
+      const nItens = dias.reduce((s, d) => s + d.itens.length, 0);
+      // v2: cobertura de `pratos` (dias com itens que também têm pratos) e extras.
+      const comItens = dias.filter((d) => d.itens.length).length;
+      const comPratos = dias.filter((d) => d.itens.length && d.pratos?.length).length;
+      const pratos = dias.flatMap((d) => d.pratos ?? []);
+      const nOutro = pratos.filter((p) => p.categoria === 'outro').length;
+      const nIng = pratos.filter((p) => p.ingredientes).length;
+      const nAlerg = pratos.filter((p) => p.alergenos).length;
+      const v2 = comPratos
+        ? ` | v2 ${comPratos}/${comItens} dias, ${pratos.length} pratos${nOutro ? `, ${nOutro} outro` : ''}${nIng ? `, ${nIng} ingr` : ''}${nAlerg ? `, ${nAlerg} alerg` : ''}`
+        : ' | v2 —';
 
       if (erros.length === 0) {
         totalOk++;
-        console.log(`  ✓ ${arq}  [${resultado?.diaInicial} → ${resultado?.diaFinal}] ${nItens} itens`);
+        console.log(`  ✓ ${arq}  [${resultado?.diaInicial} → ${resultado?.diaFinal}] ${nItens} itens${v2}`);
       } else {
         console.log(`  ✗ ${arq}`);
         erros.slice(0, 6).forEach((e) => console.log(`      ${e}`));

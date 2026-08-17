@@ -28,13 +28,30 @@ export interface OpcoesTabela {
   mergeGap?: number;
   /** Ignora itens à esquerda deste x (coluna de rótulos tipo FIXO/CARNE). */
   xMinBody?: number;
+  /**
+   * Como o texto se alinha dentro das células. 'centro' (default) divide as colunas
+   * nos pontos médios entre cabeçalhos; 'esquerda' (texto começa no x do cabeçalho,
+   * ex. Araranguá) usa [x_i − 6, x_{i+1} − 6) — senão uma palavra justificada à
+   * direita da célula ("MACARRÃO … AO") cai na coluna vizinha.
+   */
+  alinhamento?: 'centro' | 'esquerda';
+}
+
+/** Colunas brutas de uma semana (itens de texto por dia), antes de qualquer limpeza. */
+export interface ColunasSemana {
+  /** Célula de cabeçalho de cada coluna (nome do dia como veio). */
+  cabecalho: TextItem[];
+  datasPorColuna: (string | null)[];
+  /** Itens do corpo por coluna, ordenados de cima para baixo. */
+  colunas: TextItem[][];
 }
 
 /**
- * Extrai UMA semana (sempre 7 slots Seg→Dom) dos itens de texto de uma página.
- * Retorna [] se não encontrar um cabeçalho com nomes de dias.
+ * Localiza cabeçalho/datas e particiona o corpo em colunas. Retorna null se não
+ * encontrar um cabeçalho com nomes de dias. Base de `extrairSemana`; exportado para
+ * parsers que precisam olhar as células brutas (ex. flags de alergênicos).
  */
-export function extrairSemana(itens: TextItem[], opts: OpcoesTabela): MenuItem[] {
+export function colunasDaSemana(itens: TextItem[], opts: OpcoesTabela): ColunasSemana | null {
   const linhas = agruparEmLinhas(itens);
 
   // 1) Linha de cabeçalho = a que tem mais nomes de dia distintos.
@@ -49,7 +66,7 @@ export function extrairSemana(itens: TextItem[], opts: OpcoesTabela): MenuItem[]
       idxCabecalho = i;
     }
   });
-  if (idxCabecalho === -1 || maisDias < 3) return [];
+  if (idxCabecalho === -1 || maisDias < 3) return null;
 
   // Alguns PDFs quebram "Segunda - feira" em células; usa só a célula que carrega o
   // nome. Duas células do mesmo dia (raro) → mantém a primeira.
@@ -83,7 +100,20 @@ export function extrairSemana(itens: TextItem[], opts: OpcoesTabela): MenuItem[]
   // 3) Corpo = itens abaixo da última linha estrutural (datas se houver, senão cabeçalho).
   const yEstrutura = Math.min(...(idxDatas >= 0 ? linhas[idxDatas] : linhas[idxCabecalho]).map((it) => it.y));
   const corpo = itens.filter((it) => it.y < yEstrutura - 2);
-  const colunas = distribuirEmColunas(corpo, centrosX, { xMin: opts.xMinBody });
+  const colunas = distribuirEmColunas(corpo, centrosX, { xMin: opts.xMinBody, alinhamento: opts.alinhamento });
+
+  return { cabecalho, datasPorColuna, colunas };
+}
+
+/**
+ * Extrai UMA semana (sempre 7 slots Seg→Dom) dos itens de texto de uma página.
+ * Retorna [] se não encontrar um cabeçalho com nomes de dias.
+ */
+export function extrairSemana(itens: TextItem[], opts: OpcoesTabela): MenuItem[] {
+  const sem = colunasDaSemana(itens, opts);
+  if (!sem) return [];
+  const { cabecalho, datasPorColuna, colunas } = sem;
+  const centrosX = cabecalho.map((it) => it.x);
 
   const mergeGap = opts.mergeGap ?? 18;
   const descartar = opts.descartar ?? (() => false);
