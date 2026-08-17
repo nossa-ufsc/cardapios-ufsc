@@ -22,6 +22,7 @@ async function scrape(): Promise<Menu> {
     diaInicial: null,
     diaFinal: null,
     cardapio: { url_imagem: url },
+    fonteUrl: URL_SITE,
   };
 }
 

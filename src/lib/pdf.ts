@@ -86,18 +86,27 @@ const ordenarLinha = (linha: TextItem[]) => [...linha].sort((a, b) => a.x - b.x)
 export function distribuirEmColunas(
   itens: TextItem[],
   centrosX: number[],
-  opts: { xMin?: number } = {}
+  opts: { xMin?: number; alinhamento?: 'centro' | 'esquerda' } = {}
 ): TextItem[][] {
   const n = centrosX.length;
   const colunas: TextItem[][] = centrosX.map(() => []);
   if (n === 0) return colunas;
 
-  // Limites entre colunas; margens externas espelham a meia-distância vizinha.
-  const meioEsq = n > 1 ? (centrosX[1] - centrosX[0]) / 2 : 60;
-  const meioDir = n > 1 ? (centrosX[n - 1] - centrosX[n - 2]) / 2 : 60;
-  const limites: number[] = [centrosX[0] - meioEsq];
-  for (let i = 0; i < n - 1; i++) limites.push((centrosX[i] + centrosX[i + 1]) / 2);
-  limites.push(centrosX[n - 1] + meioDir);
+  const limites: number[] = [];
+  if (opts.alinhamento === 'esquerda') {
+    // Texto começa no x do cabeçalho: a coluna i vai de x_i − 6 até x_{i+1} − 6; a
+    // última tem a mesma largura da penúltima.
+    const larguraUltima = n > 1 ? centrosX[n - 1] - centrosX[n - 2] : 120;
+    for (let i = 0; i < n; i++) limites.push(centrosX[i] - 6);
+    limites.push(centrosX[n - 1] - 6 + larguraUltima);
+  } else {
+    // Limites entre colunas; margens externas espelham a meia-distância vizinha.
+    const meioEsq = n > 1 ? (centrosX[1] - centrosX[0]) / 2 : 60;
+    const meioDir = n > 1 ? (centrosX[n - 1] - centrosX[n - 2]) / 2 : 60;
+    limites.push(centrosX[0] - meioEsq);
+    for (let i = 0; i < n - 1; i++) limites.push((centrosX[i] + centrosX[i + 1]) / 2);
+    limites.push(centrosX[n - 1] + meioDir);
+  }
 
   for (const it of itens) {
     if (opts.xMin !== undefined && it.x < opts.xMin) continue;

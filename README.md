@@ -22,16 +22,46 @@ dependências nativas (ghostscript/opencv), o que roda direto no runner do Actio
 ## Formato de saída (contrato com o app)
 
 ```ts
-interface MenuItem { dia: string; data: string; itens: string[] }
+// v1 — INALTERADO. É tudo que versões antigas do app leem.
+interface MenuItem { dia: string; data: string; itens: string[]; pratos?: MenuPrato[] }
 interface Menu {
   cardapio: MenuItem[] | { url_imagem: string }; // imagem só no Blumenau
   diaInicial: string | null;                     // dd/mm/yyyy
   diaFinal: string | null;                       // dd/mm/yyyy
+  // v2 — tudo OPCIONAL e aditivo (o app antigo ignora chaves desconhecidas)
+  versao?: 2;
+  refeicoes?: ('almoco' | 'jantar')[];  // quando a fonte declara (Trindade, Curitibanos)
+  fonteUrl?: string;                    // PDF/página original
+  atualizadoEm?: string;                // ISO 8601
+}
+interface MenuPrato {
+  nome: string;
+  categoria: 'base' | 'carne' | 'vegetariano' | 'guarnicao' | 'salada' | 'molho' | 'sobremesa' | 'outro';
+  refeicao?: 'almoco' | 'jantar';       // ausente = vale para as duas
+  alergenos?: { gluten?: boolean; lacteos?: boolean; origemAnimal?: boolean }; // só o que a fonte DECLARA
+  ingredientes?: string;                // lista de ingredientes publicada pela fonte
 }
 ```
 
-Campi não-imagem emitem exatamente 7 dias (Segunda→Domingo). Não altere este
-formato sem atualizar o app (`features/menu/hooks/use-menu.ts`).
+Campi não-imagem emitem exatamente 7 dias (Segunda→Domingo). `itens` continua sendo a
+lista plana de sempre; `pratos` é a mesma comida estruturada, presente só quando o
+parser do campus reconhece a estrutura (senão o app cai no v1). Não remova/renomeie
+campo v1 nem mude o formato de `itens` sem atualizar o app
+(`features/menu/hooks/use-menu.ts`).
+
+### De onde vem cada informação v2
+
+| Campus | Categorias | Almoço/Jantar | Alergênicos | Ingredientes |
+| --- | --- | --- | --- | --- |
+| Trindade | rótulos do PDF ("Carne:", "Complemento:", "Saladas:"; molho/sobremesa por posição) | "(Jantar)", "Carne almoço:" etc. | "contém glúten/lactose" na lista de ingredientes | páginas "LISTA DE INGREDIENTES", casadas por nome e dia |
+| Joinville | classificador por palavra-chave + ordem fixa das linhas | — | — | — |
+| Araranguá | bloco FIXO por palavra-chave; 1º prato com flags = carne, 2º = guarnição; "2 OPÇÕES"/"1 OPÇÃO" | — | "CONTÉM LÁCTEOS/GLÚTEN: SIM/NÃO", "COM/SEM ADIÇÃO INTENCIONAL DE ORIGEM ANIMAL" | página 2 (CARNES/GUARNIÇÕES) |
+| Curitibanos | faixas horizontais SALADA/SOBREMESA/PRATOS QUENTES/(CARNE)/OPÇÃO VEGETARIANA + gap relativo quando o cabeçalho não sai como texto | título "ALMOÇO E JANTAR" | legenda "*CG"/"*CL" | — |
+| Blumenau | — (imagem) | — | — | — |
+
+Regra: rótulo estrutural da fonte vence; o classificador por nome
+(`src/lib/categorias.ts`) é fallback e devolve 'outro' quando não tem certeza.
+`bun scripts/inspecionar.ts <campus> <arquivo.pdf>` mostra os pratos de um PDF local.
 
 ## Rodar localmente
 
@@ -84,3 +114,13 @@ Para regenerar a deploy key: `ssh-keygen -t ed25519 -N "" -f key`, cadastrar
 
 `data/<campus>.json` guarda o último cardápio gerado de cada campus (fonte de
 verdade é o Supabase; os snapshots são histórico + mecanismo de keep-alive).
+
+## Backtest
+
+Os parsers são validados contra PDFs históricos com os mesmos invariantes da
+validação pré-upsert (`src/lib/validate.ts`):
+
+```bash
+bun scripts/baixar-corpus.ts /tmp/corpus   # baixa todos os PDFs linkados nas páginas dos RUs
+bun scripts/backtest.ts /tmp/corpus         # ✓/✗ por PDF + cobertura v2 (dias com pratos, ingredientes, alergênicos)
+```

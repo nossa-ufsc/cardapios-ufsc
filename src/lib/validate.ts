@@ -6,6 +6,7 @@
 // para que produção e teste apliquem exatamente os mesmos invariantes.
 
 import type { Menu, MenuItem } from './types.js';
+import { ORDEM_CATEGORIAS } from './categorias.js';
 
 const RUIDO =
   /cont[ée]m\s+(l[áa]cteos|gl[úu]te[nm]|leite)|nutricionista|CRN\s*\d|sujeito a? ?altera|lista de ingredientes|adição intencional/i;
@@ -88,7 +89,24 @@ export function violacoes(menu: Menu, opts: OpcoesValidacao): string[] {
       if (item.length > 160) erros.push(`item gigante (${item.length} chars): "${item.slice(0, 50)}…"`);
       if (!item.trim()) erros.push(`item vazio em ${d.dia}`);
     });
+    // v2 (`pratos`) é opcional, mas quando existe tem de ser coerente com `itens`:
+    // é a mesma comida estruturada, não pode vir vazia nem com lixo.
+    if (d.pratos) {
+      if (d.itens.length >= 3 && d.pratos.length < 3) erros.push(`pratos: ${d.dia} tem ${d.itens.length} itens mas só ${d.pratos.length} pratos`);
+      if (d.itens.length === 0 && d.pratos.length > 0) erros.push(`pratos: ${d.dia} sem itens mas com pratos`);
+      d.pratos.forEach((p) => {
+        if (!p.nome?.trim()) erros.push(`pratos: nome vazio em ${d.dia}`);
+        if (p.nome.length > 160) erros.push(`pratos: nome gigante em ${d.dia}: "${p.nome.slice(0, 50)}…"`);
+        if (RUIDO.test(p.nome)) erros.push(`pratos: ruido em ${d.dia}: "${p.nome.slice(0, 60)}"`);
+        if (!ORDEM_CATEGORIAS.includes(p.categoria)) erros.push(`pratos: categoria inválida "${p.categoria}" em ${d.dia}`);
+        if (p.refeicao && p.refeicao !== 'almoco' && p.refeicao !== 'jantar') erros.push(`pratos: refeicao inválida "${p.refeicao}" em ${d.dia}`);
+      });
+    }
   });
+
+  if (menu.refeicoes && !menu.refeicoes.every((r) => r === 'almoco' || r === 'jantar')) {
+    erros.push(`refeicoes inválidas: ${JSON.stringify(menu.refeicoes)}`);
+  }
 
   if (opts.hoje) {
     const ini = menu.diaInicial ? parseData(menu.diaInicial) : null;

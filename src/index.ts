@@ -45,6 +45,9 @@ async function main() {
   const scraper = SCRAPERS[alvo];
   console.error(`▶ Raspando campus "${scraper.campus}"…`);
   const menu = await scraper.scrape();
+  // Metadados v2 (aditivos — o app antigo ignora chaves desconhecidas).
+  menu.versao = 2;
+  menu.atualizadoEm = new Date().toISOString();
 
   // Validação de sanidade ANTES de qualquer persistência: um parse degradado
   // (0 itens, datas vazias, dias trocados, cardápio vencido) deve falhar o job —
@@ -53,7 +56,9 @@ async function main() {
     labels: LABELS_POR_CAMPUS[scraper.campus] ?? [],
     hoje: hojeBrasilia(),
   });
-  console.error('✓ Validação de sanidade passou.');
+  const dias = Array.isArray(menu.cardapio) ? menu.cardapio : [];
+  const comPratos = dias.filter((d) => d.pratos?.length).length;
+  console.error(`✓ Validação de sanidade passou (${dias.filter((d) => d.itens.length).length} dias com itens, ${comPratos} com pratos v2).`);
 
   if (dryRun) {
     console.log(JSON.stringify(menu, null, 2));
