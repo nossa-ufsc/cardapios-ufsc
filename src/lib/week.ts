@@ -30,23 +30,32 @@ function inicioDaSemana(dias: MenuItem[]): Date | null {
 /**
  * Escolhe a semana que contém `hoje`; se nenhuma contiver (virada de mês/lacuna),
  * pega a primeira semana ainda não encerrada; se todas já passaram, a última.
+ *
+ * Lança erro se NENHUMA semana tiver datas parseáveis — devolver "a última" nesse
+ * caso seria servir uma semana arbitrária com cara de sucesso (a validação pré-upsert
+ * pegaria depois, mas aqui o erro é mais informativo).
  */
 export function selecionarSemanaAtual(semanas: MenuItem[][], hoje: Date): MenuItem[] {
   const validas = semanas.filter((s) => s.length > 0);
   if (validas.length === 0) return [];
 
+  const datadas = validas.filter((s) => inicioDaSemana(s) !== null);
+  if (datadas.length === 0) {
+    throw new Error('Nenhuma semana do PDF tem datas parseáveis — formato de data mudou?');
+  }
+
   const hoje0 = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
 
-  for (const semana of validas) {
+  for (const semana of datadas) {
     const ini = inicioDaSemana(semana);
     const fim = fimDaSemana(semana);
     if (ini && fim && hoje0 >= ini && hoje0 <= fim) return semana;
   }
 
-  const futura = validas.find((s) => {
+  const futura = datadas.find((s) => {
     const fim = fimDaSemana(s);
     return fim && hoje0 <= fim;
   });
 
-  return futura ?? validas[validas.length - 1];
+  return futura ?? datadas[datadas.length - 1];
 }

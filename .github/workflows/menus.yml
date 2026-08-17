@@ -33,12 +33,13 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: bun src/index.ts ${{ matrix.campus }}
+      # Só publica o snapshot se o scrape passou (incluindo a validação de sanidade);
+      # um artifact de job falho seria o snapshot ANTIGO do checkout, confundindo o debug.
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
           name: snapshot-${{ matrix.campus }}
           path: data/${{ matrix.campus }}.json
-          if-no-files-found: warn
+          if-no-files-found: error
 
   commit:
     name: Commit dos snapshots (keep-alive)
@@ -72,5 +73,9 @@ jobs:
             echo "Nada para commitar."
           else
             git commit -m "chore: atualiza cardápios ($(date -u +%F))"
-            git push
+            # Retry com rebase: cobre corrida com um push humano entre checkout e push.
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase && continue
+            done
           fi

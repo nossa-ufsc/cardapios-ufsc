@@ -8,29 +8,21 @@ import { carregarPagina, resolverUrl } from '../lib/html.js';
 import { fetchBinary } from '../lib/http.js';
 import { extrairItens } from '../lib/pdf.js';
 import { extrairSemana, DIAS_MAIUSCULO_FEIRA } from '../lib/table.js';
-import { normalizarData, hojeBrasilia } from '../lib/dates.js';
+import { extrairData, hojeBrasilia } from '../lib/dates.js';
 
 const URL_SITE = 'https://ara.ufsc.br/ru/';
 
 const RUIDO =
   /cont[ée]m\s+(l[áa]cteos|gl[úu]te[nm])|adição|intencional|origem animal|nutricionista|CRN\s*\d|sujeito à altera|^\d+\s*op[çc]|^\d*\s*op[çc][ãa]o/i;
 
-async function scrape(): Promise<Menu> {
-  const $ = await carregarPagina(URL_SITE);
-  const candidatos = $("a[href$='.pdf']")
-    .toArray()
-    .map((el) => $(el).attr('href'))
-    .filter((h): h is string => !!h && /cardapio/i.test(h));
-  const link = candidatos[candidatos.length - 1];
-  if (!link) throw new Error('Nenhum PDF de cardápio encontrado no site do RU de Araranguá.');
-
-  const buf = await fetchBinary(resolverUrl(link, URL_SITE));
+/** Parse puro a partir do buffer do PDF (exportado para backtest). */
+export async function parseAraranguaPdf(buf: Uint8Array, ano?: number): Promise<Menu> {
   const itens = await extrairItens(buf, 1);
-  const ano = hojeBrasilia().getFullYear();
+  const anoBase = ano ?? hojeBrasilia().getFullYear();
 
   const dias: MenuItem[] = extrairSemana(itens, {
     diaLabels: DIAS_MAIUSCULO_FEIRA,
-    normalizarData: (raw) => normalizarData(raw, ano),
+    normalizarData: (raw) => extrairData(raw, anoBase),
     descartar: (s) => RUIDO.test(s),
     xMinBody: 90, // ignora a coluna de rótulos (FIXO/CARNE/GUARNIÇÃO/SOBREMESA) à esquerda
   });
@@ -41,6 +33,24 @@ async function scrape(): Promise<Menu> {
     diaFinal: datas[datas.length - 1] ?? null,
     cardapio: dias,
   };
+}
+
+async function scrape(): Promise<Menu> {
+  const $ = await carregarPagina(URL_SITE);
+  // Decodifica o href antes de filtrar — "Cardápio-…pdf" chega URL-encoded.
+  const candidatos = $("a[href*='.pdf']")
+    .toArray()
+    .map((el) => $(el).attr('href'))
+    .filter((h): h is string => {
+      if (!h) return false;
+      const dec = decodeURIComponent(h);
+      return /card[áa]pio|cardapio/i.test(dec);
+    });
+  const link = candidatos[candidatos.length - 1];
+  if (!link) throw new Error('Nenhum PDF de cardápio encontrado no site do RU de Araranguá.');
+
+  const buf = await fetchBinary(resolverUrl(link, URL_SITE));
+  return parseAraranguaPdf(buf);
 }
 
 export const ararangua: CampusScraper = { campus: 'ararangua', scrape };

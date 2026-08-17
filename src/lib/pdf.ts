@@ -48,21 +48,25 @@ export async function numeroDePaginas(buf: Uint8Array): Promise<number> {
 
 /**
  * Agrupa itens de texto em linhas visuais (mesma coordenada y, com tolerância).
+ * A comparação é sempre contra a ÂNCORA da linha corrente (o primeiro item dela),
+ * não contra o último item — senão baselines em "escada" (y=700,695,690,…) fazem
+ * linhas distintas colapsarem em uma só por drift encadeado.
  * Cada linha vem ordenada da esquerda para a direita.
  */
 export function agruparEmLinhas(itens: TextItem[], toleranciaY = 6): TextItem[][] {
   const ordenados = [...itens].sort((a, b) => b.y - a.y || a.x - b.x);
   const linhas: TextItem[][] = [];
   let atual: TextItem[] = [];
-  let ultimoY: number | null = null;
+  let ancoraY: number | null = null;
   for (const it of ordenados) {
-    if (ultimoY === null || Math.abs(it.y - ultimoY) <= toleranciaY) {
+    if (ancoraY === null || Math.abs(it.y - ancoraY) <= toleranciaY) {
+      if (ancoraY === null) ancoraY = it.y;
       atual.push(it);
     } else {
       linhas.push(ordenarLinha(atual));
       atual = [it];
+      ancoraY = it.y;
     }
-    ultimoY = it.y;
   }
   if (atual.length) linhas.push(ordenarLinha(atual));
   return linhas;
@@ -71,34 +75,38 @@ export function agruparEmLinhas(itens: TextItem[], toleranciaY = 6): TextItem[][
 const ordenarLinha = (linha: TextItem[]) => [...linha].sort((a, b) => a.x - b.x);
 
 /**
- * A partir dos centros x das N colunas de dias, distribui todos os itens de texto
- * da página em N baldes (colunas). Itens fora de qualquer coluna (rótulos à esquerda,
- * legendas) são descartados quando `xMin` é informado.
+ * Particiona os itens de texto nas N colunas de dias pelos PONTOS MÉDIOS entre os
+ * centros x adjacentes (sem tolerância absoluta — elimina o caso "item exatamente
+ * entre duas colunas" e o de célula mais larga que a tolerância). As bordas externas
+ * ganham margem simétrica à meia-distância da coluna vizinha; itens fora delas (ou
+ * à esquerda de `xMin`) são descartados.
  *
- * Retorna, para cada coluna, a lista de itens ordenados de cima para baixo — depois
- * agrupados em "células" por proximidade vertical.
+ * Retorna, para cada coluna, os itens ordenados de cima para baixo (tiebreak x).
  */
 export function distribuirEmColunas(
   itens: TextItem[],
   centrosX: number[],
-  opts: { toleranciaX?: number; xMin?: number } = {}
+  opts: { xMin?: number } = {}
 ): TextItem[][] {
-  const tol = opts.toleranciaX ?? 55;
+  const n = centrosX.length;
   const colunas: TextItem[][] = centrosX.map(() => []);
+  if (n === 0) return colunas;
+
+  // Limites entre colunas; margens externas espelham a meia-distância vizinha.
+  const meioEsq = n > 1 ? (centrosX[1] - centrosX[0]) / 2 : 60;
+  const meioDir = n > 1 ? (centrosX[n - 1] - centrosX[n - 2]) / 2 : 60;
+  const limites: number[] = [centrosX[0] - meioEsq];
+  for (let i = 0; i < n - 1; i++) limites.push((centrosX[i] + centrosX[i + 1]) / 2);
+  limites.push(centrosX[n - 1] + meioDir);
+
   for (const it of itens) {
     if (opts.xMin !== undefined && it.x < opts.xMin) continue;
-    let melhor = -1;
-    let menorDist = Infinity;
-    centrosX.forEach((cx, i) => {
-      const d = Math.abs(it.x - cx);
-      if (d < menorDist) {
-        menorDist = d;
-        melhor = i;
-      }
-    });
-    if (melhor >= 0 && menorDist <= tol) colunas[melhor].push(it);
+    if (it.x < limites[0] || it.x > limites[n]) continue;
+    let idx = 0;
+    while (idx < n - 1 && it.x >= limites[idx + 1]) idx++;
+    colunas[idx].push(it);
   }
-  return colunas.map((col) => col.sort((a, b) => b.y - a.y));
+  return colunas.map((col) => col.sort((a, b) => b.y - a.y || a.x - b.x));
 }
 
 /**

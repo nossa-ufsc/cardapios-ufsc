@@ -8,15 +8,20 @@ const URL_SITE = 'https://ru.blumenau.ufsc.br/cardapios/';
 
 async function scrape(): Promise<Menu> {
   const $ = await carregarPagina(URL_SITE);
-  const img = $("img[src*='cardapio'][src$='.png']").first();
-  const src = img.attr('src');
-  if (!src) {
+  // Aceita png/jpg/jpeg — o RU pode trocar o formato de exportação a qualquer momento.
+  const img = $("img[src*='cardapio']")
+    .toArray()
+    .map((el) => $(el).attr('src'))
+    .find((s): s is string => !!s && /\.(png|jpe?g)(\?.*)?$/i.test(s));
+  if (!img) {
     throw new Error('Nenhuma imagem de cardápio encontrada na página do RU Blumenau.');
   }
+  // Força https: os paginas.ufsc.br servem TLS válido e iOS (ATS) bloqueia http.
+  const url = resolverUrl(img, URL_SITE).replace(/^http:\/\//, 'https://');
   return {
     diaInicial: null,
     diaFinal: null,
-    cardapio: { url_imagem: resolverUrl(src, URL_SITE) },
+    cardapio: { url_imagem: url },
   };
 }
 

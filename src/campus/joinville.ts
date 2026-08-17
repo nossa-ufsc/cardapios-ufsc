@@ -11,13 +11,8 @@ const URL_SITE = 'https://restaurante.joinville.ufsc.br/cardapio-da-semana/';
 
 const RUIDO = /cardápio sujeito|sujeito à altera|nutricionista|CRN\s*\d/i;
 
-async function scrape(): Promise<Menu> {
-  const $ = await carregarPagina(URL_SITE);
-  const links = $("#content a[href$='.pdf']");
-  const ultimo = links.last().attr('href');
-  if (!ultimo) throw new Error('Nenhum link de PDF encontrado no site do RU de Joinville.');
-
-  const buf = await fetchBinary(resolverUrl(ultimo, URL_SITE));
+/** Parse puro a partir do buffer do PDF (exportado para backtest). */
+export async function parseJoinvillePdf(buf: Uint8Array): Promise<Menu> {
   const itens = await extrairItens(buf, 1);
 
   const dias: MenuItem[] = extrairSemana(itens, {
@@ -38,6 +33,16 @@ async function scrape(): Promise<Menu> {
     diaFinal: datas[datas.length - 1] ?? null,
     cardapio: dias,
   };
+}
+
+async function scrape(): Promise<Menu> {
+  const $ = await carregarPagina(URL_SITE);
+  const links = $("#content a[href$='.pdf']");
+  const ultimo = links.last().attr('href');
+  if (!ultimo) throw new Error('Nenhum link de PDF encontrado no site do RU de Joinville.');
+
+  const buf = await fetchBinary(resolverUrl(ultimo, URL_SITE));
+  return parseJoinvillePdf(buf);
 }
 
 export const joinville: CampusScraper = { campus: 'joinville', scrape };

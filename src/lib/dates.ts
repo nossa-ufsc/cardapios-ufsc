@@ -59,8 +59,40 @@ export function parseDataFlex(raw: string, anoPadrao: number): string | null {
   return normalizarData(limpo, anoPadrao);
 }
 
-/** Data de hoje em UTC-3 (Brasília), sem depender do fuso do runner. */
+/**
+ * Busca uma data DENTRO de um texto (não-ancorado — sobrevive a células com texto
+ * extra, ex. "18/08 Almoço"). Aceita dd/mm/yyyy, dd/mm, dd-mmm-yy e dd/mmm.
+ */
+export function extrairData(raw: string, anoPadrao: number): string | null {
+  const numerica = raw.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
+  const extensa = raw.toLowerCase().match(/(\d{1,2})[\/-]([a-zç]{3,})(?:[\/-](\d{2,4}))?/);
+  // Preferência: o match mais específico (com mês por extenso só se o numérico falhar
+  // ou se o "mês" numérico for inválido).
+  if (numerica && Number(numerica[2]) >= 1 && Number(numerica[2]) <= 12) {
+    const ano = numerica[3] ? expandirAno(numerica[3]) : String(anoPadrao);
+    return `${pad2(numerica[1])}/${pad2(numerica[2])}/${ano}`;
+  }
+  if (extensa) {
+    const mes = MESES_PT[extensa[2].slice(0, 3)];
+    if (mes) {
+      const ano = extensa[3] ? expandirAno(extensa[3]) : String(anoPadrao);
+      return `${pad2(extensa[1])}/${mes}/${ano}`;
+    }
+  }
+  return null;
+}
+
+/**
+ * Data de hoje no fuso de Brasília, correta em qualquer fuso do runner (o antigo
+ * shift de -3h dava o dia errado antes das 03:00 quando rodado em máquina UTC-3).
+ */
 export function hojeBrasilia(): Date {
-  const agora = new Date();
-  return new Date(agora.getTime() - 3 * 60 * 60 * 1000);
+  const s = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Sao_Paulo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date());
+  const [y, m, d] = s.split('-').map(Number);
+  return new Date(y, m - 1, d);
 }

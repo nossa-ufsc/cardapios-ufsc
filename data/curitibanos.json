@@ -6,9 +6,14 @@
       "dia": "Segunda feira",
       "data": "17/08/2026",
       "itens": [
-        "Folhas Do dia",
+        "Folhas",
+        "Do dia",
         "Fruta",
-        "Arroz Arroz integral Feijão vermelho Farofa Macarrão ao molho rose",
+        "Arroz",
+        "Arroz integral",
+        "Feijão vermelho",
+        "Farofa",
+        "Macarrão ao molho rose",
         "Sassami acebolado",
         "Grão de bico"
       ]
@@ -17,9 +22,14 @@
       "dia": "Terça feira",
       "data": "18/08/2026",
       "itens": [
-        "Legumes cru Vinagrete",
+        "Legumes cru",
+        "Vinagrete",
         "Fruta",
-        "Arroz Arroz integral Feijão preto Farofa Polenta gratinada",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Polenta gratinada",
         "Almondegas sugo",
         "PTS"
       ]
@@ -28,9 +38,14 @@
       "dia": "Quarta feira",
       "data": "19/08/2026",
       "itens": [
-        "Do dia Refogado",
+        "Do dia",
+        "Refogado",
         "Preparada",
-        "Arroz Arroz integral Feijão preto Farofa Nhoque ao molho",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Nhoque ao molho",
         "Frango a passarinho",
         "Lentilha"
       ]
@@ -39,9 +54,14 @@
       "dia": "Quinta feira",
       "data": "20/08/2026",
       "itens": [
-        "Mix Do dia",
+        "Mix",
+        "Do dia",
         "Fruta",
-        "Arroz Arroz integral Feijão vermelho Farofa Quirerinha com calabresa",
+        "Arroz",
+        "Arroz integral",
+        "Feijão vermelho",
+        "Farofa",
+        "Quirerinha com calabresa",
         "Suino assado",
         "Bolinho pts"
       ]
@@ -50,9 +70,13 @@
       "dia": "Sexta feira",
       "data": "21/08/2026",
       "itens": [
-        "Do dia Tabule",
+        "Do dia",
+        "Tabule",
         "Fruta",
-        "Arroz Arroz integral Feijão preto Farofa",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
         "Polenta",
         "Peixe frito",
         "Grao de bico"
@@ -62,11 +86,16 @@
       "dia": "Sábado",
       "data": "22/08/2026",
       "itens": [
-        "Mix Vinagrete",
+        "Mix",
+        "Vinagrete",
         "Pudim de chocolate",
-        "Arroz Arroz integral Feijão carioca Farofa",
+        "Arroz",
+        "Arroz integral",
+        "Feijão carioca",
+        "Farofa",
         "Batata frita",
-        "Strogonoff Frango",
+        "Strogonoff",
+        "Frango",
         "Quibe c lentilha assado"
       ]
     },
@@ -74,9 +103,16 @@
       "dia": "Domingo",
       "data": "23/08/2026",
       "itens": [
-        "Maionese Do dia",
+        "Maionese",
+        "Do dia",
         "Sagú",
-        "Arroz Arroz integral Feijão preto Farofa Legumes Acebolado",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Legumes",
+        "Acebolado",
+        "Carne assada",
         "Bolinho pts"
       ]
     }

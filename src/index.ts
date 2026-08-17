@@ -11,6 +11,8 @@ import { fileURLToPath } from 'node:url';
 
 import type { CampusScraper } from './lib/types.js';
 import { salvarMenu } from './lib/supabase.js';
+import { validarMenu, LABELS_POR_CAMPUS } from './lib/validate.js';
+import { hojeBrasilia } from './lib/dates.js';
 
 import { trindade } from './campus/trindade.js';
 import { joinville } from './campus/joinville.js';
@@ -43,6 +45,15 @@ async function main() {
   const scraper = SCRAPERS[alvo];
   console.error(`▶ Raspando campus "${scraper.campus}"…`);
   const menu = await scraper.scrape();
+
+  // Validação de sanidade ANTES de qualquer persistência: um parse degradado
+  // (0 itens, datas vazias, dias trocados, cardápio vencido) deve falhar o job —
+  // nunca sobrescrever o dado bom que já está no banco.
+  validarMenu(menu, {
+    labels: LABELS_POR_CAMPUS[scraper.campus] ?? [],
+    hoje: hojeBrasilia(),
+  });
+  console.error('✓ Validação de sanidade passou.');
 
   if (dryRun) {
     console.log(JSON.stringify(menu, null, 2));
