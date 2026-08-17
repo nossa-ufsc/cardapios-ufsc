@@ -5,7 +5,7 @@ name: Keep-alive
 # já commita 2x/semana e mantém o repo ativo; este workflow é um backstop caso as
 # raspagens falhem por várias semanas seguidas.
 #
-# Usa um PAT (secrets.MENU_COMMIT_PAT) — commits do GITHUB_TOKEN NÃO contam.
+# Usa uma deploy key SSH (secrets.MENU_COMMIT_SSH_KEY) — commits do GITHUB_TOKEN NÃO contam.
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.MENU_COMMIT_PAT }}
+          ssh-key: ${{ secrets.MENU_COMMIT_SSH_KEY }}
       - name: Heartbeat
         run: |
           mkdir -p data

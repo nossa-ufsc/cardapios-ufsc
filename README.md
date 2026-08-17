@@ -63,9 +63,9 @@ Campi válidos: `florianopolis` (ou `trindade`), `joinville`, `ararangua`,
 
 ### Por que os commits (keep-alive)
 
-O GitHub desativa workflows agendados após **60 dias sem commit de usuário**
-(commits do `GITHUB_TOKEN` **não** contam). Por isso os workflows commitam via um
-**PAT** (`MENU_COMMIT_PAT`): cada execução (2x/semana) atualiza `data/*.json` +
+O GitHub desativa workflows agendados após **60 dias sem atividade** (commits do
+`GITHUB_TOKEN` **não** contam). Por isso os workflows commitam via **deploy key
+SSH** (`MENU_COMMIT_SSH_KEY`): cada execução (2x/semana) atualiza `data/*.json` +
 `data/last-run.txt`, mantendo o repositório ativo automaticamente e ainda gerando
 um histórico versionado dos cardápios.
 
@@ -74,8 +74,11 @@ um histórico versionado dos cardápios.
 | Secret | Uso |
 | --- | --- |
 | `SUPABASE_URL` | URL do projeto Supabase |
-| `SUPABASE_KEY` | service key (a mesma usada hoje pelo Render) |
-| `MENU_COMMIT_PAT` | PAT fine-grained com `Contents: write` neste repositório |
+| `SUPABASE_KEY` | chave com permissão de escrita na tabela `menus` (a anon key atende — RLS permite) |
+| `MENU_COMMIT_SSH_KEY` | chave privada da deploy key (write) cadastrada no repositório |
+
+Para regenerar a deploy key: `ssh-keygen -t ed25519 -N "" -f key`, cadastrar
+`key.pub` em Settings → Deploy keys (com *write access*) e `key` como o secret.
 
 ## Snapshots
 

@@ -2,7 +2,7 @@ name: Gerar Cardápios
 
 # Raspa os cardápios dos 5 campi direto no runner (sem Python/Render) e faz upsert
 # na tabela `menus` do Supabase. Ao final, um único job commita os snapshots em
-# data/*.json usando um PAT — o commit de usuário mantém o repositório "ativo" e
+# data/*.json via deploy key SSH — o push com deploy key conta como atividade e
 # impede o GitHub de desabilitar os workflows agendados (regra dos 60 dias).
 
 on:
@@ -48,11 +48,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Checkout autenticado com o PAT: garante que o push conte como atividade de
-      # usuário (o GITHUB_TOKEN NÃO reinicia o contador de 60 dias).
+      # Checkout via deploy key SSH: o push com ela conta como atividade e reinicia
+      # o contador de 60 dias (o GITHUB_TOKEN NÃO conta).
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.MENU_COMMIT_PAT }}
+          ssh-key: ${{ secrets.MENU_COMMIT_SSH_KEY }}
       - uses: actions/download-artifact@v4
         with:
           path: artifacts
