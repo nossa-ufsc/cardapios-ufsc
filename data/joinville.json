@@ -1,0 +1,118 @@
+{
+  "diaInicial": "17/8/2026",
+  "diaFinal": "23/8/2026",
+  "cardapio": [
+    {
+      "dia": "SEGUNDA",
+      "data": "17/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO PRETO",
+        "FRANGO ACEBOLADO",
+        "POLENTA CREMOSA",
+        "LENTILHA",
+        "MOLHO DE MOSTARDA",
+        "SALADA DE CENOURA COZIDA",
+        "SALADA MIX DE FOLHAS",
+        "PUDIM"
+      ]
+    },
+    {
+      "dia": "TERÇA",
+      "data": "18/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO CARIOCA",
+        "BISTECA SUINA AO MOLHO ORIENTAL",
+        "FAROFA DE BANANA",
+        "PROTEINA DE SOJA",
+        "MOLHO ROSE",
+        "SALADA DE BETERRABA RALADA",
+        "SALADA DE ACELGA",
+        "FRUTA"
+      ]
+    },
+    {
+      "dia": "QUARTA",
+      "data": "19/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO PRETO",
+        "FRANGO XADREZ",
+        "LEGUMES NO VAPOR",
+        "ERVILHA",
+        "MOLHO DE LIMÃO",
+        "SALADA DE PEPINO",
+        "SALADA MIX DE FOLHAS",
+        "DOCINHO"
+      ]
+    },
+    {
+      "dia": "QUINTA",
+      "data": "20/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO VERMELHO",
+        "ALMÔNDEGA AO SUGO",
+        "BATATA DOCE COZIDA",
+        "FEIJÃO BRANCO",
+        "MOLHO ROSE",
+        "SALADA DE ABOBRINHA",
+        "SALADA DE REPOLHO",
+        "FRUTA"
+      ]
+    },
+    {
+      "dia": "SEXTA",
+      "data": "21/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJAO CARIOCA COM LEGUMES",
+        "PEIXE EMPANADO",
+        "PIRÃO",
+        "ERVILHA",
+        "MOLHO VERDE",
+        "SALADA DE CENOURA RALADA",
+        "MIX DE FOLHAS",
+        "DOCINHO"
+      ]
+    },
+    {
+      "dia": "SÁBADO",
+      "data": "22/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO PRETO",
+        "BISTECA SUINA ACEBOLADA",
+        "FAROFA SIMPLES",
+        "PROTEINA DE SOJA",
+        "MOLHO DE ALHO",
+        "SALADA MIX DE TOMATE COM CEBOLA",
+        "SALADA MIX DE REPOLHO",
+        "FRUTA"
+      ]
+    },
+    {
+      "dia": "DOMINGO",
+      "data": "23/8/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO PRETO",
+        "FRANGO GRELHADO",
+        "AIPIM COZIDO",
+        "LENTILHA",
+        "MOLHO DE MOSTARDA",
+        "SALADA DE PEPINO",
+        "SALADA MIX DE FOLHAS",
+        "FRUTA"
+      ]
+    }
+  ]
+}

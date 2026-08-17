@@ -1,31 +1,19 @@
-# Python bytecode
-__pycache__/
-*.py[cod]
-*$py.class
+# Dependencies
+node_modules/
 
-app/__pycache__/
+# Environment variables
+.env
+.env.local
 
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
+# Logs
+*.log
 
-# Virtual environments
-venv/
-env/
-ENV/
-
-# IDE specific files
+# OS / IDE
+.DS_Store
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# Environment variables
-.env
-
-# Logs
-*.log
-
-# Local development settings
-.DS_Store 
+# PDFs baixados durante execução (nunca versionar)
+*.pdf

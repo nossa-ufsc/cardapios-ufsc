@@ -1,60 +1,83 @@
 # Cardápios UFSC
 
-API para obter os cardápios dos Restaurantes Universitários da UFSC.
+Raspagem dos cardápios dos Restaurantes Universitários da UFSC, executada
+**inteiramente no GitHub Actions** (TypeScript + Bun) — sem Python e sem servidor
+web/Render. Cada campus é raspado, parseado e persistido via `upsert` na tabela
+`menus` do Supabase (uma linha por campus), consumida pelo app.
 
-## Como rodar localmente
+## Campi e fontes
 
-### Pré-requisitos
+| Campus (`campus` no Supabase) | Fonte | Formato |
+| --- | --- | --- |
+| `florianopolis` (Trindade) | `ru.ufsc.br/ru/` | PDF (texto) |
+| `joinville` | `restaurante.joinville.ufsc.br/cardapio-da-semana/` | PDF (tabela) |
+| `ararangua` | `ara.ufsc.br/ru/` | PDF (tabela) |
+| `curitibanos` | `ru.curitibanos.ufsc.br/cardapio` | PDF mensal (tabela) |
+| `blumenau` | `ru.blumenau.ufsc.br/cardapios/` | Imagem PNG |
 
-- Python 3.x
-- pip (gerenciador de pacotes do Python)
+O parsing de PDF usa [`unpdf`](https://github.com/unjs/unpdf) (pdf.js): texto corrido
+para o Trindade e **reconstrução de tabela por coordenadas** para os demais — sem
+dependências nativas (ghostscript/opencv), o que roda direto no runner do Actions.
 
-### Configuração do ambiente
+## Formato de saída (contrato com o app)
 
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/cardapios-ufsc.git
-cd cardapios-ufsc
+```ts
+interface MenuItem { dia: string; data: string; itens: string[] }
+interface Menu {
+  cardapio: MenuItem[] | { url_imagem: string }; // imagem só no Blumenau
+  diaInicial: string | null;                     // dd/mm/yyyy
+  diaFinal: string | null;                       // dd/mm/yyyy
+}
 ```
 
-2. Crie um ambiente virtual:
+Campi não-imagem emitem exatamente 7 dias (Segunda→Domingo). Não altere este
+formato sem atualizar o app (`features/menu/hooks/use-menu.ts`).
+
+## Rodar localmente
+
+Pré-requisito: [Bun](https://bun.sh).
 
 ```bash
-python3 -m venv venv
+bun install
+cp .env.example .env   # preencha SUPABASE_URL e SUPABASE_KEY
+
+# validar um campus sem tocar no banco (imprime o JSON):
+bun src/index.ts florianopolis --dry-run
+
+# gravar só o snapshot em data/, sem upsert:
+bun src/index.ts joinville --skip-db
+
+# execução real (upsert no Supabase + snapshot):
+bun src/index.ts curitibanos
 ```
 
-3. Ative o ambiente virtual:
+Campi válidos: `florianopolis` (ou `trindade`), `joinville`, `ararangua`,
+`curitibanos`, `blumenau`.
 
-```bash
-# No macOS/Linux:
-source venv/bin/activate
+## Automação (GitHub Actions)
 
-# No Windows:
-.\venv\Scripts\activate
-```
+- **`Gerar Cardápios`** (`.github/workflows/menus.yml`): cron seg/qua 11:00 BRT.
+  Raspa os 5 campi em paralelo (matrix), faz upsert no Supabase e, num job final,
+  commita os snapshots em `data/*.json`.
+- **`Keep-alive`** (`.github/workflows/keepalive.yml`): backstop semanal.
 
-4. Instale as dependências:
+### Por que os commits (keep-alive)
 
-```bash
-pip install -r requirements.txt
-```
+O GitHub desativa workflows agendados após **60 dias sem commit de usuário**
+(commits do `GITHUB_TOKEN` **não** contam). Por isso os workflows commitam via um
+**PAT** (`MENU_COMMIT_PAT`): cada execução (2x/semana) atualiza `data/*.json` +
+`data/last-run.txt`, mantendo o repositório ativo automaticamente e ainda gerando
+um histórico versionado dos cardápios.
 
-5. Configure as variáveis de ambiente:
+### Secrets necessários (Settings → Secrets and variables → Actions)
 
-```bash
-cp .env.example .env
-```
+| Secret | Uso |
+| --- | --- |
+| `SUPABASE_URL` | URL do projeto Supabase |
+| `SUPABASE_KEY` | service key (a mesma usada hoje pelo Render) |
+| `MENU_COMMIT_PAT` | PAT fine-grained com `Contents: write` neste repositório |
 
-Edite o arquivo `.env` com suas configurações.
+## Snapshots
 
-### Executando o projeto
-
-1. Com o ambiente virtual ativado, execute:
-
-```bash
-python main.py
-```
-
-2. A API estará disponível em `http://localhost:5003`
-
+`data/<campus>.json` guarda o último cardápio gerado de cada campus (fonte de
+verdade é o Supabase; os snapshots são histórico + mecanismo de keep-alive).

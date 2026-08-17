@@ -1,0 +1,84 @@
+{
+  "diaInicial": "17/08/2026",
+  "diaFinal": "23/08/2026",
+  "cardapio": [
+    {
+      "dia": "Segunda feira",
+      "data": "17/08/2026",
+      "itens": [
+        "Folhas Do dia",
+        "Fruta",
+        "Arroz Arroz integral Feijão vermelho Farofa Macarrão ao molho rose",
+        "Sassami acebolado",
+        "Grão de bico"
+      ]
+    },
+    {
+      "dia": "Terça feira",
+      "data": "18/08/2026",
+      "itens": [
+        "Legumes cru Vinagrete",
+        "Fruta",
+        "Arroz Arroz integral Feijão preto Farofa Polenta gratinada",
+        "Almondegas sugo",
+        "PTS"
+      ]
+    },
+    {
+      "dia": "Quarta feira",
+      "data": "19/08/2026",
+      "itens": [
+        "Do dia Refogado",
+        "Preparada",
+        "Arroz Arroz integral Feijão preto Farofa Nhoque ao molho",
+        "Frango a passarinho",
+        "Lentilha"
+      ]
+    },
+    {
+      "dia": "Quinta feira",
+      "data": "20/08/2026",
+      "itens": [
+        "Mix Do dia",
+        "Fruta",
+        "Arroz Arroz integral Feijão vermelho Farofa Quirerinha com calabresa",
+        "Suino assado",
+        "Bolinho pts"
+      ]
+    },
+    {
+      "dia": "Sexta feira",
+      "data": "21/08/2026",
+      "itens": [
+        "Do dia Tabule",
+        "Fruta",
+        "Arroz Arroz integral Feijão preto Farofa",
+        "Polenta",
+        "Peixe frito",
+        "Grao de bico"
+      ]
+    },
+    {
+      "dia": "Sábado",
+      "data": "22/08/2026",
+      "itens": [
+        "Mix Vinagrete",
+        "Pudim de chocolate",
+        "Arroz Arroz integral Feijão carioca Farofa",
+        "Batata frita",
+        "Strogonoff Frango",
+        "Quibe c lentilha assado"
+      ]
+    },
+    {
+      "dia": "Domingo",
+      "data": "23/08/2026",
+      "itens": [
+        "Maionese Do dia",
+        "Sagú",
+        "Arroz Arroz integral Feijão preto Farofa Legumes Acebolado",
+        "Bolinho pts"
+      ]
+    }
+  ]
+}
