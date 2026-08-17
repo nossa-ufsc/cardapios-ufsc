@@ -16,6 +16,48 @@
         "SALADA DE CENOURA COZIDA",
         "SALADA MIX DE FOLHAS",
         "PUDIM"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO PRETO",
+          "categoria": "base"
+        },
+        {
+          "nome": "FRANGO ACEBOLADO",
+          "categoria": "carne"
+        },
+        {
+          "nome": "POLENTA CREMOSA",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "LENTILHA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO DE MOSTARDA",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE CENOURA COZIDA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "SALADA MIX DE FOLHAS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "PUDIM",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -32,6 +74,48 @@
         "SALADA DE BETERRABA RALADA",
         "SALADA DE ACELGA",
         "FRUTA"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO CARIOCA",
+          "categoria": "base"
+        },
+        {
+          "nome": "BISTECA SUINA AO MOLHO ORIENTAL",
+          "categoria": "carne"
+        },
+        {
+          "nome": "FAROFA DE BANANA",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "PROTEINA DE SOJA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO ROSE",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE BETERRABA RALADA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "SALADA DE ACELGA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "FRUTA",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -48,6 +132,48 @@
         "SALADA DE PEPINO",
         "SALADA MIX DE FOLHAS",
         "DOCINHO"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO PRETO",
+          "categoria": "base"
+        },
+        {
+          "nome": "FRANGO XADREZ",
+          "categoria": "carne"
+        },
+        {
+          "nome": "LEGUMES NO VAPOR",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "ERVILHA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO DE LIMÃO",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE PEPINO",
+          "categoria": "salada"
+        },
+        {
+          "nome": "SALADA MIX DE FOLHAS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "DOCINHO",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -64,6 +190,48 @@
         "SALADA DE ABOBRINHA",
         "SALADA DE REPOLHO",
         "FRUTA"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO VERMELHO",
+          "categoria": "base"
+        },
+        {
+          "nome": "ALMÔNDEGA AO SUGO",
+          "categoria": "carne"
+        },
+        {
+          "nome": "BATATA DOCE COZIDA",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "FEIJÃO BRANCO",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO ROSE",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE ABOBRINHA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "SALADA DE REPOLHO",
+          "categoria": "salada"
+        },
+        {
+          "nome": "FRUTA",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -80,6 +248,48 @@
         "SALADA DE CENOURA RALADA",
         "MIX DE FOLHAS",
         "DOCINHO"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJAO CARIOCA COM LEGUMES",
+          "categoria": "base"
+        },
+        {
+          "nome": "PEIXE EMPANADO",
+          "categoria": "carne"
+        },
+        {
+          "nome": "PIRÃO",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "ERVILHA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO VERDE",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE CENOURA RALADA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "MIX DE FOLHAS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "DOCINHO",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -96,6 +306,48 @@
         "SALADA MIX DE TOMATE COM CEBOLA",
         "SALADA MIX DE REPOLHO",
         "FRUTA"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO PRETO",
+          "categoria": "base"
+        },
+        {
+          "nome": "BISTECA SUINA ACEBOLADA",
+          "categoria": "carne"
+        },
+        {
+          "nome": "FAROFA SIMPLES",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "PROTEINA DE SOJA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO DE ALHO",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA MIX DE TOMATE COM CEBOLA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "SALADA MIX DE REPOLHO",
+          "categoria": "salada"
+        },
+        {
+          "nome": "FRUTA",
+          "categoria": "sobremesa"
+        }
       ]
     },
     {
@@ -112,7 +364,52 @@
         "SALADA DE PEPINO",
         "SALADA MIX DE FOLHAS",
         "FRUTA"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO PRETO",
+          "categoria": "base"
+        },
+        {
+          "nome": "FRANGO GRELHADO",
+          "categoria": "carne"
+        },
+        {
+          "nome": "AIPIM COZIDO",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "LENTILHA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO DE MOSTARDA",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE PEPINO",
+          "categoria": "salada"
+        },
+        {
+          "nome": "SALADA MIX DE FOLHAS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "FRUTA",
+          "categoria": "sobremesa"
+        }
       ]
     }
-  ]
+  ],
+  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/08/CARD%C3%81PIO-17-DE-AGO-A-23-DE-AGO.pdf",
+  "versao": 2,
+  "atualizadoEm": "2026-08-17T18:18:32.045Z"
 }
