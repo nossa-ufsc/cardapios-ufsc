@@ -2,14 +2,16 @@
 
 Raspagem dos cardápios dos Restaurantes Universitários da UFSC, executada
 **inteiramente no GitHub Actions** (TypeScript + Bun) — sem Python e sem servidor
-web/Render. Cada campus é raspado, parseado e persistido via `upsert` na tabela
-`menus` do Supabase (uma linha por campus), consumida pelo app.
+web/Render. Cada RU é raspado, parseado e persistido via `upsert` na tabela
+`menus` do Supabase (uma linha por RU — a coluna `campus` é a chave do restaurante:
+Florianópolis tem dois, `florianopolis` = Trindade e `cca`), consumida pelo app.
 
 ## Campi e fontes
 
 | Campus (`campus` no Supabase) | Fonte | Formato |
 | --- | --- | --- |
 | `florianopolis` (Trindade) | `ru.ufsc.br/ru/` | PDF (texto) |
+| `cca` (RU do CCA, Itacorubi) | `ru.ufsc.br/cca-2/` | PDF (1 página por dia + tabela; lista mais-novo-primeiro) |
 | `joinville` | `restaurante.joinville.ufsc.br/cardapio-da-semana/` | PDF (tabela) |
 | `ararangua` | `ara.ufsc.br/ru/` | PDF (tabela) |
 | `curitibanos` | `ru.curitibanos.ufsc.br/cardapio` | PDF mensal (tabela) |
@@ -54,6 +56,7 @@ campo v1 nem mude o formato de `itens` sem atualizar o app
 | Campus | Categorias | Almoço/Jantar | Alergênicos | Ingredientes |
 | --- | --- | --- | --- | --- |
 | Trindade | rótulos do PDF ("Carne:", "Complemento:", "Saladas:"; molho/sobremesa por posição) | "(Jantar)", "Carne almoço:" etc. | "contém glúten/lactose" na lista de ingredientes | páginas "LISTA DE INGREDIENTES", casadas por nome e dia |
+| CCA | rótulos "Saladas:/Acompanhamentos:/Proteína animal:/Fruta:" das páginas por dia (base/vegetariano/guarnição por nome+posição dentro de Acompanhamentos); nas férias só a tabela da pág. 1 (mesmos rótulos, sem ingredientes) | — (cardápio único) | "(Não) contém glúten / lactose / produtos de origem animal" declarado por prato | mesma linha "Nome: ingredientes (…)" |
 | Joinville | classificador por palavra-chave + ordem fixa das linhas | — | — | — |
 | Araranguá | bloco FIXO por palavra-chave; 1º prato com flags = carne, 2º = guarnição; "2 OPÇÕES"/"1 OPÇÃO" | — | "CONTÉM LÁCTEOS/GLÚTEN: SIM/NÃO", "COM/SEM ADIÇÃO INTENCIONAL DE ORIGEM ANIMAL" | página 2 (CARNES/GUARNIÇÕES) |
 | Curitibanos | faixas horizontais SALADA/SOBREMESA/PRATOS QUENTES/(CARNE)/OPÇÃO VEGETARIANA + gap relativo quando o cabeçalho não sai como texto | título "ALMOÇO E JANTAR" | legenda "*CG"/"*CL" | — |
@@ -81,8 +84,12 @@ bun src/index.ts joinville --skip-db
 bun src/index.ts curitibanos
 ```
 
-Campi válidos: `florianopolis` (ou `trindade`), `joinville`, `ararangua`,
+Campi válidos: `florianopolis` (ou `trindade`), `cca`, `joinville`, `ararangua`,
 `curitibanos`, `blumenau`.
+
+Nota CCA: PDFs com menos de 3 dias servidos (fim de semana avulso, semana de
+manutenção) são rejeitados pela validação — o job falha e o banco mantém a semana
+anterior (o app mostra o aviso de "desatualizado"), por desenho.
 
 ## Automação (GitHub Actions)
 

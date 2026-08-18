@@ -19,11 +19,13 @@ import { joinville } from './campus/joinville.js';
 import { ararangua } from './campus/ararangua.js';
 import { curitibanos } from './campus/curitibanos.js';
 import { blumenau } from './campus/blumenau.js';
+import { cca } from './campus/cca.js';
 
 const SCRAPERS: Record<string, CampusScraper> = {
   // aceita tanto a chave do campus quanto o nome "trindade"
   trindade,
   florianopolis: trindade,
+  cca, // 2º RU de Florianópolis (Itacorubi) — chave própria na tabela `menus`
   joinville,
   ararangua,
   curitibanos,

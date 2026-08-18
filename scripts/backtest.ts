@@ -17,12 +17,14 @@ import { parseTrindadePdf } from '../src/campus/trindade.js';
 import { parseJoinvillePdf } from '../src/campus/joinville.js';
 import { parseAraranguaPdf } from '../src/campus/ararangua.js';
 import { parseCuritibanosPdf } from '../src/campus/curitibanos.js';
+import { parseCcaPdf } from '../src/campus/cca.js';
 
 const CAMPUS_KEY: Record<string, string> = {
   trindade: 'florianopolis',
   joinville: 'joinville',
   ararangua: 'ararangua',
   curitibanos: 'curitibanos',
+  cca: 'cca',
 };
 
 function parseData(s: string): Date | null {
@@ -36,6 +38,7 @@ async function parsear(campus: string, buf: Uint8Array, anoDoArquivo: number): P
   if (campus === 'trindade') return parseTrindadePdf(buf);
   if (campus === 'joinville') return parseJoinvillePdf(buf);
   if (campus === 'ararangua') return parseAraranguaPdf(buf, anoDoArquivo);
+  if (campus === 'cca') return parseCcaPdf(buf);
   // Curitibanos: mensal — precisa de um "hoje" dentro do mês do PDF. 1º passe pega
   // a 1ª semana; o 2º usa (1ª data + 9 dias) para cair na 2ª semana do mês.
   const preview = await parseCuritibanosPdf(buf, new Date(2000, 0, 1));
@@ -61,7 +64,7 @@ async function main() {
   let totalOk = 0;
   const falhas: string[] = [];
 
-  for (const campus of ['trindade', 'joinville', 'ararangua', 'curitibanos'] as const) {
+  for (const campus of ['trindade', 'joinville', 'ararangua', 'curitibanos', 'cca'] as const) {
     let arquivos: string[] = [];
     try {
       arquivos = readdirSync(join(raiz, campus))

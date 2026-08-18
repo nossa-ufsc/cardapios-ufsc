@@ -1,7 +1,7 @@
 // Baixa um corpus de PDFs históricos das páginas dos RUs para o backtest.
 //
 // Uso: bun scripts/baixar-corpus.ts <dir-destino>
-//   Cria <dir>/trindade, <dir>/joinville, <dir>/ararangua, <dir>/curitibanos com
+//   Cria <dir>/trindade, <dir>/joinville, <dir>/ararangua, <dir>/curitibanos, <dir>/cca com
 //   todos os PDFs de cardápio linkados nas páginas (o Trindade filtra os "CAFÉ").
 //   PDFs já presentes não são baixados de novo. *.pdf está no .gitignore.
 
@@ -25,6 +25,13 @@ const FONTES: { campus: string; url: string; seletor: string; filtro?: (hrefDeco
     filtro: (h) => /card[áa]pio/i.test(h),
   },
   { campus: 'curitibanos', url: 'https://ru.curitibanos.ufsc.br/cardapio', seletor: "#content .content a[href$='.pdf']" },
+  {
+    // Lista do mais novo p/ o mais antigo; os arquivos de 2023/2024 respondem 404 (pulados).
+    campus: 'cca',
+    url: 'https://ru.ufsc.br/cca-2/',
+    seletor: "#content .content a[href$='.pdf']",
+    filtro: (h) => /card[áa]pio/i.test(h) && !/caf[ée]/i.test(h),
+  },
 ];
 
 async function existe(p: string) {
