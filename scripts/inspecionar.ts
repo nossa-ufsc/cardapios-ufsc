@@ -1,14 +1,15 @@
 // Inspeção rápida do parse de UM PDF local, com o contrato v2 (`pratos`) aberto:
-//   bun scripts/inspecionar.ts <trindade|joinville|ararangua|curitibanos> <arquivo.pdf> [índices de dia, ex. 0,3]
+//   bun scripts/inspecionar.ts <trindade|joinville|ararangua|curitibanos|cca> <arquivo.pdf> [índices de dia, ex. 0,3]
 // Imprime por dia: categoria | nome | refeição | ING (tem ingredientes) | alergênicos.
 import { readFileSync } from 'node:fs';
 import { parseTrindadePdf } from '../src/campus/trindade.js';
 import { parseJoinvillePdf } from '../src/campus/joinville.js';
 import { parseAraranguaPdf } from '../src/campus/ararangua.js';
 import { parseCuritibanosPdf } from '../src/campus/curitibanos.js';
+import { parseCcaPdf } from '../src/campus/cca.js';
 const [campus, arq, soDias] = process.argv.slice(2);
 const buf = new Uint8Array(readFileSync(arq));
-const fn: any = { trindade: parseTrindadePdf, joinville: parseJoinvillePdf, ararangua: parseAraranguaPdf, curitibanos: parseCuritibanosPdf }[campus];
+const fn: any = { trindade: parseTrindadePdf, joinville: parseJoinvillePdf, ararangua: parseAraranguaPdf, curitibanos: parseCuritibanosPdf, cca: parseCcaPdf }[campus];
 const m = await fn(buf);
 console.log('refeicoes', m.refeicoes, 'intervalo', m.diaInicial, m.diaFinal);
 const dias = m.cardapio as any[];

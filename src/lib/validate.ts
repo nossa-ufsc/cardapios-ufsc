@@ -133,4 +133,5 @@ export const LABELS_POR_CAMPUS: Record<string, string[]> = {
   ararangua: ['SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO', 'DOMINGO'],
   curitibanos: ['Segunda feira', 'Terça feira', 'Quarta feira', 'Quinta feira', 'Sexta feira', 'Sábado', 'Domingo'],
   blumenau: [],
+  cca: ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo'],
 };

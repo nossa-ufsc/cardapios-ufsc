@@ -1,6 +1,6 @@
 name: Gerar Cardápios
 
-# Raspa os cardápios dos 5 campi direto no runner (sem Python/Render) e faz upsert
+# Raspa os cardápios dos 6 RUs (5 campi + RU do CCA) direto no runner (sem Python/Render) e faz upsert
 # na tabela `menus` do Supabase. Ao final, um único job commita os snapshots em
 # data/*.json via deploy key SSH — o push com deploy key conta como atividade e
 # impede o GitHub de desabilitar os workflows agendados (regra dos 60 dias).
@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false # a falha de um campus não bloqueia os demais
       matrix:
-        campus: [florianopolis, joinville, ararangua, curitibanos, blumenau]
+        campus: [florianopolis, cca, joinville, ararangua, curitibanos, blumenau]
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
