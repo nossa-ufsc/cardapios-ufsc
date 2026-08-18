@@ -13,6 +13,53 @@
         "Cenoura ralada",
         "Vinagrete",
         "Maçã"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "refeicao": "jantar"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base",
+          "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
+        },
+        {
+          "nome": "Bife acebolado",
+          "categoria": "carne",
+          "ingredientes": "coxão mole bovino, cebola, óleo de soja, sal, alho em pasta, alho em pasta, sal, pimenta do reino, orégano"
+        },
+        {
+          "nome": "Abóbora ao forno",
+          "categoria": "guarnicao",
+          "ingredientes": "abóbora, tempero verde, sal"
+        },
+        {
+          "nome": "Chicória",
+          "categoria": "salada",
+          "ingredientes": "chicória"
+        },
+        {
+          "nome": "Cenoura ralada",
+          "categoria": "salada",
+          "ingredientes": "cenoura"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "molho",
+          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
+        },
+        {
+          "nome": "Maçã",
+          "categoria": "sobremesa",
+          "ingredientes": "maçã"
+        }
       ]
     },
     {
@@ -28,6 +75,71 @@
         "Rabanete",
         "Molho de mostarda",
         "Laranja"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "refeicao": "jantar"
+        },
+        {
+          "nome": "Feijão com vegetais",
+          "categoria": "base",
+          "refeicao": "almoco",
+          "ingredientes": "feijão preto, chuchu, abóbora, batata doce, cebola, sal, óleo de soja, tempero verde, alho em pasta, orégano, louro"
+        },
+        {
+          "nome": "Carne moída com milho",
+          "categoria": "carne",
+          "refeicao": "almoco",
+          "ingredientes": "extrato de tomate, carne bovina moída, tomate, cebola, milho, pimentão, oléo de soja, sal, tempero verde, alho em pasta, orégano, manjericão, pimenta do reino"
+        },
+        {
+          "nome": "Almondegas",
+          "categoria": "carne",
+          "refeicao": "jantar",
+          "alergenos": {
+            "gluten": true
+          },
+          "ingredientes": "carne bovina, cebola, água, proteína texturizada de soja granulada, farinha de rosca, sal refinado, alho, salsinha, cebolinha, glutamato monossódico, inosinato, guanilato dissódico e aromatizante. contém glúten"
+        },
+        {
+          "nome": "Farofa com azeitonas",
+          "categoria": "guarnicao",
+          "refeicao": "almoco",
+          "ingredientes": "farinha de mandioca, oléo de soja, azeitona verde, sal, colorau"
+        },
+        {
+          "nome": "Canja",
+          "categoria": "guarnicao",
+          "refeicao": "jantar",
+          "ingredientes": "batata inglesa, cenoura, peito de frango, cebola, arroz parboilizado, alho em pasta, tempero verde, sal"
+        },
+        {
+          "nome": "Alface",
+          "categoria": "salada",
+          "ingredientes": "alface"
+        },
+        {
+          "nome": "Rabanete",
+          "categoria": "salada",
+          "ingredientes": "rabanete"
+        },
+        {
+          "nome": "Molho de mostarda",
+          "categoria": "molho",
+          "ingredientes": "molho de mostarda, água, azeite de oliva, vinagre, tempero verde, alho em pasta, sal"
+        },
+        {
+          "nome": "Laranja",
+          "categoria": "sobremesa",
+          "ingredientes": "laranja"
+        }
       ]
     },
     {
@@ -41,6 +153,53 @@
         "Beterraba ralada",
         "Molho de ervas",
         "Banana"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "refeicao": "jantar"
+        },
+        {
+          "nome": "Feijão carioca",
+          "categoria": "base",
+          "ingredientes": "feijão carioca, cebola, sal, tempero verde, óleo de soja, alho em pasta, orégano, louro"
+        },
+        {
+          "nome": "Frango à portuguesa",
+          "categoria": "carne",
+          "ingredientes": "peito de frango, tomate, cebola, pimentão, azeitona, óleo de soja, sal, alho em pasta, sal, pimenta do reino, orégano"
+        },
+        {
+          "nome": "Legumes refogados II",
+          "categoria": "guarnicao",
+          "ingredientes": "cebola, cenoura, couve folha, tempero verde, sal, óleo de soja, pimenta do reino"
+        },
+        {
+          "nome": "Acelga",
+          "categoria": "salada",
+          "ingredientes": "acelga"
+        },
+        {
+          "nome": "Beterraba ralada",
+          "categoria": "salada",
+          "ingredientes": "beterraba"
+        },
+        {
+          "nome": "Molho de ervas",
+          "categoria": "molho",
+          "ingredientes": "água, cebola, vinagre, azeite de oliva, sal, sálvia, orégano, manjerona, manjericão"
+        },
+        {
+          "nome": "Banana",
+          "categoria": "sobremesa",
+          "ingredientes": "banana"
+        }
       ]
     },
     {
@@ -54,6 +213,53 @@
         "Cenoura ralada",
         "Vinagrete",
         "Morgote"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "refeicao": "jantar"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base",
+          "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
+        },
+        {
+          "nome": "Quibe",
+          "categoria": "carne",
+          "ingredientes": "quibe bovino"
+        },
+        {
+          "nome": "Lentilha com legumes",
+          "categoria": "guarnicao",
+          "ingredientes": "lentilha, cebola, chuchu, cenoura, batata doce, sal, tempero verde, alho em pasta"
+        },
+        {
+          "nome": "Rúcula",
+          "categoria": "salada",
+          "ingredientes": "rúcula"
+        },
+        {
+          "nome": "Cenoura ralada",
+          "categoria": "salada",
+          "ingredientes": "cenoura"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "molho",
+          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
+        },
+        {
+          "nome": "Morgote",
+          "categoria": "sobremesa",
+          "ingredientes": "pokã ou morgote"
+        }
       ]
     },
     {
@@ -67,6 +273,52 @@
         "Pepino",
         "Molho de mostarda",
         "Maçã"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "refeicao": "jantar"
+        },
+        {
+          "nome": "Feijão carioca",
+          "categoria": "base",
+          "ingredientes": "feijão carioca, cebola, sal, tempero verde, óleo de soja, alho em pasta, orégano, louro"
+        },
+        {
+          "nome": "Filé mignon suíno acebolado ao m. agridoce",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Batata doce cozida",
+          "categoria": "guarnicao",
+          "ingredientes": "batata doce, tempero verde, sal"
+        },
+        {
+          "nome": "Repolho roxo",
+          "categoria": "salada",
+          "ingredientes": "repolho roxo"
+        },
+        {
+          "nome": "Pepino",
+          "categoria": "salada",
+          "ingredientes": "pepino"
+        },
+        {
+          "nome": "Molho de mostarda",
+          "categoria": "molho",
+          "ingredientes": "molho de mostarda, água, azeite de oliva, vinagre, tempero verde, alho em pasta, sal"
+        },
+        {
+          "nome": "Maçã",
+          "categoria": "sobremesa",
+          "ingredientes": "maçã"
+        }
       ]
     },
     {
@@ -80,6 +332,53 @@
         "Beterraba ralada",
         "Molho de ervas",
         "Mamão"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "ingredientes": "arroz integral, sal, óleo de soja"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base",
+          "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
+        },
+        {
+          "nome": "Carne ensopada",
+          "categoria": "carne",
+          "ingredientes": "extrato de tomate, músculo bovino, tomate, cebola, pimentão, oléo de soja, sal, tempero verde, alho em pasta, sal, pimenta do reino, orégano, manjericão"
+        },
+        {
+          "nome": "Macarrão ao alho e óleo com ervas",
+          "categoria": "guarnicao",
+          "ingredientes": "macarrão parafuso, óleo de soja, tempero verde, sal, alho em pasta, alecrim, orégano, manjericão"
+        },
+        {
+          "nome": "Alface",
+          "categoria": "salada",
+          "ingredientes": "alface"
+        },
+        {
+          "nome": "Beterraba ralada",
+          "categoria": "salada",
+          "ingredientes": "beterraba"
+        },
+        {
+          "nome": "Molho de ervas",
+          "categoria": "molho",
+          "ingredientes": "água, cebola, vinagre, azeite de oliva, sal, sálvia, orégano, manjerona, manjericão"
+        },
+        {
+          "nome": "Mamão",
+          "categoria": "sobremesa",
+          "ingredientes": "mamão"
+        }
       ]
     },
     {
@@ -92,7 +391,56 @@
         "Couve folha",
         "Vinagrete",
         "Laranja"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "ingredientes": "arroz integral, sal, óleo de soja"
+        },
+        {
+          "nome": "Feijoada",
+          "categoria": "base",
+          "ingredientes": "charque bovino, patinho bovino, linguiça calabresa, feijão preto, bacon em cubos, cebola, sal, tempero verde, óleo de soja, alho em pasta, louro em folha, orégano"
+        },
+        {
+          "nome": "Feijoada vegetariana",
+          "categoria": "vegetariano",
+          "ingredientes": "feijão preto, chuchu, abóbora, batata doce, repolho verde, cebola, sal, tempero verde, óleo de soja, alho em pasta, louro, orégano"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao",
+          "ingredientes": "farinha de mandioca, oléo de soja, sal, colorau"
+        },
+        {
+          "nome": "Couve folha",
+          "categoria": "salada",
+          "ingredientes": "couve-folha"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "molho",
+          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
+        },
+        {
+          "nome": "Laranja",
+          "categoria": "sobremesa",
+          "ingredientes": "laranja"
+        }
       ]
     }
-  ]
+  ],
+  "refeicoes": [
+    "almoco",
+    "jantar"
+  ],
+  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/08/17.08.2026-a-23.08.2026.pdf",
+  "versao": 2,
+  "atualizadoEm": "2026-08-18T22:31:49.569Z"
 }
