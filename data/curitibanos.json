@@ -1,21 +1,21 @@
 {
-  "diaInicial": "17/08/2026",
-  "diaFinal": "23/08/2026",
+  "diaInicial": "24/08/2026",
+  "diaFinal": "30/08/2026",
   "cardapio": [
     {
       "dia": "Segunda feira",
-      "data": "17/08/2026",
+      "data": "24/08/2026",
       "itens": [
         "Folhas",
-        "Do dia",
+        "Mix legum",
         "Fruta",
         "Arroz",
         "Arroz integral",
         "Feijão vermelho",
         "Farofa",
-        "Macarrão ao molho rose",
-        "Sassami acebolado",
-        "Grão de bico"
+        "Macarrão na manteiga",
+        "Frango caipira",
+        "Lentilha colorida"
       ],
       "pratos": [
         {
@@ -23,7 +23,7 @@
           "categoria": "salada"
         },
         {
-          "nome": "Do dia",
+          "nome": "Mix legum",
           "categoria": "salada"
         },
         {
@@ -47,99 +47,41 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Macarrão ao molho rose",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Sassami acebolado",
+          "nome": "Macarrão na manteiga",
           "categoria": "carne"
         },
         {
-          "nome": "Grão de bico",
+          "nome": "Frango caipira",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Lentilha colorida",
           "categoria": "vegetariano"
         }
       ]
     },
     {
       "dia": "Terça feira",
-      "data": "18/08/2026",
+      "data": "25/08/2026",
       "itens": [
-        "Legumes cru",
-        "Vinagrete",
-        "Fruta",
-        "Arroz",
-        "Arroz integral",
-        "Feijão preto",
-        "Farofa",
-        "Polenta gratinada",
-        "Almondegas sugo",
-        "PTS"
-      ],
-      "pratos": [
-        {
-          "nome": "Legumes cru",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Vinagrete",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Polenta gratinada",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Almondegas sugo",
-          "categoria": "carne"
-        },
-        {
-          "nome": "PTS",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Quarta feira",
-      "data": "19/08/2026",
-      "itens": [
-        "Do dia",
-        "Refogado",
+        "Mix",
+        "Repolho salpicão",
         "Preparada",
         "Arroz",
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Nhoque ao molho",
-        "Frango a passarinho",
-        "Lentilha"
+        "Quirera c calabre",
+        "Bisteca ao shoyo",
+        "Grao de bico"
       ],
       "pratos": [
         {
-          "nome": "Do dia",
+          "nome": "Mix",
           "categoria": "salada"
         },
         {
-          "nome": "Refogado",
+          "nome": "Repolho salpicão",
           "categoria": "salada"
         },
         {
@@ -163,127 +105,11 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Nhoque ao molho",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Frango a passarinho",
+          "nome": "Quirera c calabre",
           "categoria": "carne"
         },
         {
-          "nome": "Lentilha",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Quinta feira",
-      "data": "20/08/2026",
-      "itens": [
-        "Mix",
-        "Do dia",
-        "Fruta",
-        "Arroz",
-        "Arroz integral",
-        "Feijão vermelho",
-        "Farofa",
-        "Quirerinha com calabresa",
-        "Suino assado",
-        "Bolinho pts"
-      ],
-      "pratos": [
-        {
-          "nome": "Mix",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Do dia",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão vermelho",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Quirerinha com calabresa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Suino assado",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Bolinho pts",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Sexta feira",
-      "data": "21/08/2026",
-      "itens": [
-        "Do dia",
-        "Tabule",
-        "Fruta",
-        "Arroz",
-        "Arroz integral",
-        "Feijão preto",
-        "Farofa",
-        "Polenta",
-        "Peixe frito",
-        "Grao de bico"
-      ],
-      "pratos": [
-        {
-          "nome": "Do dia",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Tabule",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Polenta",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Peixe frito",
+          "nome": "Bisteca ao shoyo",
           "categoria": "carne"
         },
         {
@@ -293,91 +119,31 @@
       ]
     },
     {
-      "dia": "Sábado",
-      "data": "22/08/2026",
+      "dia": "Quarta feira",
+      "data": "26/08/2026",
       "itens": [
-        "Mix",
-        "Vinagrete",
-        "Pudim de chocolate",
-        "Arroz",
-        "Arroz integral",
-        "Feijão carioca",
-        "Farofa",
-        "Batata frita",
-        "Strogonoff",
-        "Frango",
-        "Quibe c lentilha assado"
-      ],
-      "pratos": [
-        {
-          "nome": "Mix",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Vinagrete",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Pudim de chocolate",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão carioca",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Batata frita",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Strogonoff Frango",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Quibe c lentilha assado",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Domingo",
-      "data": "23/08/2026",
-      "itens": [
-        "Maionese",
-        "Do dia",
-        "Sagú",
+        "Folhas",
+        "Tabule",
+        "Preparada",
         "Arroz",
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Legumes",
-        "Acebolado",
-        "Carne assada",
-        "Bolinho pts"
+        "Pure Batata",
+        "Carne de panela",
+        "Proteína soja"
       ],
       "pratos": [
         {
-          "nome": "Maionese",
+          "nome": "Folhas",
           "categoria": "salada"
         },
         {
-          "nome": "Do dia",
+          "nome": "Tabule",
           "categoria": "salada"
         },
         {
-          "nome": "Sagú",
+          "nome": "Preparada",
           "categoria": "sobremesa"
         },
         {
@@ -397,19 +163,246 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Legumes",
+          "nome": "Pure Batata",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Carne de panela",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Proteína soja",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Quinta feira",
+      "data": "27/08/2026",
+      "itens": [
+        "Do dia",
+        "Mix",
+        "Preparada",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Espaguete c bacon",
+        "Moida crocante (carne moida ref. molho branco e cobre c batata palha)",
+        "Lentilha"
+      ],
+      "pratos": [
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Mix",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Preparada",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Acebolado",
+          "nome": "Espaguete c bacon",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Moida crocante (carne moida ref. molho branco e cobre c batata palha)",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Lentilha",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Sexta feira",
+      "data": "28/08/2026",
+      "itens": [
+        "Folhas",
+        "Vinagrete",
+        "Fruta",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Polenta recheada",
+        "Frango na chapa",
+        "Proteina"
+      ],
+      "pratos": [
+        {
+          "nome": "Folhas",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
           "categoria": "guarnicao"
+        },
+        {
+          "nome": "Polenta recheada",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Frango na chapa",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Proteina",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Sábado",
+      "data": "29/08/2026",
+      "itens": [
+        "Folhas",
+        "Tabule",
+        "Sagu",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Farofa",
+        "Batata Doce car",
+        "Suino Empanado",
+        "Panqueca pts"
+      ],
+      "pratos": [
+        {
+          "nome": "Folhas",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Tabule",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Sagu",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Batata Doce car",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Suino Empanado",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Panqueca pts",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Domingo",
+      "data": "30/08/2026",
+      "itens": [
+        "Vinagrete",
+        "Maionese",
+        "Preparada",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Farofa",
+        "Panqueca ml branco",
+        "Carne assada panqueca pts"
+      ],
+      "pratos": [
+        {
+          "nome": "Vinagrete",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Maionese",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Preparada",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Panqueca ml branco",
+          "categoria": "carne"
         },
         {
           "nome": "Carne assada",
           "categoria": "carne"
         },
         {
-          "nome": "Bolinho pts",
+          "nome": "panqueca pts",
           "categoria": "vegetariano"
         }
       ]
@@ -421,5 +414,5 @@
   ],
   "fonteUrl": "http://restaurante.paginas.ufsc.br/files/2026/08/Cardapio-Agosto-2026.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-08-19T14:31:37.871Z"
+  "atualizadoEm": "2026-08-24T14:39:27.327Z"
 }
