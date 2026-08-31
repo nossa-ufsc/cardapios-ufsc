@@ -1,17 +1,18 @@
 {
-  "diaInicial": "17/08/2026",
-  "diaFinal": "23/08/2026",
+  "diaInicial": "31/08/2026",
+  "diaFinal": "06/09/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA-FEIRA",
-      "data": "17/08/2026",
+      "data": "31/08/2026",
       "itens": [
         "Arroz branco",
-        "Arroz integral",
+        "Arroz integral Arroz integral",
         "Feijão",
-        "Proteína Vegetal",
-        "FRANGO ASSADO COM GERGELIM",
-        "MACARRÃO AO MOLHO POMODORO"
+        "Proteína vegetal Proteína vegetal",
+        "ALMÔNDEGAS",
+        "AO MOLHO DE",
+        "MACARRÃO AO ALHO E ÓLEO TRADICIONAL"
       ],
       "pratos": [
         {
@@ -23,30 +24,37 @@
           "categoria": "base"
         },
         {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
           "nome": "Feijão",
           "categoria": "base"
         },
         {
-          "nome": "Proteína Vegetal",
+          "nome": "Proteína vegetal",
           "categoria": "vegetariano"
         },
         {
-          "nome": "FRANGO ASSADO COM GERGELIM",
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "ALMÔNDEGAS AO MOLHO DE",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
-            "gluten": false
+            "gluten": true
           }
         },
         {
-          "nome": "MACARRÃO AO MOLHO POMODORO",
+          "nome": "MACARRÃO AO ALHO E ÓLEO TRADICIONAL",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
             "gluten": true,
-            "origemAnimal": true
-          },
-          "ingredientes": "MACARRÃO, MOLHO POMODORO E TEMPEROS NATURAIS."
+            "origemAnimal": false
+          }
         },
         {
           "nome": "2 opções",
@@ -60,14 +68,14 @@
     },
     {
       "dia": "TERÇA-FEIRA",
-      "data": "18/08/2026",
+      "data": "01/09/2026",
       "itens": [
         "Arroz branco",
-        "Arroz integral",
         "Feijão",
-        "Proteína Vegetal",
-        "ALMÔNDEGA AO MOLHO SUGO",
-        "POLENTA TRADICIONAL"
+        "Proteína vegetal",
+        "FILÉ DE FRANGO",
+        "TOMATE",
+        "POLENTA"
       ],
       "pratos": [
         {
@@ -75,35 +83,35 @@
           "categoria": "base"
         },
         {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
           "nome": "Feijão",
           "categoria": "base"
         },
         {
-          "nome": "Proteína Vegetal",
+          "nome": "Proteína vegetal",
           "categoria": "vegetariano"
         },
         {
-          "nome": "ALMÔNDEGA AO MOLHO SUGO",
+          "nome": "FILÉ DE FRANGO",
           "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": true
-          },
-          "ingredientes": "ALMÔNDEGAS, MOLHO SUGO E TEMPEROS NATURAIS."
+          "ingredientes": "PEITO DE FRANGO, ERVAS, CEBOLA E TEMPEEO NATURAIS."
         },
         {
-          "nome": "POLENTA TRADICIONAL",
+          "nome": "TOMATE",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": false,
-            "origemAnimal": false
+            "gluten": false
           },
-          "ingredientes": "FARINHA DE MILHO, E TEMPEROS NATURAIS."
+          "ingredientes": "ALMÔNDEGAS, TOMATE, AMIDO DE MILHO E TEMPERO NATURAIS."
+        },
+        {
+          "nome": "POLENTA",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": false
+          },
+          "ingredientes": "FARINHA DE MILHO E TEMPEROS NATURAIS."
         },
         {
           "nome": "2 opções",
@@ -117,14 +125,14 @@
     },
     {
       "dia": "QUARTA-FEIRA",
-      "data": "19/08/2026",
+      "data": "02/09/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
         "Feijão",
-        "Proteína Vegetal",
-        "FILÉ DE FRANGO GRELHADO ACEBOLADAS",
-        "MACARRÃO AO MOLHO BRANCO"
+        "Proteína vegetal",
+        "ACEBOLADO",
+        "PURÊ DE MORANGA BATATA PALHA"
       ],
       "pratos": [
         {
@@ -140,25 +148,25 @@
           "categoria": "base"
         },
         {
-          "nome": "Proteína Vegetal",
+          "nome": "Proteína vegetal",
           "categoria": "vegetariano"
         },
         {
-          "nome": "FILÉ DE FRANGO GRELHADO ACEBOLADAS",
+          "nome": "ACEBOLADO",
           "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          }
-        },
-        {
-          "nome": "MACARRÃO AO MOLHO BRANCO",
-          "categoria": "guarnicao",
           "alergenos": {
             "lacteos": true,
             "gluten": true
           },
-          "ingredientes": "MACARRÃO, MOLHO BRANCO E TEMPEROS NATURAIS."
+          "ingredientes": "PEITO DE FRANGO, ERVAS, CEBOLA E TEMPEEO NATURAIS."
+        },
+        {
+          "nome": "PURÊ DE MORANGA BATATA PALHA",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true
+          }
         },
         {
           "nome": "2 opções",
@@ -172,18 +180,23 @@
     },
     {
       "dia": "QUINTA-FEIRA",
-      "data": "20/08/2026",
+      "data": "03/09/2026",
       "itens": [
         "Arroz branco",
-        "Arroz integral",
+        "Arroz integral Arroz integral",
         "Feijão",
         "Proteína vegetal",
-        "CHILLI DE CARNE SIMPLES",
-        "PURÊ DE MORANGA"
+        "LASANHA À ISCA DE FRANGO",
+        "BOLONHESA",
+        "FAROFA C/ MACARRÃO OU"
       ],
       "pratos": [
         {
           "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
           "categoria": "base"
         },
         {
@@ -199,23 +212,21 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "CHILLI DE CARNE SIMPLES",
+          "nome": "LASANHA À ISCA DE FRANGO BOLONHESA",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          },
-          "ingredientes": "CARNE MOÍDA, CEBOLA, PIMENTÃO, PIMENTA, ALHO, TOMATE, MOLHO SUGO E TEMPEROS NATURAIS."
+            "lacteos": true,
+            "gluten": true
+          }
         },
         {
-          "nome": "PURÊ DE MORANGA",
+          "nome": "FAROFA C/ MACARRÃO OU",
           "categoria": "guarnicao",
           "alergenos": {
-            "lacteos": true,
-            "gluten": false,
-            "origemAnimal": true
-          },
-          "ingredientes": "MARANGA, LEITE, CREME DE LEITE, E TEMPEROS NATURAIS."
+            "lacteos": false,
+            "gluten": true,
+            "origemAnimal": false
+          }
         },
         {
           "nome": "2 opções",
@@ -229,16 +240,21 @@
     },
     {
       "dia": "SEXTA-FEIRA",
-      "data": "21/08/2026",
+      "data": "04/09/2026",
       "itens": [
-        "Arroz branco",
+        "Arroz branco Arroz branco",
         "Arroz integral",
         "Feijão",
-        "Proteína Vegetal",
-        "PEIXE GRELHADO",
-        "PIRÃO DE PEIXE"
+        "Proteína vegetal",
+        "SUÍNO EM CROCANTE CUBOS AO",
+        "MOLHO SHOYU",
+        "FAROFA DE MOLHO POMODORO"
       ],
       "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
         {
           "nome": "Arroz branco",
           "categoria": "base"
@@ -252,27 +268,24 @@
           "categoria": "base"
         },
         {
-          "nome": "Proteína Vegetal",
+          "nome": "Proteína vegetal",
           "categoria": "vegetariano"
         },
         {
-          "nome": "PEIXE GRELHADO",
+          "nome": "SUÍNO EM CROCANTE CUBOS AO MOLHO SHOYU",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
-            "gluten": true
-          },
-          "ingredientes": "FILÉ DE PEIXE E TEMPEROS NATURAIS."
+            "gluten": false
+          }
         },
         {
-          "nome": "PIRÃO DE PEIXE",
+          "nome": "FAROFA DE MOLHO POMODORO",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": false,
-            "origemAnimal": true
-          },
-          "ingredientes": "PEIXE, FARINHA DE MANDIOCA E TEMPEROS NATURAIS."
+            "gluten": false
+          }
         },
         {
           "nome": "2 opções",
@@ -286,15 +299,14 @@
     },
     {
       "dia": "SÁBADO",
-      "data": "22/08/2026",
+      "data": "05/09/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
         "Feijão",
         "Proteína vegetal",
-        "FRANGO À",
-        "PORTUGUESA",
-        "MACARRÃO À PRIMAVERA"
+        "TOSCANA C/",
+        "MACARRÃO AO COUVE MOLHO PESTO"
       ],
       "pratos": [
         {
@@ -314,23 +326,20 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "FRANGO À PORTUGUESA",
+          "nome": "TOSCANA C/",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
             "gluten": false
-          },
-          "ingredientes": "FRANGO, PIMENTÃO, TOMATE, MOLHO TOMATE E TEMPEROS NATURAIS."
+          }
         },
         {
-          "nome": "MACARRÃO À PRIMAVERA",
+          "nome": "MACARRÃO AO COUVE MOLHO PESTO",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": true,
-            "origemAnimal": true
-          },
-          "ingredientes": "MACARRÃO, MILHO, ERVILA, CENOURA E TEMPEROS NATURAIS."
+            "gluten": true
+          }
         },
         {
           "nome": "2 opções",
@@ -344,50 +353,22 @@
     },
     {
       "dia": "DOMINGO",
-      "data": "23/08/2026",
+      "data": "06/09/2026",
       "itens": [
-        "Arroz branco",
-        "Arroz integral",
         "Feijão",
-        "Proteína vegetal",
-        "CHULETA SUINA NA CHAPA",
-        "FAROFA TRADICIONAL"
+        "LEGUMES"
       ],
       "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
         {
           "nome": "Feijão",
           "categoria": "base"
         },
         {
-          "nome": "Proteína vegetal",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "CHULETA SUINA NA CHAPA",
+          "nome": "LEGUMES",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          },
-          "ingredientes": "CHULETA SUINA E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "FAROFA TRADICIONAL",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "FARINHA DE MANDIOCA, MANTEIGA, CEBOLA, E TEMPEROS NATURAIS."
+            "origemAnimal": true
+          }
         },
         {
           "nome": "2 opções",
@@ -400,7 +381,7 @@
       ]
     }
   ],
-  "fonteUrl": "http://ararangua.paginas.ufsc.br/files/2024/07/CARDAPIO-17-a-23-AGOS.pdf",
+  "fonteUrl": "https://ara.ufsc.br/files/2024/07/CARD%C3%81PIO-31-AGOSTO-A-06-SETEMBRO.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-08-24T14:39:30.979Z"
+  "atualizadoEm": "2026-08-31T16:15:24.470Z"
 }
