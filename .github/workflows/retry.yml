@@ -1,0 +1,27 @@
+name: Retry Cardápios
+
+# Os sites da UFSC às vezes deixam de responder para o IP de um runner específico
+# (timeout nas 3 tentativas do scraper, enquanto outros jobs do MESMO run passam).
+# Retry dentro do job não resolve — o IP não muda. Este workflow observa o fim do
+# "Gerar Cardápios" e, se algum job falhou, o reexecuta em runners novos (IPs novos),
+# até 3 tentativas no total (o workflow_run dispara de novo a cada rerun).
+
+on:
+  workflow_run:
+    workflows: ["Gerar Cardápios"]
+    types: [completed]
+
+jobs:
+  retry:
+    if: github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt < 3
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Rerun jobs que falharam
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Tentativa ${{ github.event.workflow_run.run_attempt }} falhou; aguardando antes do rerun…"
+          sleep 60
+          gh run rerun ${{ github.event.workflow_run.id }} --failed --repo ${{ github.repository }}
