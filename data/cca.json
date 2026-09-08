@@ -1,20 +1,25 @@
 {
-  "diaInicial": "31/08/2026",
-  "diaFinal": "04/09/2026",
+  "diaInicial": "08/09/2026",
+  "diaFinal": "11/09/2026",
   "cardapio": [
     {
       "dia": "Segunda-feira",
-      "data": "31/08/2026",
+      "data": "",
+      "itens": []
+    },
+    {
+      "dia": "Terça-feira",
+      "data": "08/09/2026",
       "itens": [
         "Rúcula",
-        "Cenoura",
-        "Molho de ervas",
+        "Rabanete",
+        "Vinagrete",
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Lentilha",
-        "Batata baby com ervas",
-        "Frango assado",
+        "Ervilha",
+        "Farofa de batata palha",
+        "Guisado de frango com vegetais",
         "Banana"
       ],
       "pratos": [
@@ -28,7 +33,7 @@
           }
         },
         {
-          "nome": "Cenoura",
+          "nome": "Rabanete",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
@@ -37,130 +42,14 @@
           }
         },
         {
-          "nome": "Molho de ervas",
-          "categoria": "molho",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Água, vinagre, ervas finas e sal"
-        },
-        {
-          "nome": "Arroz parboilizado",
-          "categoria": "base",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Arroz parboilizado, água, óleo de soja e sal"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Arroz integral, água, óleo de soja e sal"
-        },
-        {
-          "nome": "Feijão",
-          "categoria": "base",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
-        },
-        {
-          "nome": "Lentilha",
-          "categoria": "vegetariano",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Lentilha, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
-        },
-        {
-          "nome": "Batata baby com ervas",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Batata inglesa, água, óleo de soja, alho, alecrim e sal"
-        },
-        {
-          "nome": "Frango assado",
-          "categoria": "carne",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": true
-          },
-          "ingredientes": "Cortes de frango, chimichurri, páprica doce, páprica picante e sal"
-        },
-        {
-          "nome": "Banana",
-          "categoria": "sobremesa",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          }
-        }
-      ]
-    },
-    {
-      "dia": "Terça-feira",
-      "data": "01/09/2026",
-      "itens": [
-        "Mix de folhas",
-        "Pepino",
-        "Molho shoyu",
-        "Arroz parboilizado",
-        "Arroz integral",
-        "Feijão",
-        "Ervilha",
-        "Farofa de biju",
-        "Bisteca suína acebolada",
-        "Laranja"
-      ],
-      "pratos": [
-        {
-          "nome": "Mix de folhas",
+          "nome": "Vinagrete",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Alface e rúcula"
-        },
-        {
-          "nome": "Pepino",
-          "categoria": "salada",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          }
-        },
-        {
-          "nome": "Molho shoyu",
-          "categoria": "molho",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Água, vinagre e shoyu"
+          "ingredientes": "Água, vinagre, cebola, tomate, pimentão verde e sal"
         },
         {
           "nome": "Arroz parboilizado",
@@ -203,27 +92,27 @@
           "ingredientes": "Ervilha partida, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
         },
         {
-          "nome": "Farofa de biju",
+          "nome": "Farofa de batata palha",
           "categoria": "guarnicao",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Farinha de milho biju, óleo de soja, cebola, páprica picante e sal"
+          "ingredientes": "Farinha de mandioca, óleo de soja, cebola, colorau, páprica picante, batata palha e sal"
         },
         {
-          "nome": "Bisteca suína acebolada",
+          "nome": "Guisado de frango com vegetais",
           "categoria": "carne",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Bisteca suína, pimenta calabresa, páprica doce, óleo de soja, cebola, shoyu e sal"
+          "ingredientes": "Sassami de frango, óleo de soja, cebola, tomate, ervilha, milho, cenoura, brócolis, couve flor, páprica picante, chimichurri e sal"
         },
         {
-          "nome": "Laranja",
+          "nome": "Banana",
           "categoria": "sobremesa",
           "alergenos": {
             "gluten": false,
@@ -235,28 +124,29 @@
     },
     {
       "dia": "Quarta-feira",
-      "data": "02/09/2026",
+      "data": "09/09/2026",
       "itens": [
-        "Alface",
+        "Mix de folhas",
         "Cenoura",
         "Molho de ervas",
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Proteína de soja",
-        "Creme de abóbora",
-        "Frango grelhado à marguerita",
+        "Soja em grãos",
+        "Aipim cozido",
+        "Frango assado",
         "Maçã"
       ],
       "pratos": [
         {
-          "nome": "Alface",
+          "nome": "Mix de folhas",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
-          }
+          },
+          "ingredientes": "Alface e rúcula:"
         },
         {
           "nome": "Cenoura",
@@ -308,34 +198,34 @@
           "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
         },
         {
-          "nome": "Proteína de soja",
+          "nome": "Soja em grãos",
           "categoria": "vegetariano",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Proteína texturizada de soja, tomate, cebola, óleo de soja, cheiro verde e sal"
+          "ingredientes": "Grãos de soja, tomate, cebola, óleo de soja, cheiro verde, açafrão, pimenta preta e sal"
         },
         {
-          "nome": "Creme de abóbora",
+          "nome": "Aipim cozido",
           "categoria": "guarnicao",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Abóbora paulista, óleo de soja, cebola, cheiro verde e sal"
+          "ingredientes": "Aipim, água, açafrão e sal"
         },
         {
-          "nome": "Frango grelhado à marguerita",
+          "nome": "Frango assado",
           "categoria": "carne",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Sassami de frango, chimichurri, páprica doce, páprica picante, óleo de soja, tomate, manjericão fresco e sal"
+          "ingredientes": "Cortes de frango com osso, chimichurri, páprica doce, páprica picante e sal"
         },
         {
           "nome": "Maçã",
@@ -350,133 +240,17 @@
     },
     {
       "dia": "Quinta-feira",
-      "data": "03/09/2026",
-      "itens": [
-        "Mix de folhas",
-        "Beterraba",
-        "Molho mostarda agridoce",
-        "Arroz parboilizado",
-        "Arroz integral",
-        "Feijão",
-        "Lentilha",
-        "Farofa de cebola",
-        "Frango assado",
-        "Banana"
-      ],
-      "pratos": [
-        {
-          "nome": "Mix de folhas",
-          "categoria": "salada",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Rúcula e alface"
-        },
-        {
-          "nome": "Beterraba",
-          "categoria": "salada",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          }
-        },
-        {
-          "nome": "Molho mostarda agridoce",
-          "categoria": "molho",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Água, vinagre, mostarda amarela e açúcar mascavo"
-        },
-        {
-          "nome": "Arroz parboilizado",
-          "categoria": "base",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Arroz parboilizado, água, óleo de soja e sal"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Arroz integral, água, óleo de soja, alho, cebola e sal"
-        },
-        {
-          "nome": "Feijão",
-          "categoria": "base",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
-        },
-        {
-          "nome": "Lentilha",
-          "categoria": "vegetariano",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Lentilha, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
-        },
-        {
-          "nome": "Farofa de cebola",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Farinha de mandioca, óleo de soja, colorau, cebola, páprica picante e sal"
-        },
-        {
-          "nome": "Frango assado",
-          "categoria": "carne",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": true
-          },
-          "ingredientes": "Cortes de frango, chimichurri, páprica doce, páprica picante e sal"
-        },
-        {
-          "nome": "Banana",
-          "categoria": "sobremesa",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": false
-          }
-        }
-      ]
-    },
-    {
-      "dia": "Sexta-feira",
-      "data": "04/09/2026",
+      "data": "10/09/2026",
       "itens": [
         "Alface",
-        "Pepino com tomate",
+        "Beterraba",
         "Molho shoyu",
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Mix de grãos",
-        "Repolho temperado",
-        "Suíno ao molho escuro",
+        "Lentilha",
+        "Macarrão ao molho de tomate",
+        "Suíno acebolado",
         "Laranja"
       ],
       "pratos": [
@@ -490,7 +264,7 @@
           }
         },
         {
-          "nome": "Pepino com tomate",
+          "nome": "Beterraba",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
@@ -539,37 +313,151 @@
           "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
         },
         {
-          "nome": "Mix de grãos",
+          "nome": "Lentilha",
           "categoria": "vegetariano",
-          "alergenos": {
-            "gluten": true,
-            "lacteos": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "Grão de bico, grãos de trigo, milho, cenoura, cebola, tomate, óleo de soja, cheiro verde e sal"
-        },
-        {
-          "nome": "Repolho temperado",
-          "categoria": "guarnicao",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Repolho, óleo de soja, cebola, cheiro verde e sal"
+          "ingredientes": "Lentilha, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
         },
         {
-          "nome": "Suíno ao molho escuro",
+          "nome": "Macarrão ao molho de tomate",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "gluten": true,
+            "lacteos": false,
+            "origemAnimal": true
+          },
+          "ingredientes": "Massa de sêmola de trigo com ovos, óleo de soja, alho, tomate, colorau, extrato de tomate, cheiro verde e sal"
+        },
+        {
+          "nome": "Suíno acebolado",
           "categoria": "carne",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Carne suína, chimichurri, páprica doce, páprica pimenta calabresa, cebola, tomate, barbecue, shoyu, cheiro verde e sal"
+          "ingredientes": "Bisteca suína, óleo de soja, cebola, chimichurri, páprica doce, páprica picante, pimenta calabresa, shoyu e sal"
         },
         {
           "nome": "Laranja",
+          "categoria": "sobremesa",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          }
+        }
+      ]
+    },
+    {
+      "dia": "Sexta-feira",
+      "data": "11/09/2026",
+      "itens": [
+        "Repolho",
+        "Pepino",
+        "Molho de ervas",
+        "Arroz parboilizado",
+        "Arroz integral",
+        "Feijão",
+        "Proteína de soja com vegetais",
+        "Abóbora",
+        "Frango assado",
+        "Pokan"
+      ],
+      "pratos": [
+        {
+          "nome": "Repolho",
+          "categoria": "salada",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          }
+        },
+        {
+          "nome": "Pepino",
+          "categoria": "salada",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          }
+        },
+        {
+          "nome": "Molho de ervas",
+          "categoria": "molho",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Água, vinagre, ervas finas e sal"
+        },
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Arroz parboilizado, água, óleo de soja e sal"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Arroz integral, água, óleo de soja, alho, cebola e sal"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
+        },
+        {
+          "nome": "Proteína de soja com vegetais",
+          "categoria": "vegetariano",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Proteína de soja, cenoura, brócolis, cebola, tomate, óleo de soja, cheiro verde e sal"
+        },
+        {
+          "nome": "Abóbora",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          }
+        },
+        {
+          "nome": "Frango assado",
+          "categoria": "carne",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": true
+          },
+          "ingredientes": "Cortes de frango com osso, chimichurri, páprica doce, páprica picante e sal"
+        },
+        {
+          "nome": "Pokan",
           "categoria": "sobremesa",
           "alergenos": {
             "gluten": false,
@@ -590,7 +478,7 @@
       "itens": []
     }
   ],
-  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/08/Card%C3%A1pio-CCA-de-31.08-a-04.09.2026.pdf",
+  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2012/10/Card%C3%A1pio-CCA-de-07-a-11.09.2026.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-09-02T17:40:32.728Z"
+  "atualizadoEm": "2026-09-08T17:47:08.273Z"
 }
