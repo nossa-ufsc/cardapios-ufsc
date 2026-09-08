@@ -8,6 +8,7 @@
 //      aparece no RODAPÉ do próprio bloco), data "17-ago-26".
 //   C) tabela colunar Seg–Sex (semana de terceirizada, jul/2026): sem data por dia,
 //      intervalo apenas no título ("Cardápio de 27 à 31/07/2026").
+//   D) lista B com data por extenso "7 de setembro de 2026" (set/2026+).
 //
 // Por isso o parser é multi-estratégia: tenta a lista (detectando A vs B pela
 // posição da linha de arroz), cai para a tabela genérica, e pontua o melhor
@@ -34,7 +35,8 @@ const X_ESQUERDA = 110; // coluna do dia/data; conteúdo fica à direita disso
 function parseDataTrindade(raw: string): string | null {
   // Tolera espaços em volta dos separadores — o pdf.js às vezes fatia a data em
   // várias células ("11" "-" "mai" "-" "26"), que chegam aqui re-juntadas.
-  const extensa = raw.toLowerCase().match(/(\d{1,2})\s*[\/-]\s*([a-zç]{3,})\s*[\/-]\s*(\d{2,4})/);
+  // Layouts: "17-ago-26" (jun/2026+) e "7 de setembro de 2026" (set/2026+).
+  const extensa = raw.toLowerCase().match(/(\d{1,2})\s*(?:[\/-]|\s+de\s+)\s*([a-zç]{3,})\s*(?:[\/-]|\s+de\s+)\s*(\d{2,4})/);
   if (extensa) return parseDataExtenso(`${extensa[1]}-${extensa[2]}-${extensa[3]}`);
   const numerica = raw.match(/(\d{1,2})\s*\/\s*(\d{1,2})\s*\/\s*(\d{4})/);
   if (numerica) return normalizarData(`${numerica[1]}/${numerica[2]}/${numerica[3]}`, 0);
