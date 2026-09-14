@@ -10,7 +10,7 @@ name: Keep-alive
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 1" # toda segunda 09:00 BRT (12:00 UTC)
+    - cron: "7 12 * * 1" # toda segunda 09:07 BRT (12:07 UTC) — fora do minuto :00 p/ evitar drop de agendados
 
 jobs:
   keepalive:
