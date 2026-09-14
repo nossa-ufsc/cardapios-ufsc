@@ -1,21 +1,21 @@
 {
-  "diaInicial": "7/9/2026",
-  "diaFinal": "13/9/2026",
+  "diaInicial": "14/9/2026",
+  "diaFinal": "20/9/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA",
-      "data": "7/9/2026",
+      "data": "14/9/2026",
       "itens": [
         "ARROZ",
         "ARROZ INTEGRAL",
         "FEIJÃO PRETO",
-        "FRANGO AO CREME DE MILHO",
-        "BATATA PALHA",
+        "FRANGO ACEBOLADO",
+        "POLENTA CREMOSA",
         "ERVILHA",
         "MOLHO DE MOSTARDA",
-        "SALADA DE CENOURA RALADA",
-        "SALADA MIX DE REPOLHO",
-        "PUDIM"
+        "SALADA DE PEPINO",
+        "SALADA DE ACELGA",
+        "FRUTA"
       ],
       "pratos": [
         {
@@ -31,11 +31,11 @@
           "categoria": "base"
         },
         {
-          "nome": "FRANGO AO CREME DE MILHO",
+          "nome": "FRANGO ACEBOLADO",
           "categoria": "carne"
         },
         {
-          "nome": "BATATA PALHA",
+          "nome": "POLENTA CREMOSA",
           "categoria": "guarnicao"
         },
         {
@@ -47,33 +47,33 @@
           "categoria": "molho"
         },
         {
-          "nome": "SALADA DE CENOURA RALADA",
+          "nome": "SALADA DE PEPINO",
           "categoria": "salada"
         },
         {
-          "nome": "SALADA MIX DE REPOLHO",
+          "nome": "SALADA DE ACELGA",
           "categoria": "salada"
         },
         {
-          "nome": "PUDIM",
+          "nome": "FRUTA",
           "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "TERÇA",
-      "data": "8/9/2026",
+      "data": "15/9/2026",
       "itens": [
         "ARROZ",
         "ARROZ INTEGRAL",
         "FEIJÃO CARIOCA",
         "BISTECA SUÍNA ACEBOLADA",
-        "POLENTA CREMOSA",
-        "PROTEINA DE SOJA",
-        "MOLHO ROSE",
-        "SALADA DE PEPINO",
-        "SALADA DE ACELGA",
-        "FRUTA"
+        "FAROFA CROCANTE",
+        "PROTEÍNA DE SOJA",
+        "MOLHO ORIENTAL",
+        "SALADA DE ACENOURA RALADA",
+        "SALADA MIX DE FOLHAS",
+        "DOCINHO"
       ],
       "pratos": [
         {
@@ -93,45 +93,45 @@
           "categoria": "carne"
         },
         {
-          "nome": "POLENTA CREMOSA",
+          "nome": "FAROFA CROCANTE",
           "categoria": "guarnicao"
         },
         {
-          "nome": "PROTEINA DE SOJA",
+          "nome": "PROTEÍNA DE SOJA",
           "categoria": "vegetariano"
         },
         {
-          "nome": "MOLHO ROSE",
+          "nome": "MOLHO ORIENTAL",
           "categoria": "molho"
         },
         {
-          "nome": "SALADA DE PEPINO",
+          "nome": "SALADA DE ACENOURA RALADA",
           "categoria": "salada"
         },
         {
-          "nome": "SALADA DE ACELGA",
+          "nome": "SALADA MIX DE FOLHAS",
           "categoria": "salada"
         },
         {
-          "nome": "FRUTA",
+          "nome": "DOCINHO",
           "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "QUARTA",
-      "data": "9/9/2026",
+      "data": "16/9/2026",
       "itens": [
         "ARROZ",
         "ARROZ INTEGRAL",
         "FEIJÃO PRETO",
-        "FRANGO AO MOLHO SUGO",
-        "FAROFA DE COUVE",
-        "LENTILHA",
+        "ALMÔNDEGA AO MOLHO SUGO",
+        "BATATA COZIDA",
+        "ERVILHA",
         "MOLHO DE LIMÃO",
-        "SALADA DE ABOBRINHA",
-        "SALADA MIX DE FOLHAS",
-        "DOCINHO"
+        "SALADA DE BETERRABA RALADA",
+        "SALADA DE REPOLHO",
+        "FRUTA"
       ],
       "pratos": [
         {
@@ -147,15 +147,15 @@
           "categoria": "base"
         },
         {
-          "nome": "FRANGO AO MOLHO SUGO",
+          "nome": "ALMÔNDEGA AO MOLHO SUGO",
           "categoria": "carne"
         },
         {
-          "nome": "FAROFA DE COUVE",
+          "nome": "BATATA COZIDA",
           "categoria": "guarnicao"
         },
         {
-          "nome": "LENTILHA",
+          "nome": "ERVILHA",
           "categoria": "vegetariano"
         },
         {
@@ -163,33 +163,33 @@
           "categoria": "molho"
         },
         {
-          "nome": "SALADA DE ABOBRINHA",
+          "nome": "SALADA DE BETERRABA RALADA",
           "categoria": "salada"
         },
         {
-          "nome": "SALADA MIX DE FOLHAS",
+          "nome": "SALADA DE REPOLHO",
           "categoria": "salada"
         },
         {
-          "nome": "DOCINHO",
+          "nome": "FRUTA",
           "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "QUINTA",
-      "data": "10/9/2026",
+      "data": "17/9/2026",
       "itens": [
         "ARROZ",
         "ARROZ INTEGRAL",
         "FEIJÃO VERMELHO",
-        "CARNE MOÍDA COM LEGUMES",
-        "BATATA DORÊ",
-        "FEIJÃO BRANCO",
-        "MOLHO DE MOSTARDA",
-        "SALADA DE CENOURA COZIDA",
-        "SALADA DE ACELGA",
-        "FRUTA"
+        "LINGUIÇA TOSCANA",
+        "FAROFA DE CENOURA",
+        "LENTILHA",
+        "MOLHO ROSÊ",
+        "SALADA SELETA DE LEGUMES",
+        "SALADA MIX DE FOLHAS",
+        "DOCINHO"
       ],
       "pratos": [
         {
@@ -205,85 +205,27 @@
           "categoria": "base"
         },
         {
-          "nome": "CARNE MOÍDA COM LEGUMES",
+          "nome": "LINGUIÇA TOSCANA",
           "categoria": "carne"
         },
         {
-          "nome": "BATATA DORÊ",
+          "nome": "FAROFA DE CENOURA",
           "categoria": "guarnicao"
         },
         {
-          "nome": "FEIJÃO BRANCO",
+          "nome": "LENTILHA",
           "categoria": "vegetariano"
         },
         {
-          "nome": "MOLHO DE MOSTARDA",
+          "nome": "MOLHO ROSÊ",
           "categoria": "molho"
         },
         {
-          "nome": "SALADA DE CENOURA COZIDA",
+          "nome": "SALADA SELETA DE LEGUMES",
           "categoria": "salada"
         },
         {
-          "nome": "SALADA DE ACELGA",
-          "categoria": "salada"
-        },
-        {
-          "nome": "FRUTA",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "SEXTA",
-      "data": "11/9/2026",
-      "itens": [
-        "ARROZ",
-        "ARROZ INTEGRAL",
-        "FEIJÃO CARIOCA COM ABÓBORA",
-        "PEIXE EMPANADO",
-        "PIRÃO",
-        "GRÃO DE BICO",
-        "VINAGRETE",
-        "SALADA DE BETERRABA RALADA",
-        "MIX DE FOLHAS",
-        "DOCINHO"
-      ],
-      "pratos": [
-        {
-          "nome": "ARROZ",
-          "categoria": "base"
-        },
-        {
-          "nome": "ARROZ INTEGRAL",
-          "categoria": "base"
-        },
-        {
-          "nome": "FEIJÃO CARIOCA COM ABÓBORA",
-          "categoria": "base"
-        },
-        {
-          "nome": "PEIXE EMPANADO",
-          "categoria": "carne"
-        },
-        {
-          "nome": "PIRÃO",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "GRÃO DE BICO",
-          "categoria": "salada"
-        },
-        {
-          "nome": "VINAGRETE",
-          "categoria": "salada"
-        },
-        {
-          "nome": "SALADA DE BETERRABA RALADA",
-          "categoria": "salada"
-        },
-        {
-          "nome": "MIX DE FOLHAS",
+          "nome": "SALADA MIX DE FOLHAS",
           "categoria": "salada"
         },
         {
@@ -293,75 +235,17 @@
       ]
     },
     {
-      "dia": "SÁBADO",
-      "data": "12/9/2026",
-      "itens": [
-        "ARROZ",
-        "ARROZ INTEGRAL",
-        "FEIJÃO PRETO",
-        "LINGUIÇA TOSCANA",
-        "FAROFA DE CENOURA",
-        "PROTEINA DE SOJA",
-        "MOLHO ROSE",
-        "SALADA DE PEPINO",
-        "SALADA MIX DE REPOLHO",
-        "FRUTA"
-      ],
-      "pratos": [
-        {
-          "nome": "ARROZ",
-          "categoria": "base"
-        },
-        {
-          "nome": "ARROZ INTEGRAL",
-          "categoria": "base"
-        },
-        {
-          "nome": "FEIJÃO PRETO",
-          "categoria": "base"
-        },
-        {
-          "nome": "LINGUIÇA TOSCANA",
-          "categoria": "carne"
-        },
-        {
-          "nome": "FAROFA DE CENOURA",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "PROTEINA DE SOJA",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "MOLHO ROSE",
-          "categoria": "molho"
-        },
-        {
-          "nome": "SALADA DE PEPINO",
-          "categoria": "salada"
-        },
-        {
-          "nome": "SALADA MIX DE REPOLHO",
-          "categoria": "salada"
-        },
-        {
-          "nome": "FRUTA",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "DOMINGO",
-      "data": "13/9/2026",
+      "dia": "SEXTA",
+      "data": "18/9/2026",
       "itens": [
         "ARROZ",
         "ARROZ INTEGRAL",
         "FEIJÃO CARIOCA",
-        "BISTECA AO MOLHO BARBECUE",
-        "ESPAGUETE AO ALHO E OLEO",
-        "LENTILHA",
-        "MOLHO DE MOSTARDA",
-        "SALADA DE TOMATE COM CEBOLA",
+        "FRANGO XADREZ",
+        "BATATA PALHA",
+        "FEIJÃO BRANCO",
+        "MOLHO VERDE",
+        "SALADA DE ABOBRINHA",
         "SALADA DE ACELGA",
         "FRUTA"
       ],
@@ -379,23 +263,23 @@
           "categoria": "base"
         },
         {
-          "nome": "BISTECA AO MOLHO BARBECUE",
+          "nome": "FRANGO XADREZ",
           "categoria": "carne"
         },
         {
-          "nome": "ESPAGUETE AO ALHO E OLEO",
+          "nome": "BATATA PALHA",
           "categoria": "guarnicao"
         },
         {
-          "nome": "LENTILHA",
+          "nome": "FEIJÃO BRANCO",
           "categoria": "vegetariano"
         },
         {
-          "nome": "MOLHO DE MOSTARDA",
+          "nome": "MOLHO VERDE",
           "categoria": "molho"
         },
         {
-          "nome": "SALADA DE TOMATE COM CEBOLA",
+          "nome": "SALADA DE ABOBRINHA",
           "categoria": "salada"
         },
         {
@@ -407,9 +291,125 @@
           "categoria": "sobremesa"
         }
       ]
+    },
+    {
+      "dia": "SÁBADO",
+      "data": "19/9/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO CARIOCA",
+        "CARNE MOÍDA COM LEGUMES",
+        "MIX LEGUMES COZIDOS",
+        "PROTEINA DE SOJA",
+        "MOLHO DE MOSTARDA",
+        "SALADA DE CENOURA",
+        "MIX DE FOLHAS",
+        "DOCINHO"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO CARIOCA",
+          "categoria": "base"
+        },
+        {
+          "nome": "CARNE MOÍDA COM LEGUMES",
+          "categoria": "carne"
+        },
+        {
+          "nome": "MIX LEGUMES COZIDOS",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "PROTEINA DE SOJA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO DE MOSTARDA",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE CENOURA",
+          "categoria": "salada"
+        },
+        {
+          "nome": "MIX DE FOLHAS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "DOCINHO",
+          "categoria": "sobremesa"
+        }
+      ]
+    },
+    {
+      "dia": "DOMINGO",
+      "data": "20/9/2026",
+      "itens": [
+        "ARROZ",
+        "ARROZ INTEGRAL",
+        "FEIJÃO PRETO",
+        "FRANGO AO SUGO",
+        "ESPAGUETE AO ALHO E OLEO",
+        "ERVILHA",
+        "MOLHO VINAGRETE",
+        "SALADA DE LEGUMES COZIDOS",
+        "MIX DE FOLHAS",
+        "FRUTA"
+      ],
+      "pratos": [
+        {
+          "nome": "ARROZ",
+          "categoria": "base"
+        },
+        {
+          "nome": "ARROZ INTEGRAL",
+          "categoria": "base"
+        },
+        {
+          "nome": "FEIJÃO PRETO",
+          "categoria": "base"
+        },
+        {
+          "nome": "FRANGO AO SUGO",
+          "categoria": "carne"
+        },
+        {
+          "nome": "ESPAGUETE AO ALHO E OLEO",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "ERVILHA",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "MOLHO VINAGRETE",
+          "categoria": "molho"
+        },
+        {
+          "nome": "SALADA DE LEGUMES COZIDOS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "MIX DE FOLHAS",
+          "categoria": "salada"
+        },
+        {
+          "nome": "FRUTA",
+          "categoria": "sobremesa"
+        }
+      ]
     }
   ],
-  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/09/CARD%C3%81PIO-07-A-13-DE-SETEMBRO.pdf",
+  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/09/CARD%C3%81PIO-14-A-20-DE-SETEMBRO.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-09-09T17:33:30.702Z"
+  "atualizadoEm": "2026-09-14T17:40:21.428Z"
 }
