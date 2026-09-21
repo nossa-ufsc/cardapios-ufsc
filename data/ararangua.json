@@ -1,17 +1,19 @@
 {
-  "diaInicial": "14/09/2026",
-  "diaFinal": "20/09/2026",
+  "diaInicial": "21/09/2026",
+  "diaFinal": "27/09/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA-FEIRA",
-      "data": "14/09/2026",
+      "data": "21/09/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
-        "Feijão carioca",
+        "Feijão",
         "Proteína Vegetal",
-        "FRANGO ASSADO AÇAFRÃO C/ ALECRIM",
-        "MACARRÃO AO MOLHO BRANCO"
+        "ISCAS DE FRANGO GROCANTE EMPANADA",
+        "MACARRÃO AO",
+        "MOLHO",
+        "POMODORO"
       ],
       "pratos": [
         {
@@ -23,7 +25,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Feijão carioca",
+          "nome": "Feijão",
           "categoria": "base"
         },
         {
@@ -31,18 +33,18 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "FRANGO ASSADO AÇAFRÃO C/ ALECRIM",
+          "nome": "ISCAS DE FRANGO GROCANTE EMPANADA",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
-            "gluten": false
+            "gluten": true
           }
         },
         {
-          "nome": "MACARRÃO AO MOLHO BRANCO",
+          "nome": "MACARRÃO AO MOLHO POMODORO",
           "categoria": "guarnicao",
           "alergenos": {
-            "lacteos": true,
+            "lacteos": false,
             "gluten": true,
             "origemAnimal": true
           }
@@ -50,23 +52,19 @@
         {
           "nome": "2 opções",
           "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "TERÇA-FEIRA",
-      "data": "15/09/2026",
+      "data": "22/09/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
-        "Feijão preto",
+        "Feijão",
         "Proteína Vegetal",
-        "LOMBO SUINO AO MOLHO ORIENTAL",
-        "FAROFA C/ CENOURA"
+        "PEIXE A MILANESA",
+        "PIRÃO DE PEIXE"
       ],
       "pratos": [
         {
@@ -78,7 +76,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Feijão preto",
+          "nome": "Feijão",
           "categoria": "base"
         },
         {
@@ -86,135 +84,19 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "LOMBO SUINO AO MOLHO ORIENTAL",
-          "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          },
-          "ingredientes": "LOMBO SUINO, CEBOLA, TOMATE, PIEMENTÃO, SHOYU, E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "FAROFA C/ CENOURA",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false,
-            "origemAnimal": false
-          }
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "QUARTA-FEIRA",
-      "data": "16/09/2026",
-      "itens": [
-        "Arroz branco",
-        "Arroz integral",
-        "Feijão carioca",
-        "Proteína Vegetal",
-        "FRANGO À",
-        "PARMEGIANA",
-        "MACARRÃO AO ALHO E OLEO"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão carioca",
-          "categoria": "base"
-        },
-        {
-          "nome": "Proteína Vegetal",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "FRANGO À PARMEGIANA",
+          "nome": "PEIXE A MILANESA",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
             "gluten": true
           },
-          "ingredientes": "PEITO DE FRANGO, FARINHA DE ROSCA, FARINHA DE TRIGO, MOLHO TOMATE, E TEMPEROS NATURAIS."
+          "ingredientes": "FILE DE PEIXE, FARINHA DE ROSCA FARINHA DE TRIGO, E TEMPEROS NATURAIS."
         },
         {
-          "nome": "MACARRÃO AO ALHO E OLEO",
+          "nome": "PIRÃO DE PEIXE",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": true
-          },
-          "ingredientes": "MACARRÃO, ALHO, E ÓLEO, E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "QUINTA-FEIRA",
-      "data": "17/09/2026",
-      "itens": [
-        "Arroz branco",
-        "Arroz integral",
-        "Feijão preto",
-        "Proteína vegetal",
-        "CHILLI COM CARNE SIMPLES",
-        "PURÊ BATATA DOCÊ"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Proteína vegetal",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "CHILLI COM CARNE SIMPLES",
-          "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          }
-        },
-        {
-          "nome": "PURÊ",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "BATATA DOCÊ",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "lacteos": true,
             "gluten": false,
             "origemAnimal": true
           }
@@ -222,24 +104,20 @@
         {
           "nome": "2 opções",
           "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
         }
       ]
     },
     {
-      "dia": "SEXTA-FEIRA",
-      "data": "18/09/2026",
+      "dia": "QUARTA-FEIRA",
+      "data": "23/09/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
-        "Feijão carioca",
+        "Feijão",
         "Proteína Vegetal",
-        "LASANHA DE",
-        "FRANGO",
-        "FAROFA SIMPLES"
+        "FILÉ DE FRANGO GRELHADO À CEBOLADO",
+        "MACARRÃO OO",
+        "MOLHO PESTO"
       ],
       "pratos": [
         {
@@ -251,7 +129,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Feijão carioca",
+          "nome": "Feijão",
           "categoria": "base"
         },
         {
@@ -259,72 +137,15 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "LASANHA DE FRANGO",
+          "nome": "FILÉ DE FRANGO GRELHADO À CEBOLADO",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": true,
+            "lacteos": false,
             "gluten": false
           }
         },
         {
-          "nome": "FAROFA SIMPLES",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false,
-            "origemAnimal": false
-          },
-          "ingredientes": "FARINHA MANDIOCA, E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "SÁBADO",
-      "data": "19/09/2026",
-      "itens": [
-        "Arroz branco",
-        "Arroz integral",
-        "Feijão preto",
-        "Proteína vegetal",
-        "FRICASSÊ DE FRANGO",
-        "MACARRÃO AO MOLHO SUGO"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Proteína vegetal",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "FRICASSÊ DE FRANGO",
-          "categoria": "carne",
-          "alergenos": {
-            "lacteos": true,
-            "gluten": false
-          },
-          "ingredientes": "PEITO DE FRANGO, CREME DE LEITE, LEITE, REQUEIJÃO E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "MACARRÃO AO MOLHO SUGO",
+          "nome": "MACARRÃO OO MOLHO PESTO",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
@@ -335,22 +156,18 @@
         {
           "nome": "2 opções",
           "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
         }
       ]
     },
     {
-      "dia": "DOMINGO",
-      "data": "20/09/2026",
+      "dia": "QUINTA-FEIRA",
+      "data": "24/09/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
-        "Feijão carioca",
+        "Feijão",
         "Proteína vegetal",
-        "ALMONDEGAS AO MOLHO POMODORO",
+        "CARNE DE PANELA OU MOLHO MADEIRA",
         "POLENTA TRADICIONAL"
       ],
       "pratos": [
@@ -363,7 +180,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Feijão carioca",
+          "nome": "Feijão",
           "categoria": "base"
         },
         {
@@ -371,11 +188,11 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "ALMONDEGAS AO MOLHO POMODORO",
+          "nome": "CARNE DE PANELA OU MOLHO MADEIRA",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
-            "gluten": true
+            "gluten": false
           }
         },
         {
@@ -383,22 +200,175 @@
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": true,
+            "gluten": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "FARINHA DE MILHO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        }
+      ]
+    },
+    {
+      "dia": "SEXTA-FEIRA",
+      "data": "25/09/2026",
+      "itens": [
+        "Arroz branco",
+        "Arroz integral",
+        "Feijão",
+        "Proteína Vegetal",
+        "FRANGO GRELHADO OU MOLHO BRANCO REGRADO DE ERVILHAS",
+        "REPOLHO REFOGADO"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína Vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "FRANGO GRELHADO OU MOLHO BRANCO REGRADO DE ERVILHAS",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": false
+          }
+        },
+        {
+          "nome": "REPOLHO REFOGADO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": false,
             "origemAnimal": false
           }
         },
         {
           "nome": "2 opções",
           "categoria": "salada"
+        }
+      ]
+    },
+    {
+      "dia": "SÁBADO",
+      "data": "26/09/2026",
+      "itens": [
+        "Arroz branco",
+        "Arroz integral",
+        "Feijão",
+        "Proteína vegetal",
+        "LASANHA À BOLHOESA",
+        "FAROFA",
+        "TRADICIONAL"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
         },
         {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "LASANHA À BOLHOESA",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": true
+          },
+          "ingredientes": "CARNE MOIDA, MASSA LASANHA, MOLHO BRANCO, E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "FAROFA TRADICIONAL",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false,
+            "origemAnimal": false
+          }
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
+        }
+      ]
+    },
+    {
+      "dia": "DOMINGO",
+      "data": "27/09/2026",
+      "itens": [
+        "Arroz branco",
+        "Arroz integral",
+        "Feijão",
+        "Proteína vegetal",
+        "STROGONOFF DE FRANGO CREMOSO",
+        "MACARRÃO AO ALHO E OLEO"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "STROGONOFF DE FRANGO CREMOSO",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": true,
+            "gluten": false
+          }
+        },
+        {
+          "nome": "MACARRÃO AO ALHO E OLEO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true,
+            "origemAnimal": true
+          },
+          "ingredientes": "MACARRÃO, OLEO, ALHO, E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "2 opções",
+          "categoria": "salada"
         }
       ]
     }
   ],
-  "fonteUrl": "http://ararangua.paginas.ufsc.br/files/2024/07/CARDAPIO-De-17-A-23-MAR-.pdf",
+  "fonteUrl": "https://ara.ufsc.br/files/2024/07/CARDAPIO-21-%C3%83_-27-SET.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-09-16T18:07:51.560Z"
+  "atualizadoEm": "2026-09-21T17:49:49.627Z"
 }
