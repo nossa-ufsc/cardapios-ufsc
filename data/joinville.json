@@ -11,14 +11,13 @@
         "Chá de Erva doce Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
         "Fruta",
         "Salada de Pepino",
-        "Salada de acelga",
-        "Molho oriental",
+        "Salada de acelga Molho oriental",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Preto",
         "Batata palha",
         "Ervilha",
-        "Frango ao molho sugo",
-        "Fruta"
+        "Frango ao molho sugo Fruta"
       ],
       "pratos": [
         {
@@ -42,12 +41,8 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada de acelga",
+          "nome": "Salada de acelga Molho oriental",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho oriental",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -55,6 +50,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Preto",
           "categoria": "base"
         },
         {
@@ -66,12 +65,8 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Frango ao molho sugo",
+          "nome": "Frango ao molho sugo Fruta",
           "categoria": "carne"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
         }
       ]
     },
@@ -81,15 +76,14 @@
       "itens": [
         "Café passado",
         "Leite",
-        "Chá de Hortelã",
-        "Pão tipo francês c/ geléia",
+        "Chá de Hortelã Pão tipo francês c/ geléia",
         "Pão doce tipo cuca",
         "Fruta",
         "Salada de cenoura ralada",
-        "Salada mix de folhas",
-        "Molho de mostarda",
+        "Salada mix de folhas Molho de mostarda",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Carioca",
         "Farofa de couve",
         "Proteína de soja Bisteca suína ao molho oriental Pudim"
       ],
@@ -103,11 +97,7 @@
           "categoria": "outro"
         },
         {
-          "nome": "Chá de Hortelã",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Pão tipo francês c/ geléia",
+          "nome": "Chá de Hortelã Pão tipo francês c/ geléia",
           "categoria": "outro"
         },
         {
@@ -123,12 +113,8 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de folhas",
+          "nome": "Salada mix de folhas Molho de mostarda",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho de mostarda",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -136,6 +122,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Carioca",
           "categoria": "base"
         },
         {
@@ -152,22 +142,21 @@
       "dia": "QUARTA",
       "data": "23/9/2026",
       "itens": [
-        "Café passado",
+        "CAFÉ DA MANHÃ (07:00 às 08:30) Exclusivo para alunos isentos de pagamento. Café passado",
         "Leite",
         "Chá de Erva doce Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
-        "Fruta ALMOÇO / JANTAR (11:30 às 13:30 e das 17:00 às 19:00) Salada de tabule",
-        "Salada de acelga",
-        "Molho rosê",
+        "Fruta ALMOÇO / JANTAR (11:00 às 13:30 e das 17:00 às 19:00) Salada de tabule",
+        "Salada de acelga Molho rosê",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Preto",
         "Batata dorê",
         "Lentilha",
-        "Carne moída com legumes",
-        "Fruta"
+        "Almôndega ao sugo Fruta"
       ],
       "pratos": [
         {
-          "nome": "Café passado",
+          "nome": "CAFÉ DA MANHÃ (07:00 às 08:30) Exclusivo para alunos isentos de pagamento. Café passado",
           "categoria": "outro"
         },
         {
@@ -179,16 +168,12 @@
           "categoria": "outro"
         },
         {
-          "nome": "Fruta ALMOÇO / JANTAR (11:30 às 13:30 e das 17:00 às 19:00) Salada de tabule",
+          "nome": "Fruta ALMOÇO / JANTAR (11:00 às 13:30 e das 17:00 às 19:00) Salada de tabule",
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de acelga",
+          "nome": "Salada de acelga Molho rosê",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho rosê",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -196,6 +181,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Preto",
           "categoria": "base"
         },
         {
@@ -207,12 +196,8 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Carne moída com legumes",
+          "nome": "Almôndega ao sugo Fruta",
           "categoria": "carne"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
         }
       ]
     },
@@ -220,25 +205,23 @@
       "dia": "QUINTA",
       "data": "24/9/2026",
       "itens": [
-        "CAFÉ DA MANHÃ (07:00 às 08:30) Café passado",
+        "Café passado",
         "Leite",
-        "Chá de erva cidreira",
-        "Pão tipo francês c/ geléia",
+        "Chá de erva cidreira Pão tipo francês c/ geléia",
         "Pão doce tipo cuca",
         "Fruta",
         "Salada de beterraba cozida",
-        "Salada mix de repolho",
-        "Molho verde",
+        "Salada mix de repolho Molho verde",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Vermelho",
         "Polenta cremosa",
         "Feijão Branco",
-        "Frango ao molho xadrez",
-        "Docinho"
+        "Frango ao molho xadrez Docinho"
       ],
       "pratos": [
         {
-          "nome": "CAFÉ DA MANHÃ (07:00 às 08:30) Café passado",
+          "nome": "Café passado",
           "categoria": "outro"
         },
         {
@@ -246,11 +229,7 @@
           "categoria": "outro"
         },
         {
-          "nome": "Chá de erva cidreira",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Pão tipo francês c/ geléia",
+          "nome": "Chá de erva cidreira Pão tipo francês c/ geléia",
           "categoria": "outro"
         },
         {
@@ -266,12 +245,8 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de repolho",
+          "nome": "Salada mix de repolho Molho verde",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho verde",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -279,6 +254,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Vermelho",
           "categoria": "base"
         },
         {
@@ -290,12 +269,8 @@
           "categoria": "outro"
         },
         {
-          "nome": "Frango ao molho xadrez",
+          "nome": "Frango ao molho xadrez Docinho",
           "categoria": "carne"
-        },
-        {
-          "nome": "Docinho",
-          "categoria": "sobremesa"
         }
       ]
     },
@@ -308,14 +283,13 @@
         "Chá de Erva doce Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
         "Fruta",
         "Salada mix de legumes",
-        "Salada de acelga",
-        "Molho Vinagrete",
+        "Salada de acelga Molho Vinagrete",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Preto",
         "Farofa de cenoura",
         "Ervilha",
-        "Bisteca suína acebolada",
-        "Fruta"
+        "Bisteca suína acebolada Fruta"
       ],
       "pratos": [
         {
@@ -339,12 +313,8 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada de acelga",
+          "nome": "Salada de acelga Molho Vinagrete",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho Vinagrete",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -352,6 +322,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Preto",
           "categoria": "base"
         },
         {
@@ -363,12 +337,8 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Bisteca suína acebolada",
+          "nome": "Bisteca suína acebolada Fruta",
           "categoria": "carne"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
         }
       ]
     },
@@ -378,19 +348,17 @@
       "itens": [
         "Café passado",
         "Leite",
-        "Chá de erva cidreira",
-        "Pão tipo francês c/ geléia",
+        "Chá de erva cidreira Pão tipo francês c/ geléia",
         "Pão doce tipo cuca",
         "Fruta",
         "Salada de beterraba ralada",
-        "Salada mix de folhas",
-        "Molho de limão",
+        "Salada mix de folhas Molho de limão",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Carioca",
         "Macarrão ao alho e óleo",
         "Proteína de soja",
-        "Almôndega ao sugo",
-        "Gelatina"
+        "Carne moída com legumes Gelatina"
       ],
       "pratos": [
         {
@@ -402,11 +370,7 @@
           "categoria": "outro"
         },
         {
-          "nome": "Chá de erva cidreira",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Pão tipo francês c/ geléia",
+          "nome": "Chá de erva cidreira Pão tipo francês c/ geléia",
           "categoria": "outro"
         },
         {
@@ -422,12 +386,8 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de folhas",
+          "nome": "Salada mix de folhas Molho de limão",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho de limão",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -435,6 +395,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Carioca",
           "categoria": "base"
         },
         {
@@ -446,12 +410,8 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Almôndega ao sugo",
+          "nome": "Carne moída com legumes Gelatina",
           "categoria": "carne"
-        },
-        {
-          "nome": "Gelatina",
-          "categoria": "sobremesa"
         }
       ]
     },
@@ -464,14 +424,13 @@
         "Chá de Hortelã Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
         "Fruta",
         "Salada de cenoura cozida",
-        "Salada de repolho",
-        "Molho de ervas finas",
+        "Salada de repolho Molho de ervas finas",
         "Arroz Parboilizado",
         "Arroz Integral",
+        "Feijão Preto",
         "Mix de legumes cozidos",
         "Grão de bico",
-        "Frango acebolado",
-        "Fruta"
+        "Frango acebolado Fruta"
       ],
       "pratos": [
         {
@@ -495,12 +454,8 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada de repolho",
+          "nome": "Salada de repolho Molho de ervas finas",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho de ervas finas",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -508,6 +463,10 @@
         },
         {
           "nome": "Arroz Integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão Preto",
           "categoria": "base"
         },
         {
@@ -519,17 +478,13 @@
           "categoria": "salada"
         },
         {
-          "nome": "Frango acebolado",
+          "nome": "Frango acebolado Fruta",
           "categoria": "carne"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
         }
       ]
     }
   ],
-  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/09/card%C3%A1pio-21-set-a-27-set-1.pdf",
+  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/09/Modelo-card%C3%A1pio-RU-UFSC-SEMANA-21-1.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-09-16T18:07:50.266Z"
+  "atualizadoEm": "2026-09-21T17:54:34.510Z"
 }
