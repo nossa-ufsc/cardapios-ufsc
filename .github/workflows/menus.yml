@@ -8,7 +8,8 @@ name: Gerar Cardápios
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7 14 * * 1,3" # seg/qua 11:07 BRT (14:07 UTC) — fora do minuto :00 p/ evitar drop de agendados
+    - cron: "7 14 * * 1,3"  # seg/qua 11:07 BRT (14:07 UTC) — fora do minuto :00 p/ evitar drop de agendados
+    - cron: "37 14 * * 1,3" # backup ~30min depois; o GitHub descarta agendados sob carga (sobretudo nas segundas). O job de commit é idempotente, então rodar 2x é inofensivo.
 
 concurrency:
   group: gerar-cardapios
