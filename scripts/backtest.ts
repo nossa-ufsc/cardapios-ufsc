@@ -13,7 +13,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Menu, MenuItem } from '../src/lib/types.js';
 import { violacoes, LABELS_POR_CAMPUS } from '../src/lib/validate.js';
-import { parseTrindadePdf } from '../src/campus/trindade.js';
+import { parseTrindadePdf, parseTrindadeDocx } from '../src/campus/trindade.js';
 import { parseJoinvillePdf } from '../src/campus/joinville.js';
 import { parseAraranguaPdf } from '../src/campus/ararangua.js';
 import { parseCuritibanosPdf } from '../src/campus/curitibanos.js';
@@ -34,8 +34,8 @@ function parseData(s: string): Date | null {
   return isNaN(d.getTime()) ? null : d;
 }
 
-async function parsear(campus: string, buf: Uint8Array, anoDoArquivo: number): Promise<Menu> {
-  if (campus === 'trindade') return parseTrindadePdf(buf);
+async function parsear(campus: string, buf: Uint8Array, anoDoArquivo: number, nome = ''): Promise<Menu> {
+  if (campus === 'trindade') return /\.docx$/i.test(nome) ? parseTrindadeDocx(buf) : parseTrindadePdf(buf);
   if (campus === 'joinville') return parseJoinvillePdf(buf);
   if (campus === 'ararangua') return parseAraranguaPdf(buf, anoDoArquivo);
   if (campus === 'cca') return parseCcaPdf(buf);
@@ -80,7 +80,7 @@ async function main() {
       let resultado: Menu | null = null;
       let erros: string[] = [];
       try {
-        resultado = await parsear(campus, buf, anoDoArquivo(arq));
+        resultado = await parsear(campus, buf, anoDoArquivo(arq), arq);
         erros = violacoes(resultado, { labels: LABELS_POR_CAMPUS[CAMPUS_KEY[campus]] });
       } catch (e) {
         erros = [`EXCEÇÃO: ${e instanceof Error ? e.message : String(e)}`];

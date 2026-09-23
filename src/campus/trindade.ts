@@ -9,6 +9,9 @@
 //   C) tabela colunar Seg–Sex (semana de terceirizada, jul/2026): sem data por dia,
 //      intervalo apenas no título ("Cardápio de 27 à 31/07/2026").
 //   D) lista B com data por extenso "7 de setembro de 2026" (set/2026+).
+//   E) o mesmo layout B publicado como .docx em vez de PDF (semana 21-27/09/2026):
+//      a tabela do Word é convertida em itens posicionados sintéticos (lib/docx.ts)
+//      e passa pelo MESMO parser de lista.
 //
 // Por isso o parser é multi-estratégia: tenta a lista (detectando A vs B pela
 // posição da linha de arroz), cai para a tabela genérica, e pontua o melhor
@@ -18,6 +21,7 @@ import type { CampusScraper, Menu, MenuItem, MenuPrato, MenuCategoria, MenuRefei
 import { carregarPagina, resolverUrl } from '../lib/html.js';
 import { fetchBinary } from '../lib/http.js';
 import { extrairItens, agruparEmLinhas, numeroDePaginas, type TextItem } from '../lib/pdf.js';
+import { extrairItensDocx } from '../lib/docx.js';
 import { extrairSemana, DIAS_MAIUSCULO_FEIRA } from '../lib/table.js';
 import { parseDataExtenso, normalizarData, extrairData } from '../lib/dates.js';
 import { alocarSlots, inferirDatas, indiceDoDia, type DiaParseado } from '../lib/slots.js';
@@ -29,7 +33,7 @@ import {
 const URL_SITE = 'https://ru.ufsc.br/ru/';
 
 const REGEX_DIA = /segunda|ter[çc]a|quarta|quinta|sexta|s[áa]bado|domingo/i;
-const REGEX_CORTE = /lista de ingredientes|card[áa]pio sujeito/i;
+const REGEX_CORTE = /lista de ingredientes|prepara[çc][õo]es e ingredientes|card[áa]pio sujeito/i;
 const X_ESQUERDA = 110; // coluna do dia/data; conteúdo fica à direita disso
 
 function parseDataTrindade(raw: string): string | null {
@@ -276,12 +280,32 @@ function parsearPagina(itens: TextItem[]): MenuItem[] | null {
 
 /** Parse puro a partir do buffer do PDF (exportado para backtest). */
 export async function parseTrindadePdf(buf: Uint8Array): Promise<Menu> {
-  let dias = parsearPagina(await extrairItens(buf, 1));
+  const n = await numeroDePaginas(buf);
+  const paginas: TextItem[][] = [];
+  for (let p = 1; p <= n; p++) paginas.push(await extrairItens(buf, p));
+  return parseTrindadePaginas(paginas);
+}
+
+/**
+ * Parse puro a partir do .docx (layout E). Células com vários parágrafos na linha
+ * do arroz viram um único item "Arroz parboilizado / Arroz integral / Feijão",
+ * como no PDF; nas demais, cada parágrafo é um item.
+ */
+export function parseTrindadeDocx(buf: Uint8Array): Menu {
+  const itens = extrairItensDocx(buf, {
+    celula: (ps) => (/^arroz\b/i.test(ps[0]) ? [ps.join(' / ')] : ps),
+  });
+  return parseTrindadePaginas([itens]);
+}
+
+/** Núcleo compartilhado: recebe os itens posicionados de cada página. */
+export function parseTrindadePaginas(paginas: TextItem[][]): Menu {
+  let dias = parsearPagina(paginas[0] ?? []);
 
   // Semanas que estendem para a página 2 (raro): parseia a página SEPARADAMENTE
   // (os espaços de coordenadas y são independentes) e preenche só os slots vazios.
-  if (pontuacao(dias) < 5 && (await numeroDePaginas(buf)) > 1) {
-    const p2 = parsearPagina(await extrairItens(buf, 2));
+  if (pontuacao(dias) < 5 && paginas.length > 1) {
+    const p2 = parsearPagina(paginas[1]);
     if (p2) {
       if (!dias) dias = p2;
       else {
@@ -291,10 +315,10 @@ export async function parseTrindadePdf(buf: Uint8Array): Promise<Menu> {
     }
   }
 
-  if (!dias) throw new Error('Não foi possível reconhecer o layout do PDF do RU Trindade.');
+  if (!dias) throw new Error('Não foi possível reconhecer o layout do cardápio do RU Trindade.');
 
   // v2: lista de ingredientes (páginas seguintes) → `ingredientes` + alergênicos por prato.
-  const ingredientes = await extrairListaDeIngredientes(buf);
+  const ingredientes = extrairListaDeIngredientes(paginas);
   dias = dias.map((d, i) =>
     d.pratos?.length ? { ...d, pratos: anexarIngredientes(d.pratos, ingredientes.get(i)) } : d
   );
@@ -319,9 +343,8 @@ const REGEX_CABECALHO_DIA = /^(segunda|ter[çc]a|quarta|quinta|sexta|s[áa]bado|
 const REGEX_ENTRADA = /^([A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 ,.'’()\-\/]{1,80}?):\s*(.*)$/;
 
 /** Mapa slot do dia (0-6) → { nomeNormalizado → ingredientes }. */
-async function extrairListaDeIngredientes(buf: Uint8Array): Promise<Map<number, Map<string, string>>> {
+function extrairListaDeIngredientes(paginas: TextItem[][]): Map<number, Map<string, string>> {
   const porDia = new Map<number, Map<string, string>>();
-  const paginas = await numeroDePaginas(buf);
   let diaAtual: number | null = null;
   let entradaAtual: { dia: number; chave: string; texto: string } | null = null;
   let dentroDaLista = false;
@@ -334,12 +357,12 @@ async function extrairListaDeIngredientes(buf: Uint8Array): Promise<Map<number, 
     entradaAtual = null;
   };
 
-  for (let p = 1; p <= paginas; p++) {
-    const linhas = agruparEmLinhas(await extrairItens(buf, p));
+  for (const pagina of paginas) {
+    const linhas = agruparEmLinhas(pagina);
     for (const linha of linhas) {
       const texto = linha.map((c) => c.str).join(' ').trim();
       if (!dentroDaLista) {
-        if (/lista de ingredientes/i.test(texto)) dentroDaLista = true;
+        if (REGEX_CORTE.test(texto) && !/card[áa]pio sujeito/i.test(texto)) dentroDaLista = true;
         continue;
       }
       if (REGEX_CABECALHO_DIA.test(texto)) {
@@ -366,8 +389,9 @@ async function scrape(): Promise<Menu> {
   const $ = await carregarPagina(URL_SITE);
   // A página intercala cardápios de almoço com "CARDÁPIO CAFÉ" (café da manhã,
   // layout diferente) — e o café costuma ser o último link da semana. Filtramos
-  // sobre o href DECODIFICADO (acentos chegam URL-encoded).
-  const candidatos = $(".content li a[href$='.pdf']")
+  // sobre o href DECODIFICADO (acentos chegam URL-encoded). O RU já publicou a
+  // semana como .docx em vez de PDF (21-27/09/2026), então aceitamos ambos.
+  const candidatos = $(".content li a[href$='.pdf'], .content li a[href$='.docx']")
     .toArray()
     .map((el) => $(el).attr('href'))
     .filter((h): h is string => {
@@ -380,7 +404,8 @@ async function scrape(): Promise<Menu> {
 
   const url = resolverUrl(ultimo, URL_SITE);
   const buf = await fetchBinary(url);
-  return { ...(await parseTrindadePdf(buf)), fonteUrl: url };
+  const menu = /\.docx$/i.test(url) ? parseTrindadeDocx(buf) : await parseTrindadePdf(buf);
+  return { ...menu, fonteUrl: url };
 }
 
 export const trindade: CampusScraper = { campus: 'florianopolis', scrape };

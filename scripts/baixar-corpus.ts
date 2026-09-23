@@ -14,7 +14,7 @@ const FONTES: { campus: string; url: string; seletor: string; filtro?: (hrefDeco
   {
     campus: 'trindade',
     url: 'https://ru.ufsc.br/ru/',
-    seletor: ".content li a[href$='.pdf']",
+    seletor: ".content li a[href$='.pdf'], .content li a[href$='.docx']",
     filtro: (h) => !/caf[ée]/i.test(h),
   },
   { campus: 'joinville', url: 'https://restaurante.joinville.ufsc.br/cardapio-da-semana/', seletor: "#content a[href$='.pdf']" },
