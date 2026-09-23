@@ -8,7 +8,7 @@
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão",
         "Bife acebolado",
-        "COMPLEMENTO: Brócolis e couve-flor",
+        "COMPLEMENTO: Abobrinha refogada",
         "Chicória",
         "Cenoura ralada",
         "Vinagrete",
@@ -35,9 +35,8 @@
           "ingredientes": "coxão mole bovino, cebola, óleo de soja, sal, alho em pasta, alho em pasta, sal, pimenta do reino, orégano"
         },
         {
-          "nome": "Brócolis e couve-flor",
-          "categoria": "guarnicao",
-          "ingredientes": "brócolis, couve-flor, sal"
+          "nome": "Abobrinha refogada",
+          "categoria": "guarnicao"
         },
         {
           "nome": "Chicória",
@@ -132,7 +131,7 @@
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão",
         "Filé mignon suíno à portuguesa",
-        "COMPLEMENTO: Cenoura e chuchu sautée",
+        "COMPLEMENTO: Cenoura e chuchu cozidos",
         "Acelga",
         "Beterraba Ralada",
         "Molho de ervas",
@@ -158,8 +157,9 @@
           "categoria": "carne"
         },
         {
-          "nome": "Cenoura e chuchu sautée",
-          "categoria": "guarnicao"
+          "nome": "Cenoura e chuchu cozidos",
+          "categoria": "guarnicao",
+          "ingredientes": "chuchu, cenoura, sal, tempero verde"
         },
         {
           "nome": "Acelga",
@@ -342,7 +342,7 @@
           "alergenos": {
             "gluten": true
           },
-          "ingredientes": "cenoura, leite, cebola, farinha de trigo, tempero verde, sal , noz moscada. Contém glúten e lactose."
+          "ingredientes": "cenoura, leite, cebola, farinha de trigo, tempero verde, sal , noz moscada. Contém glúten e lactose ."
         },
         {
           "nome": "Alface",
@@ -421,7 +421,7 @@
     "almoco",
     "jantar"
   ],
-  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/09/RESTAURANTE-UNIVERSIT%C3%81RIO-card%C3%A1pio-21-27.09.docx",
+  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/09/Card%C3%A1pio-RU-Trindade-21.09.2026-a-27.09.2026.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-09-23T12:37:17.688Z"
+  "atualizadoEm": "2026-09-23T18:21:31.428Z"
 }
