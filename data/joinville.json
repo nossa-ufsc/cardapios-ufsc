@@ -1,23 +1,23 @@
 {
-  "diaInicial": "21/9/2026",
-  "diaFinal": "27/9/2026",
+  "diaInicial": "28/9/2026",
+  "diaFinal": "4/10/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA",
-      "data": "21/9/2026",
+      "data": "28/9/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de Erva doce Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
         "Fruta",
         "Salada de Pepino",
-        "Salada de acelga Molho oriental",
+        "Salada de acelga Molho de mostarda",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
         "Batata palha",
         "Ervilha",
-        "Frango ao molho sugo Fruta"
+        "Fricassê de frango Fruta"
       ],
       "pratos": [
         {
@@ -41,7 +41,7 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada de acelga Molho oriental",
+          "nome": "Salada de acelga Molho de mostarda",
           "categoria": "salada"
         },
         {
@@ -65,27 +65,27 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Frango ao molho sugo Fruta",
+          "nome": "Fricassê de frango Fruta",
           "categoria": "carne"
         }
       ]
     },
     {
       "dia": "TERÇA",
-      "data": "22/9/2026",
+      "data": "29/9/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de Hortelã Pão tipo francês c/ geléia",
-        "Pão doce tipo cuca",
+        "Bolo de cenoura",
         "Fruta",
-        "Salada de cenoura ralada",
-        "Salada mix de folhas Molho de mostarda",
+        "Salada duo de cenoura e repolho roxo ralados Salada mix de folhas Molho de limão",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Carioca",
         "Farofa de couve",
-        "Proteína de soja Bisteca suína ao molho oriental Pudim"
+        "Proteína de soja",
+        "Bisteca suína acebolada Gelatina"
       ],
       "pratos": [
         {
@@ -101,19 +101,15 @@
           "categoria": "outro"
         },
         {
-          "nome": "Pão doce tipo cuca",
-          "categoria": "outro"
+          "nome": "Bolo de cenoura",
+          "categoria": "sobremesa"
         },
         {
           "nome": "Fruta",
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de cenoura ralada",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Salada mix de folhas Molho de mostarda",
+          "nome": "Salada duo de cenoura e repolho roxo ralados Salada mix de folhas Molho de limão",
           "categoria": "salada"
         },
         {
@@ -133,26 +129,30 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Proteína de soja Bisteca suína ao molho oriental Pudim",
+          "nome": "Proteína de soja",
           "categoria": "vegetariano"
+        },
+        {
+          "nome": "Bisteca suína acebolada Gelatina",
+          "categoria": "carne"
         }
       ]
     },
     {
       "dia": "QUARTA",
-      "data": "23/9/2026",
+      "data": "30/9/2026",
       "itens": [
         "CAFÉ DA MANHÃ (07:00 às 08:30) Exclusivo para alunos isentos de pagamento. Café passado",
         "Leite",
         "Chá de Erva doce Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
-        "Fruta ALMOÇO / JANTAR (11:00 às 13:30 e das 17:00 às 19:00) Salada de tabule",
-        "Salada de acelga Molho rosê",
+        "Fruta ALMOÇO / JANTAR (11:00 às 13:30 e das 17:00 às 19:00) Salada de beterraba cozida",
+        "Salada de acelga Molho oriental",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
-        "Batata dorê",
+        "Polenta cremosa",
         "Lentilha",
-        "Almôndega ao sugo Fruta"
+        "Carne moída com legumes Fruta"
       ],
       "pratos": [
         {
@@ -168,11 +168,11 @@
           "categoria": "outro"
         },
         {
-          "nome": "Fruta ALMOÇO / JANTAR (11:00 às 13:30 e das 17:00 às 19:00) Salada de tabule",
+          "nome": "Fruta ALMOÇO / JANTAR (11:00 às 13:30 e das 17:00 às 19:00) Salada de beterraba cozida",
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de acelga Molho rosê",
+          "nome": "Salada de acelga Molho oriental",
           "categoria": "salada"
         },
         {
@@ -188,7 +188,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Batata dorê",
+          "nome": "Polenta cremosa",
           "categoria": "guarnicao"
         },
         {
@@ -196,26 +196,26 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Almôndega ao sugo Fruta",
+          "nome": "Carne moída com legumes Fruta",
           "categoria": "carne"
         }
       ]
     },
     {
       "dia": "QUINTA",
-      "data": "24/9/2026",
+      "data": "1/10/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de erva cidreira Pão tipo francês c/ geléia",
         "Pão doce tipo cuca",
         "Fruta",
-        "Salada de beterraba cozida",
+        "Salada mix de legumes",
         "Salada mix de repolho Molho verde",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Vermelho",
-        "Polenta cremosa",
+        "Farofa Crocante",
         "Feijão Branco",
         "Frango ao molho xadrez Docinho"
       ],
@@ -241,7 +241,7 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de beterraba cozida",
+          "nome": "Salada mix de legumes",
           "categoria": "salada"
         },
         {
@@ -261,7 +261,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Polenta cremosa",
+          "nome": "Farofa Crocante",
           "categoria": "guarnicao"
         },
         {
@@ -276,20 +276,20 @@
     },
     {
       "dia": "SEXTA",
-      "data": "25/9/2026",
+      "data": "2/10/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de Erva doce Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
         "Fruta",
-        "Salada mix de legumes",
+        "Salada de abobrinha",
         "Salada de acelga Molho Vinagrete",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
-        "Farofa de cenoura",
+        "Pirão",
         "Ervilha",
-        "Bisteca suína acebolada Fruta"
+        "Peixe empanado Fruta"
       ],
       "pratos": [
         {
@@ -309,7 +309,7 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada mix de legumes",
+          "nome": "Salada de abobrinha",
           "categoria": "salada"
         },
         {
@@ -329,7 +329,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Farofa de cenoura",
+          "nome": "Pirão",
           "categoria": "guarnicao"
         },
         {
@@ -337,28 +337,28 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Bisteca suína acebolada Fruta",
+          "nome": "Peixe empanado Fruta",
           "categoria": "carne"
         }
       ]
     },
     {
       "dia": "SÁBADO",
-      "data": "26/9/2026",
+      "data": "3/10/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de erva cidreira Pão tipo francês c/ geléia",
-        "Pão doce tipo cuca",
+        "Bolo de fubá",
         "Fruta",
         "Salada de beterraba ralada",
-        "Salada mix de folhas Molho de limão",
+        "Salada mix de folhas Molho rosê",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Carioca",
-        "Macarrão ao alho e óleo",
+        "Batata cozida",
         "Proteína de soja",
-        "Carne moída com legumes Gelatina"
+        "Almôndega ao sugo Sagu"
       ],
       "pratos": [
         {
@@ -374,8 +374,8 @@
           "categoria": "outro"
         },
         {
-          "nome": "Pão doce tipo cuca",
-          "categoria": "outro"
+          "nome": "Bolo de fubá",
+          "categoria": "sobremesa"
         },
         {
           "nome": "Fruta",
@@ -386,7 +386,7 @@
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de folhas Molho de limão",
+          "nome": "Salada mix de folhas Molho rosê",
           "categoria": "salada"
         },
         {
@@ -402,7 +402,7 @@
           "categoria": "base"
         },
         {
-          "nome": "Macarrão ao alho e óleo",
+          "nome": "Batata cozida",
           "categoria": "guarnicao"
         },
         {
@@ -410,27 +410,27 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Carne moída com legumes Gelatina",
+          "nome": "Almôndega ao sugo Sagu",
           "categoria": "carne"
         }
       ]
     },
     {
       "dia": "DOMINGO",
-      "data": "27/9/2026",
+      "data": "4/10/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de Hortelã Pão tipo francês c/ creme vegetal Pão doce tipo cuca",
         "Fruta",
-        "Salada de cenoura cozida",
+        "Salada de pepino",
         "Salada de repolho Molho de ervas finas",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
         "Mix de legumes cozidos",
         "Grão de bico",
-        "Frango acebolado Fruta"
+        "Frango ao molho vermelho Fruta"
       ],
       "pratos": [
         {
@@ -450,7 +450,7 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de cenoura cozida",
+          "nome": "Salada de pepino",
           "categoria": "salada"
         },
         {
@@ -478,13 +478,13 @@
           "categoria": "salada"
         },
         {
-          "nome": "Frango acebolado Fruta",
+          "nome": "Frango ao molho vermelho Fruta",
           "categoria": "carne"
         }
       ]
     }
   ],
-  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/09/Modelo-card%C3%A1pio-RU-UFSC-SEMANA-21-1.pdf",
+  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/09/CARD%C3%81PIO-28-SET-A-04-OUT-1.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-09-23T18:35:06.112Z"
+  "atualizadoEm": "2026-09-28T20:30:12.578Z"
 }
