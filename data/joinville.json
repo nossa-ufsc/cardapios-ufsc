@@ -1,23 +1,25 @@
 {
-  "diaInicial": "5/10/2026",
-  "diaFinal": "11/10/2026",
+  "diaInicial": "12/10/2026",
+  "diaFinal": "18/10/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA",
-      "data": "5/10/2026",
+      "data": "12/10/2026",
       "itens": [
         "Café passado",
         "Leite",
-        "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de cenoura",
+        "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de fubá",
         "Fruta",
-        "Salada de pepino",
-        "Salada de acelga",
+        "Salada de Pepino",
+        "Salada de repolho",
         "Molho de mostarda",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
-        "Batata palha",
-        "Ervilha refogada Frango ao molho de mostarda Fruta"
+        "Polenta cremosa",
+        "Ervilha refogada",
+        "Frango ao molho sugo",
+        "Fruta"
       ],
       "pratos": [
         {
@@ -29,7 +31,7 @@
           "categoria": "outro"
         },
         {
-          "nome": "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de cenoura",
+          "nome": "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de fubá",
           "categoria": "outro"
         },
         {
@@ -37,11 +39,11 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de pepino",
+          "nome": "Salada de Pepino",
           "categoria": "salada"
         },
         {
-          "nome": "Salada de acelga",
+          "nome": "Salada de repolho",
           "categoria": "salada"
         },
         {
@@ -61,31 +63,41 @@
           "categoria": "base"
         },
         {
-          "nome": "Batata palha",
+          "nome": "Polenta cremosa",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Ervilha refogada Frango ao molho de mostarda Fruta",
+          "nome": "Ervilha refogada",
           "categoria": "vegetariano"
+        },
+        {
+          "nome": "Frango ao molho sugo",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "TERÇA",
-      "data": "6/10/2026",
+      "data": "13/10/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá cidreira Pão tipo francês c/ geléia Pão doce tipo cuca",
         "Fruta",
-        "Salada de beterraba ralada",
-        "Salada mix de folhas",
+        "Salada de cenoura cozida",
+        "Salada Mix de folhas",
         "Molho rosê",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Carioca",
-        "Farofa de cenoura",
-        "Proteína de soja Bisteca Suína ao molho barbecue Sagu de uva"
+        "Aipim cozido",
+        "Proteína de soja",
+        "Bisteca acebolada",
+        "Pudim"
       ],
       "pratos": [
         {
@@ -105,11 +117,11 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de beterraba ralada",
+          "nome": "Salada de cenoura cozida",
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de folhas",
+          "nome": "Salada Mix de folhas",
           "categoria": "salada"
         },
         {
@@ -129,32 +141,41 @@
           "categoria": "base"
         },
         {
-          "nome": "Farofa de cenoura",
+          "nome": "Aipim cozido",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Proteína de soja Bisteca Suína ao molho barbecue Sagu de uva",
+          "nome": "Proteína de soja",
           "categoria": "vegetariano"
+        },
+        {
+          "nome": "Bisteca acebolada",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Pudim",
+          "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "QUARTA",
-      "data": "7/10/2026",
+      "data": "14/10/2026",
       "itens": [
         "CAFÉ DA MANHÃ (07:00 às 08:30) Exclusivo para alunos isentos de pagamento.",
         "Café passado",
         "Leite",
-        "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de fubá",
+        "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de banana",
         "Fruta",
-        "ALMOÇO / JANTAR (11:00 às 13:30 / 17:00 às 19:00) Salada mix de abobrinha e cenoura cozida",
+        "ALMOÇO / JANTAR (11:00 às 13:30 / 17:00 às 19:00)",
+        "Salada de beterraba ralada",
         "Salada de acelga",
         "Molho de limão",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
-        "Macarrão ao alho e óleo",
-        "Lentilha refogada Frango ao molho oriental Fruta"
+        "Batata palha",
+        "Lentilha refogada Frango ao creme de milho Fruta"
       ],
       "pratos": [
         {
@@ -170,7 +191,7 @@
           "categoria": "outro"
         },
         {
-          "nome": "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de fubá",
+          "nome": "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de banana",
           "categoria": "outro"
         },
         {
@@ -178,8 +199,12 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "ALMOÇO / JANTAR (11:00 às 13:30 / 17:00 às 19:00) Salada mix de abobrinha e cenoura cozida",
+          "nome": "ALMOÇO / JANTAR (11:00 às 13:30 / 17:00 às 19:00)",
           "categoria": "outro"
+        },
+        {
+          "nome": "Salada de beterraba ralada",
+          "categoria": "salada"
         },
         {
           "nome": "Salada de acelga",
@@ -202,33 +227,30 @@
           "categoria": "base"
         },
         {
-          "nome": "Macarrão ao alho e óleo",
+          "nome": "Batata palha",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Lentilha refogada Frango ao molho oriental Fruta",
+          "nome": "Lentilha refogada Frango ao creme de milho Fruta",
           "categoria": "vegetariano"
         }
       ]
     },
     {
       "dia": "QUINTA",
-      "data": "8/10/2026",
+      "data": "15/10/2026",
       "itens": [
         "Café passado",
         "Leite",
         "Chá de hortelã Pão tipo francês c/ geléia Pão doce tipo cuca",
         "Fruta",
-        "Salada de chuchu com milho verde",
-        "Salada mix de folhas",
-        "Molho vinagrete",
+        "Salada duo de cenoura e abobrinha cozida",
+        "Salada de repolho colorido Molho vinagrete",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Vermelho",
-        "Batata doce cozida",
-        "Grão de bico ao sugo",
-        "Almôndega ao sugo",
-        "Docinho"
+        "Batata Souté",
+        "Feijão branco Carne moída com legumes Docinho"
       ],
       "pratos": [
         {
@@ -248,16 +270,12 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de chuchu com milho verde",
+          "nome": "Salada duo de cenoura e abobrinha cozida",
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de folhas",
+          "nome": "Salada de repolho colorido Molho vinagrete",
           "categoria": "salada"
-        },
-        {
-          "nome": "Molho vinagrete",
-          "categoria": "molho"
         },
         {
           "nome": "Arroz Parboilizado",
@@ -272,39 +290,31 @@
           "categoria": "base"
         },
         {
-          "nome": "Batata doce cozida",
+          "nome": "Batata Souté",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Grão de bico ao sugo",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "Almôndega ao sugo",
+          "nome": "Feijão branco Carne moída com legumes Docinho",
           "categoria": "carne"
-        },
-        {
-          "nome": "Docinho",
-          "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "SEXTA",
-      "data": "9/10/2026",
+      "data": "16/10/2026",
       "itens": [
         "Café passado",
         "Leite",
-        "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de milho",
+        "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de cenoura",
         "Fruta",
-        "Salada de cenoura cozida",
-        "Salada mix de repolho roxo com acelga Molho rosê",
+        "Salada de beterraba cozida com milho verde",
+        "Salada de acelga com almeirão Molho rosê",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
-        "Pirão",
+        "Canjiquinha",
         "Lentilha refogada",
-        "Peixe empanado",
+        "Frango assado",
         "Fruta"
       ],
       "pratos": [
@@ -317,7 +327,7 @@
           "categoria": "outro"
         },
         {
-          "nome": "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de milho",
+          "nome": "Chá de erva doce Pão tipo francês c/ creme vegetal Bolo de cenoura",
           "categoria": "outro"
         },
         {
@@ -325,11 +335,11 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Salada de cenoura cozida",
+          "nome": "Salada de beterraba cozida com milho verde",
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de repolho roxo com acelga Molho rosê",
+          "nome": "Salada de acelga com almeirão Molho rosê",
           "categoria": "salada"
         },
         {
@@ -345,15 +355,15 @@
           "categoria": "base"
         },
         {
-          "nome": "Pirão",
-          "categoria": "guarnicao"
+          "nome": "Canjiquinha",
+          "categoria": "outro"
         },
         {
           "nome": "Lentilha refogada",
           "categoria": "vegetariano"
         },
         {
-          "nome": "Peixe empanado",
+          "nome": "Frango assado",
           "categoria": "carne"
         },
         {
@@ -364,19 +374,17 @@
     },
     {
       "dia": "SÁBADO",
-      "data": "10/10/2026",
+      "data": "17/10/2026",
       "itens": [
         "SEM ATENDIMENTO",
-        "Salada de pepino",
-        "Salada mix de folhas",
+        "Salada de chuchu cozido",
+        "Salada de repolho roxo",
         "Molho oriental",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Carioca",
-        "Polenta cremosa",
-        "Ervilha refogada",
-        "Frango acebolado",
-        "Gelatina"
+        "Farofa de cenoura",
+        "Ervilha refogada Bisteca suína ao molho oriental Arroz doce"
       ],
       "pratos": [
         {
@@ -384,11 +392,11 @@
           "categoria": "outro"
         },
         {
-          "nome": "Salada de pepino",
+          "nome": "Salada de chuchu cozido",
           "categoria": "salada"
         },
         {
-          "nome": "Salada mix de folhas",
+          "nome": "Salada de repolho roxo",
           "categoria": "salada"
         },
         {
@@ -408,39 +416,31 @@
           "categoria": "base"
         },
         {
-          "nome": "Polenta cremosa",
+          "nome": "Farofa de cenoura",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Ervilha refogada",
+          "nome": "Ervilha refogada Bisteca suína ao molho oriental Arroz doce",
           "categoria": "vegetariano"
-        },
-        {
-          "nome": "Frango acebolado",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Gelatina",
-          "categoria": "sobremesa"
         }
       ]
     },
     {
       "dia": "DOMINGO",
-      "data": "11/10/2026",
+      "data": "18/10/2026",
       "itens": [
-        "Salada de beterraba cozida",
+        "Salada mix de legumes",
         "Salada de acelga",
         "Molho verde",
         "Arroz Parboilizado",
         "Arroz Integral",
         "Feijão Preto",
-        "Batata cozida",
-        "Feijão Branco Bisteca suína ao molho oriental Fruta"
+        "Macarrão ao alho e óleo",
+        "Grão de bico Almôndegas ao molho de tomate Fruta"
       ],
       "pratos": [
         {
-          "nome": "Salada de beterraba cozida",
+          "nome": "Salada mix de legumes",
           "categoria": "salada"
         },
         {
@@ -464,17 +464,17 @@
           "categoria": "base"
         },
         {
-          "nome": "Batata cozida",
+          "nome": "Macarrão ao alho e óleo",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Feijão Branco Bisteca suína ao molho oriental Fruta",
-          "categoria": "carne"
+          "nome": "Grão de bico Almôndegas ao molho de tomate Fruta",
+          "categoria": "vegetariano"
         }
       ]
     }
   ],
-  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/10/CARD%C3%81PIO-5-OUT-A-11-OUT.pdf",
+  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/10/CARD%C3%81PIO-12-OUT-A-18-OUT.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-10-05T21:36:14.024Z"
+  "atualizadoEm": "2026-10-07T19:52:24.049Z"
 }
