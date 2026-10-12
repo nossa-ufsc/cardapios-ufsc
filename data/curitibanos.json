@@ -1,93 +1,31 @@
 {
-  "diaInicial": "05/10/2026",
-  "diaFinal": "11/10/2026",
+  "diaInicial": "12/10/2026",
+  "diaFinal": "18/10/2026",
   "cardapio": [
     {
       "dia": "Segunda feira",
-      "data": "05/10/2026",
+      "data": "12/10/2026",
       "itens": [
-        "Tabule",
-        "Folhas",
-        "Fruta",
-        "Arroz",
-        "Arroz integral",
-        "Feijão preto",
-        "Farofa",
-        "Macarrão Molho",
-        "Rosé",
-        "Moída à",
-        "Parmegiana",
-        "Pts molho Branco"
-      ],
-      "pratos": [
-        {
-          "nome": "Tabule",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Folhas",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Macarrão Molho",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Rosé",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Moída à Parmegiana",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Pts molho Branco",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Terça feira",
-      "data": "06/10/2026",
-      "itens": [
-        "Mix de folhas",
-        "LegumesCozido",
+        "Mix salada",
+        "Do dia",
         "Elaborada",
         "Arroz",
         "Arroz integral",
         "Feijão vermelho",
         "Farofa",
-        "Batata gratinada",
-        "Lombo suíno com molho de maçã",
-        "Lentilha Tropeira"
+        "Mandioca",
+        "Dourada com",
+        "Ervas",
+        "Bisteca suina com molho de maçã",
+        "Pts bolinho"
       ],
       "pratos": [
         {
-          "nome": "Mix de folhas",
+          "nome": "Mix salada",
           "categoria": "salada"
         },
         {
-          "nome": "LegumesCozido",
+          "nome": "Do dia",
           "categoria": "salada"
         },
         {
@@ -111,42 +49,50 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Batata gratinada",
+          "nome": "Mandioca",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Lombo suíno com molho de maçã",
+          "nome": "Dourada com",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Ervas",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Bisteca suina com molho de maçã",
           "categoria": "carne"
         },
         {
-          "nome": "Lentilha Tropeira",
+          "nome": "Pts bolinho",
           "categoria": "vegetariano"
         }
       ]
     },
     {
-      "dia": "Quarta feira",
-      "data": "07/10/2026",
+      "dia": "Terça feira",
+      "data": "13/10/2026",
       "itens": [
-        "Do dia",
-        "Mix leg cozido",
+        "Folhas cruas",
+        "Legumes cozido",
         "Fruta",
         "Arroz",
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Polenta",
-        "Cremosa",
-        "Frango assado",
-        "Grão de bico molho"
+        "Espaguete Alho e",
+        "Óleo",
+        "Fricasse frango",
+        "Ovo Cozido"
       ],
       "pratos": [
         {
-          "nome": "Do dia",
+          "nome": "Folhas cruas",
           "categoria": "salada"
         },
         {
-          "nome": "Mix leg cozido",
+          "nome": "Legumes cozido",
           "categoria": "salada"
         },
         {
@@ -170,49 +116,49 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Polenta",
+          "nome": "Espaguete Alho e",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Cremosa",
+          "nome": "Óleo",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Frango assado",
+          "nome": "Fricasse frango",
           "categoria": "carne"
         },
         {
-          "nome": "Grão de bico molho",
+          "nome": "Ovo Cozido",
           "categoria": "vegetariano"
         }
       ]
     },
     {
-      "dia": "Quinta feira",
-      "data": "08/10/2026",
+      "dia": "Quarta feira",
+      "data": "14/10/2026",
       "itens": [
-        "Do dia",
-        "Vinagrete",
-        "Elaborada",
+        "Tabule",
+        "Refogado",
+        "Fruta",
         "Arroz",
         "Arroz integral",
         "Feijão carioca",
         "Farofa",
-        "Batata Palha",
-        "Strogonoff carne",
-        "Panqueca pts"
+        "Purê de batata",
+        "Carne de panela",
+        "Panqueca lentilha"
       ],
       "pratos": [
         {
-          "nome": "Do dia",
+          "nome": "Tabule",
           "categoria": "salada"
         },
         {
-          "nome": "Vinagrete",
+          "nome": "Refogado",
           "categoria": "salada"
         },
         {
-          "nome": "Elaborada",
+          "nome": "Fruta",
           "categoria": "sobremesa"
         },
         {
@@ -232,34 +178,33 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Batata Palha",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Strogonoff carne",
+          "nome": "Purê de batata",
           "categoria": "carne"
         },
         {
-          "nome": "Panqueca pts",
+          "nome": "Carne de panela",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Panqueca lentilha",
           "categoria": "vegetariano"
         }
       ]
     },
     {
-      "dia": "Sexta feira",
-      "data": "09/10/2026",
+      "dia": "Quinta feira",
+      "data": "15/10/2026",
       "itens": [
         "Folhas",
-        "Tabule",
+        "Mix legumes",
         "Elaborada",
         "Arroz",
         "Arroz integral",
-        "Feijão preto",
+        "Feijão vermelho",
         "Farofa",
-        "Nhoque ao",
-        "Molho",
-        "Bisteca Suína",
-        "Pts c legumes"
+        "Bolinho de Arroz",
+        "Linguiça assada",
+        "Legumes proteína"
       ],
       "pratos": [
         {
@@ -267,132 +212,7 @@
           "categoria": "salada"
         },
         {
-          "nome": "Tabule",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Elaborada",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Nhoque ao",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Molho",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Bisteca Suína",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Pts c legumes",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Sábado",
-      "data": "10/10/2026",
-      "itens": [
-        "Do dia",
-        "Mix",
-        "Fruta",
-        "Arroz",
-        "Arroz integral",
-        "Feijão preto",
-        "Farofa",
-        "Creme de",
-        "Mandioca",
-        "Ragu Bovino",
-        "Bolinho lentilha"
-      ],
-      "pratos": [
-        {
-          "nome": "Do dia",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Mix",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Arroz",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão preto",
-          "categoria": "base"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Creme de",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Mandioca",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Ragu Bovino",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Bolinho lentilha",
-          "categoria": "vegetariano"
-        }
-      ]
-    },
-    {
-      "dia": "Domingo",
-      "data": "11/10/2026",
-      "itens": [
-        "Salpicão de repolho",
-        "Legumes cozido",
-        "Elaborada",
-        "Arroz",
-        "Arroz integral",
-        "Feijão vermelho",
-        "Farofa",
-        "Purê Batata",
-        "Frango empanado",
-        "Omelete colorido"
-      ],
-      "pratos": [
-        {
-          "nome": "Salpicão de repolho",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Legumes cozido",
+          "nome": "Mix legumes",
           "categoria": "salada"
         },
         {
@@ -416,15 +236,195 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Purê Batata",
+          "nome": "Bolinho de Arroz",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Frango empanado",
+          "nome": "Linguiça assada",
           "categoria": "carne"
         },
         {
-          "nome": "Omelete colorido",
+          "nome": "Legumes proteína",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Sexta feira",
+      "data": "16/10/2026",
+      "itens": [
+        "Do dia",
+        "Vinagrete",
+        "Fruta",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Batata á",
+        "Portuguesa",
+        "Sobrecoxa",
+        "Dourada",
+        "Grão de bico bolinho"
+      ],
+      "pratos": [
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Batata á",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Portuguesa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Sobrecoxa Dourada",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Grão de bico bolinho",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Sábado",
+      "data": "17/10/2026",
+      "itens": [
+        "Folhas",
+        "Do dia",
+        "Fruta",
+        "Arroz",
+        "Arroz integral",
+        "Feijão vermelho",
+        "Farofa",
+        "Penne cremoso com milho e ervas",
+        "Empanado de peixe",
+        "Legumes proteína"
+      ],
+      "pratos": [
+        {
+          "nome": "Folhas",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão vermelho",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Penne cremoso com milho e ervas",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Empanado de peixe",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Legumes proteína",
+          "categoria": "vegetariano"
+        }
+      ]
+    },
+    {
+      "dia": "Domingo",
+      "data": "18/10/2026",
+      "itens": [
+        "Maionese",
+        "Mix",
+        "Elaborada",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Arroz Biro Biro",
+        "Frango grelhado na mant c ervas",
+        "Panqueca pts"
+      ],
+      "pratos": [
+        {
+          "nome": "Maionese",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Mix",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Elaborada",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "base"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Arroz Biro Biro",
+          "categoria": "base"
+        },
+        {
+          "nome": "Frango grelhado na mant c ervas",
+          "categoria": "carne"
+        },
+        {
+          "nome": "Panqueca pts",
           "categoria": "vegetariano"
         }
       ]
@@ -436,5 +436,5 @@
   ],
   "fonteUrl": "http://restaurante.paginas.ufsc.br/files/2026/10/Card%C3%A1pio-Outubro-2026.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-10-07T20:07:07.600Z"
+  "atualizadoEm": "2026-10-12T22:16:50.431Z"
 }
