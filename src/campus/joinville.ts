@@ -7,8 +7,15 @@ import { fetchBinary } from '../lib/http.js';
 import { extrairItens } from '../lib/pdf.js';
 import { extrairSemana, DIAS_MAIUSCULO } from '../lib/table.js';
 import { classificarPorNome, inferirPorVizinhos, extrairRefeicao, prato } from '../lib/categorias.js';
+import { selecionarSemanaAtual } from '../lib/week.js';
+import { hojeBrasilia } from '../lib/dates.js';
 
 const URL_SITE = 'https://restaurante.joinville.ufsc.br/cardapio-da-semana/';
+
+// O RU publica a semana seguinte antes da atual acabar (ex.: 26/10–1º/11 já no ar
+// em 22/10), então "último link" não é "semana atual". Parseamos os mais recentes
+// e escolhemos pela data.
+const CANDIDATOS = 3;
 
 const RUIDO = /cardápio sujeito|sujeito à altera|nutricionista|CRN\s*\d/i;
 
@@ -48,13 +55,26 @@ export async function parseJoinvillePdf(buf: Uint8Array): Promise<Menu> {
 
 async function scrape(): Promise<Menu> {
   const $ = await carregarPagina(URL_SITE);
-  const links = $("#content a[href$='.pdf']");
-  const ultimo = links.last().attr('href');
-  if (!ultimo) throw new Error('Nenhum link de PDF encontrado no site do RU de Joinville.');
+  const hrefs = $("#content a[href$='.pdf']")
+    .map((_, a) => $(a).attr('href'))
+    .get()
+    .filter(Boolean);
+  if (!hrefs.length) throw new Error('Nenhum link de PDF encontrado no site do RU de Joinville.');
 
-  const url = resolverUrl(ultimo, URL_SITE);
-  const buf = await fetchBinary(url);
-  return { ...(await parseJoinvillePdf(buf)), fonteUrl: url };
+  const urls = [...new Set(hrefs.map((h) => resolverUrl(h, URL_SITE)))].slice(-CANDIDATOS);
+  const menus: Menu[] = [];
+  for (const url of urls) {
+    try {
+      menus.push({ ...(await parseJoinvillePdf(await fetchBinary(url))), fonteUrl: url });
+    } catch (err) {
+      console.error(`• Joinville: ignorando ${url} (${err instanceof Error ? err.message : err})`);
+    }
+  }
+  if (!menus.length) throw new Error('Nenhum PDF do RU de Joinville pôde ser lido.');
+
+  const semanas = menus.map((m) => m.cardapio as MenuItem[]);
+  const escolhida = selecionarSemanaAtual(semanas, hojeBrasilia());
+  return menus[semanas.indexOf(escolhida)];
 }
 
 export const joinville: CampusScraper = { campus: 'joinville', scrape };
