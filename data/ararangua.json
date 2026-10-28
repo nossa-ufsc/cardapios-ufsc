@@ -1,19 +1,17 @@
 {
-  "diaInicial": "26/10/2026",
-  "diaFinal": "01/11/2026",
+  "diaInicial": "02/11/2026",
+  "diaFinal": "08/11/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA-FEIRA",
-      "data": "26/10/2026",
+      "data": "02/11/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral Arroz integral",
         "Feijão",
         "Proteína vegetal",
-        "FRANGO LOMBO SUÍNO GRELHADO AO",
-        "REGADO DE ERVILHAS",
-        "MACARRÃO AO BATATA DOCE",
-        "MOLHO PESTO"
+        "ALMÔNDEGAS C/ ERVAS",
+        "MACARRÃO PURÊ DE BATATA AO PESTO"
       ],
       "pratos": [
         {
@@ -37,30 +35,19 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "FRANGO LOMBO SUÍNO GRELHADO AO",
-          "categoria": "carne"
-        },
-        {
-          "nome": "REGADO DE",
-          "categoria": "guarnicao",
+          "nome": "ALMÔNDEGAS C/ ERVAS",
+          "categoria": "carne",
           "alergenos": {
-            "lacteos": false
+            "lacteos": false,
+            "gluten": true
           }
         },
         {
-          "nome": "ERVILHAS",
-          "categoria": "vegetariano",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": true
-          }
-        },
-        {
-          "nome": "MACARRÃO AO BATATA DOCE MOLHO PESTO",
+          "nome": "MACARRÃO PURÊ DE BATATA AO PESTO",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": false
+            "gluten": true
           }
         },
         {
@@ -75,13 +62,14 @@
     },
     {
       "dia": "TERÇA-FEIRA",
-      "data": "27/10/2026",
+      "data": "03/11/2026",
       "itens": [
         "Arroz branco",
         "Feijão",
         "Proteína vegetal",
-        "ASSADO AO MOLHO ORIENTAL",
-        "ESPECIARIAS"
+        "AO MOLHO",
+        "POMODORO",
+        "MACARRÃO AO MOLHO BRANCO"
       ],
       "pratos": [
         {
@@ -97,27 +85,29 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "ASSADO AO MOLHO",
+          "nome": "AO MOLHO",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": true
-          }
-        },
-        {
-          "nome": "ORIENTAL",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "gluten": true,
             "lacteos": false
-          }
+          },
+          "ingredientes": "ALMÔNDEGAS, CEBOLA, MOLHO DE TOMATE, TOMATE E TEMPEROS NATURAIS."
         },
         {
-          "nome": "ESPECIARIAS",
-          "categoria": "outro",
+          "nome": "POMODORO",
+          "categoria": "guarnicao",
           "alergenos": {
             "gluten": false
           },
-          "ingredientes": "BATATA DOCE, TOMATE, CEBOLA, E TEMPEROS NATURAIS."
+          "ingredientes": "ALMÔNDEGAS, CEBOLA, MOLHO DE TOMATE, TOMATE E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "MACARRÃO AO MOLHO BRANCO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true
+          },
+          "ingredientes": "MACARRÃO, LEITE, CREME DE LEITE, MANTEIGA E TEMPEROS NATURAIS."
         },
         {
           "nome": "2 opções",
@@ -131,14 +121,12 @@
     },
     {
       "dia": "QUARTA-FEIRA",
-      "data": "28/10/2026",
+      "data": "04/11/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
         "Feijão",
-        "LASANHA DE FRANGO",
-        "FAROFA PIRÃO DE PEIXE",
-        "TRADICIONAL"
+        "FILÉ DE PEITO GRELHADO E ACEBOLADO"
       ],
       "pratos": [
         {
@@ -154,17 +142,8 @@
           "categoria": "base"
         },
         {
-          "nome": "LASANHA DE FRANGO",
+          "nome": "FILÉ DE PEITO GRELHADO E ACEBOLADO",
           "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          },
-          "ingredientes": "PEITO DE FRANGO, MASSA LASANHA, MOLHO BRANCO E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "FAROFA PIRÃO DE PEIXE TRADICIONAL",
-          "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
             "gluten": false
@@ -182,13 +161,14 @@
     },
     {
       "dia": "QUINTA-FEIRA",
-      "data": "29/10/2026",
+      "data": "05/11/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral Arroz integral",
         "Feijão",
         "Proteína Proteína vegetal vegetal",
-        "PEIXE À MILANESA"
+        "CARNE DE PANELA AO PARMEGIANA MOLHO MADEIRA",
+        "POLENTA TRADICIONAL"
       ],
       "pratos": [
         {
@@ -216,13 +196,33 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "PEIXE À MILANESA",
+          "nome": "CARNE DE PANELA AO PARMEGIANA",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": false,
-            "gluten": false
+            "lacteos": false
+          }
+        },
+        {
+          "nome": "MOLHO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "gluten": true
           },
-          "ingredientes": "FILÉ DE PEIXE, FARINHA DE ROSCA, FARINHA DE TRIGO E TEMPEROS NATURAIS."
+          "ingredientes": "MACARRÃO, LEITE, CREME DE LEITE, MANTEIGA E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "MADEIRA",
+          "categoria": "outro",
+          "ingredientes": "CARNE BOVINA, MOLHO MADEIRA, TOMATE, CEBOLA E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "POLENTA TRADICIONAL",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": true
+          },
+          "ingredientes": "FARINHA DE MILHO E TEMPEROS NATURAIS."
         },
         {
           "nome": "2 opções",
@@ -236,13 +236,13 @@
     },
     {
       "dia": "SEXTA-FEIRA",
-      "data": "30/10/2026",
+      "data": "06/11/2026",
       "itens": [
         "Arroz branco Arroz branco",
         "Arroz integral",
         "Feijão",
-        "FRANGO ALMÔNDEGAS GRELHADO AO MOLHO ACEBOLADO POMODORO",
-        "MORANGA QUIBEBE TRADICIONAL"
+        "FRANGO à LOMBO SUÍNO AO MOLHO",
+        "MACARRÃO SELETA DE ALHO E ÓLEO"
       ],
       "pratos": [
         {
@@ -262,20 +262,19 @@
           "categoria": "base"
         },
         {
-          "nome": "FRANGO ALMÔNDEGAS GRELHADO AO MOLHO ACEBOLADO POMODORO",
+          "nome": "FRANGO à LOMBO SUÍNO AO MOLHO",
           "categoria": "carne",
           "alergenos": {
             "lacteos": false,
-            "gluten": true
+            "gluten": false
           }
         },
         {
-          "nome": "MORANGA QUIBEBE TRADICIONAL",
+          "nome": "MACARRÃO SELETA DE ALHO E ÓLEO",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": false,
-            "origemAnimal": false
+            "gluten": false
           }
         },
         {
@@ -290,14 +289,14 @@
     },
     {
       "dia": "SÁBADO",
-      "data": "31/10/2026",
+      "data": "07/11/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
         "Feijão",
         "Proteína vegetal",
-        "STROGONOFF DE FRANGO",
-        "POLENTA MACARRÃO AO ALHO E ÓLEO"
+        "ORIENTAL",
+        "LEGUMES MODA DA CASA"
       ],
       "pratos": [
         {
@@ -317,20 +316,19 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "STROGONOFF DE FRANGO",
+          "nome": "ORIENTAL",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": true,
             "gluten": false
           },
-          "ingredientes": "PEITO DE FRANGO, CREME DE LEITE, REQUEIJÃO E TEMPEROS NATURAIS."
+          "ingredientes": "LOMBO SUÍNO, MOLHO SHOYU, TOMATE, PIMENTÃO, CEBOLA E TEMPEROS NATURAIS."
         },
         {
-          "nome": "POLENTA MACARRÃO AO ALHO E ÓLEO",
+          "nome": "LEGUMES MODA DA CASA",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
-            "gluten": true
+            "gluten": false
           }
         },
         {
@@ -345,11 +343,12 @@
     },
     {
       "dia": "DOMINGO",
-      "data": "01/11/2026",
+      "data": "08/11/2026",
       "itens": [
         "Feijão",
         "Proteína vegetal",
-        "CREMOSO"
+        "TOSCANA ASSADA",
+        "FAROFA À"
       ],
       "pratos": [
         {
@@ -361,24 +360,19 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "CREMOSO",
+          "nome": "TOSCANA ASSADA",
           "categoria": "carne",
-          "alergenos": {
-            "origemAnimal": true
-          }
+          "ingredientes": "TOSCANA E TEMPEROS NATURAIS."
         },
         {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
+          "nome": "FAROFA À",
+          "categoria": "guarnicao",
+          "ingredientes": "FARINHA DE MANDIOCA E TEMPEROS NATURAIS."
         }
       ]
     }
   ],
-  "fonteUrl": "https://ara.ufsc.br/files/2024/07/CARD%C3%81PIO-26-OUTUBRO-A-01-NOVEMBRO.pdf",
+  "fonteUrl": "https://ara.ufsc.br/files/2024/07/CARD%C3%81PIO-02-A-08-NOVEMBRO-3.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-10-26T20:06:24.571Z"
+  "atualizadoEm": "2026-10-28T19:26:48.014Z"
 }

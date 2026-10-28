@@ -234,7 +234,7 @@
         "COMPLEMENTO: Batata palha",
         "Repolho roxo e cenoura ralada",
         "Molho de ervas",
-        "Maçã"
+        "Gelatina"
       ],
       "pratos": [
         {
@@ -266,9 +266,9 @@
           "ingredientes": "batata palha industrializada (batata, óleo vegetal de palma e sal)"
         },
         {
-          "nome": "Maçã",
+          "nome": "Gelatina",
           "categoria": "sobremesa",
-          "ingredientes": "maçã"
+          "ingredientes": "açúcar, gelatina em pó, sal, reguladores de acidez ácido fumárico e citrato de sódio, aromatizantes e corantes (bordeaux S, amarelo crepúsculo FCF, azul brilhante FCF, tartrazina dependendo do sabor)"
         },
         {
           "nome": "Repolho roxo e cenoura ralada",
@@ -395,7 +395,7 @@
     "almoco",
     "jantar"
   ],
-  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/10/Restaurante-Universit%C3%A1rio-Card%C3%A1pio-26.10-01.11-1.pdf",
+  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/10/Restaurante-Universit%C3%A1rio-Card%C3%A1pio-26.10-01.11-2.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-10-26T20:06:24.071Z"
+  "atualizadoEm": "2026-10-28T19:26:43.294Z"
 }
