@@ -1,17 +1,17 @@
 {
-  "diaInicial": "09/11/2026",
-  "diaFinal": "15/11/2026",
+  "diaInicial": "16/11/2026",
+  "diaFinal": "22/11/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA-FEIRA",
-      "data": "09/11/2026",
+      "data": "16/11/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral Arroz integral",
         "Feijão",
         "Proteína vegetal Proteína vegetal",
-        "LOMBO SUÍNO",
-        "MACARRÃO AO PURÊ DE BATATA MOLHO POMODORO"
+        "MOLHO POMODORO",
+        "POLENTA MACARRÃO AO CREMOSA"
       ],
       "pratos": [
         {
@@ -39,16 +39,15 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "LOMBO SUÍNO",
+          "nome": "MOLHO",
           "categoria": "carne",
           "alergenos": {
-            "lacteos": false,
             "gluten": false
           },
-          "ingredientes": "LOMBO SUÍNO, ABACAXI E TEMPEROS NATURAIS."
+          "ingredientes": "MASSA TIPO ESPAGUETE, MOLHO BRANCO E TEMPEROS NATURAIS."
         },
         {
-          "nome": "MACARRÃO AO PURÊ DE BATATA MOLHO POMODORO",
+          "nome": "POMODORO",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
@@ -56,80 +55,25 @@
           }
         },
         {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "TERÇA-FEIRA",
-      "data": "10/11/2026",
-      "itens": [
-        "Arroz branco",
-        "Feijão",
-        "Proteína vegetal",
-        "FRANGO XADREZ ASSADO C/ ABACAXI",
-        "MACARRÃO AO"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão",
-          "categoria": "base"
-        },
-        {
-          "nome": "Proteína vegetal",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "FRANGO XADREZ ASSADO C/",
-          "categoria": "carne",
-          "alergenos": {
-            "lacteos": false
-          }
-        },
-        {
-          "nome": "ABACAXI",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "gluten": false
-          },
-          "ingredientes": "LOMBO SUÍNO, ABACAXI E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "MACARRÃO AO",
+          "nome": "POLENTA MACARRÃO AO CREMOSA",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
             "gluten": true,
             "origemAnimal": true
-          },
-          "ingredientes": "MACARRÃO, MANJERICÃO E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
+          }
         }
       ]
     },
     {
-      "dia": "QUARTA-FEIRA",
-      "data": "11/11/2026",
+      "dia": "TERÇA-FEIRA",
+      "data": "17/11/2026",
       "itens": [
         "Arroz branco",
-        "Arroz integral",
         "Feijão",
+        "Proteína vegetal",
+        "GALINHADA LOMBO SUÍNO",
+        "ESPECIAL NOVEMBRO NEGRO",
         "ALHO E ÓLEO"
       ],
       "pratos": [
@@ -138,158 +82,51 @@
           "categoria": "base"
         },
         {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
           "nome": "Feijão",
           "categoria": "base"
         },
         {
-          "nome": "ALHO E ÓLEO",
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "GALINHADA LOMBO SUÍNO",
           "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          }
+        },
+        {
+          "nome": "ESPECIAL NOVEMBRO",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "NEGRO",
+          "categoria": "outro"
+        },
+        {
+          "nome": "ALHO E ÓLEO",
+          "categoria": "outro",
           "alergenos": {
             "lacteos": false,
             "gluten": false
           },
           "ingredientes": "MACARRÃO, ALHO, ÓLEO E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
         }
       ]
     },
     {
-      "dia": "QUINTA-FEIRA",
-      "data": "12/11/2026",
-      "itens": [
-        "Arroz branco",
-        "Arroz integral Arroz integral",
-        "Feijão",
-        "Proteína Proteína vegetal vegetal",
-        "LASANHA À FILÉ DE FRANGO BOLONHESA",
-        "FAROFA MACARRÃO À TRADICIONAL"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão",
-          "categoria": "base"
-        },
-        {
-          "nome": "Proteína",
-          "categoria": "base"
-        },
-        {
-          "nome": "Proteína vegetal vegetal",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "LASANHA À FILÉ DE FRANGO BOLONHESA",
-          "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          }
-        },
-        {
-          "nome": "FAROFA MACARRÃO À TRADICIONAL",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": true
-          }
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "SEXTA-FEIRA",
-      "data": "13/11/2026",
-      "itens": [
-        "Arroz branco Arroz branco",
-        "Arroz integral",
-        "Feijão",
-        "ALMÔNDEGAS GRELHADO AO MOLHO ACEBOLADO",
-        "PRIMAVERA TRADICIONAL"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz branco",
-          "categoria": "base"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão",
-          "categoria": "base"
-        },
-        {
-          "nome": "ALMÔNDEGAS GRELHADO AO MOLHO ACEBOLADO",
-          "categoria": "carne",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": true
-          }
-        },
-        {
-          "nome": "PRIMAVERA TRADICIONAL",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "lacteos": false,
-            "gluten": false
-          }
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
-        }
-      ]
-    },
-    {
-      "dia": "SÁBADO",
-      "data": "14/11/2026",
+      "dia": "QUARTA-FEIRA",
+      "data": "18/11/2026",
       "itens": [
         "Arroz branco",
         "Arroz integral",
         "Feijão",
         "Proteína vegetal",
-        "FRICASSÊ DE",
-        "SUGO",
-        "POLENTA MACARRÃO AO"
+        "FILÉ DE FRANGO ASSADO FEIJOADA TRADICIONAL",
+        "ESPECIAL NOVEMBRO NEGRO",
+        "FAROFA MACARRÃO AO MOLHO BRANCO CROCANTE CONTÉMLÁCTEOS: SIM"
       ],
       "pratos": [
         {
@@ -309,42 +146,181 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "FRICASSÊ DE",
+          "nome": "FILÉ DE FRANGO ASSADO",
           "categoria": "carne",
-          "ingredientes": "FRANGO, CREME DE LEITE, TOMATE, CEBOLA, MOLHO DE TOMATE E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "SUGO",
-          "categoria": "guarnicao",
           "alergenos": {
-            "lacteos": true,
-            "gluten": true
+            "lacteos": false
           }
         },
         {
-          "nome": "POLENTA MACARRÃO AO",
+          "nome": "FEIJOADA",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "gluten": false
+          },
+          "ingredientes": "FEIJÃO, CALABRESA, BACON, COSTELINHA DE PORCO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "TRADICIONAL",
+          "categoria": "outro",
+          "ingredientes": "FEIJÃO, CALABRESA, BACON, COSTELINHA DE PORCO E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "ESPECIAL NOVEMBRO NEGRO FAROFA MACARRÃO AO MOLHO BRANCO CROCANTE CONTÉMLÁCTEOS: SIM",
+          "categoria": "outro",
+          "alergenos": {
+            "gluten": true
+          }
+        }
+      ]
+    },
+    {
+      "dia": "QUINTA-FEIRA",
+      "data": "19/11/2026",
+      "itens": [
+        "Arroz branco",
+        "Arroz integral Arroz integral",
+        "Feijão",
+        "Proteína vegetal",
+        "ACEBOLADO"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "ACEBOLADO",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false,
+            "origemAnimal": true
+          },
+          "ingredientes": "FILÉ DE PEITO DE FRANGO, CEBOLA E TEMPEROS NATURAIS."
+        }
+      ]
+    },
+    {
+      "dia": "SEXTA-FEIRA",
+      "data": "20/11/2026",
+      "itens": [
+        "Arroz branco Arroz branco",
+        "Arroz integral",
+        "Feijão",
+        "Proteína vegetal",
+        "CARNE À PRIMAVERA",
+        "MORANGA FAROFA À MODA DA CASA QUIBEBE"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "CARNE À PRIMAVERA",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          },
+          "ingredientes": "CARNE BOVINA, MILHO, ERVILHA E TEMPEROS NATURAIS."
+        },
+        {
+          "nome": "MORANGA FAROFA À MODA DA CASA QUIBEBE",
           "categoria": "guarnicao",
           "alergenos": {
             "lacteos": false,
+            "gluten": false,
+            "origemAnimal": false
+          }
+        }
+      ]
+    },
+    {
+      "dia": "SÁBADO",
+      "data": "21/11/2026",
+      "itens": [
+        "Arroz branco",
+        "Arroz integral",
+        "Feijão",
+        "Proteína vegetal",
+        "TOSCANA FRICASSÊ DE ASSADA",
+        "MACARRÃO AO"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz branco",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base"
+        },
+        {
+          "nome": "Proteína vegetal",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "TOSCANA FRICASSÊ DE ASSADA",
+          "categoria": "carne",
+          "alergenos": {
+            "lacteos": true,
             "gluten": false
           }
         },
         {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
+          "nome": "MACARRÃO AO",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "lacteos": false,
+            "gluten": false
+          },
+          "ingredientes": "MASSA, MANJERICÃO E TEMPEROS NATURAIS."
         }
       ]
     },
     {
       "dia": "DOMINGO",
-      "data": "15/11/2026",
+      "data": "22/11/2026",
       "itens": [
         "Feijão",
-        "Proteína vegetal",
         "FRANGO CREMOSO",
         "PESTO"
       ],
@@ -354,33 +330,19 @@
           "categoria": "base"
         },
         {
-          "nome": "Proteína vegetal",
-          "categoria": "vegetariano"
-        },
-        {
           "nome": "FRANGO CREMOSO",
-          "categoria": "carne"
+          "categoria": "carne",
+          "ingredientes": "PEITO DE FRANGO, CREME DE LEITE, TOMATE, CEBOLA, MOLHO TOMATE, AMIDO DE MILHO E TEMPEROS NATURAIS."
         },
         {
           "nome": "PESTO",
           "categoria": "guarnicao",
-          "alergenos": {
-            "origemAnimal": true
-          },
-          "ingredientes": "MACARRÃO, MANJERICÃO E TEMPEROS NATURAIS."
-        },
-        {
-          "nome": "2 opções",
-          "categoria": "salada"
-        },
-        {
-          "nome": "1 opção",
-          "categoria": "sobremesa"
+          "ingredientes": "MASSA, MANJERICÃO E TEMPEROS NATURAIS."
         }
       ]
     }
   ],
-  "fonteUrl": "https://ara.ufsc.br/files/2024/07/CARD%C3%81PIO-09-A-15-NOVEMBRO.pdf",
+  "fonteUrl": "https://ara.ufsc.br/files/2024/07/CARD%C3%81PIO-16-A-22-NOVEMBRO-1.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-11-11T21:30:49.300Z"
+  "atualizadoEm": "2026-11-18T21:47:47.798Z"
 }
