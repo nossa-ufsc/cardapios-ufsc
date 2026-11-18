@@ -1,16 +1,16 @@
 {
-  "diaInicial": "09/11/2026",
-  "diaFinal": "15/11/2026",
+  "diaInicial": "16/11/2026",
+  "diaFinal": "22/11/2026",
   "cardapio": [
     {
       "dia": "SEGUNDA-FEIRA",
-      "data": "09/11/2026",
+      "data": "16/11/2026",
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão carioca",
-        "Sobrecoxa de frango",
-        "COMPLEMENTO: Lentilha com legumes",
-        "Cenoura ralada e alface",
-        "Vinagrete",
+        "Bife acebolado ao molho barbecue",
+        "COMPLEMENTO: Batata e cenoura (almoço)/ Brócolis (jantar)",
+        "Rabanete e alface",
+        "Molho de ervas",
         "Banana"
       ],
       "pratos": [
@@ -29,14 +29,19 @@
           "ingredientes": "feijão carioca, cebola, sal, tempero verde, óleo de soja, alho em pasta, orégano, louro"
         },
         {
-          "nome": "Sobrecoxa de frango",
+          "nome": "Bife acebolado ao molho barbecue",
           "categoria": "carne",
-          "ingredientes": "sobrecoxa de frango, sal, alho em pasta, pimenta do reino"
+          "ingredientes": "coxão molde bovino, cebola, molho barbecue (Tomate, vinagre, açúcar, sal, amido modificado, polpa de pimenta, aromatizantes, corante caramelo IV e conservador benzoato de sódio), oléo de soja, sal, alho em pasta, pimenta do reino Batata e cenoura: cenoura, batata inglesa, sal Brócolis: brócolis, sal"
         },
         {
-          "nome": "Lentilha com legumes",
+          "nome": "Batata e cenoura",
           "categoria": "guarnicao",
-          "ingredientes": "lentilha, cebola, chuchu, cenoura, batata doce, sal, tempero verde, alho em pasta"
+          "refeicao": "almoco"
+        },
+        {
+          "nome": "Brócolis",
+          "categoria": "guarnicao",
+          "refeicao": "jantar"
         },
         {
           "nome": "Banana",
@@ -44,26 +49,26 @@
           "ingredientes": "banana"
         },
         {
-          "nome": "Cenoura ralada e alface",
+          "nome": "Rabanete e alface",
           "categoria": "salada"
         },
         {
-          "nome": "Vinagrete",
+          "nome": "Molho de ervas",
           "categoria": "molho",
-          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
+          "ingredientes": "água, cebola, vinagre, azeite de oliva, sal, sálvia, orégano, manjerona, manjericão"
         }
       ]
     },
     {
       "dia": "TERÇA-FEIRA",
-      "data": "10/11/2026",
+      "data": "17/11/2026",
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão",
-        "Filé mignon suíno ao molho agridoce",
-        "COMPLEMENTO: Abobrinha refogada",
-        "Rúcula e beterraba ralada",
-        "Molho de mostarda",
-        "Maçã"
+        "Iscas de carne acebolada",
+        "COMPLEMENTO: Ratatouille",
+        "Agrião e beterraba ralada",
+        "Molho de ervas",
+        "Melão"
       ],
       "pratos": [
         {
@@ -81,14 +86,78 @@
           "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
         },
         {
-          "nome": "Filé mignon suíno ao molho agridoce",
+          "nome": "Iscas de carne acebolada",
           "categoria": "carne",
-          "ingredientes": "filé mignon suíno, catchup, mostarda, água, molho soyo, óleo de soja, sal, alho em pasta, amido de milho, pimenta do reino, louro, orégano, manjericão"
+          "ingredientes": "patinho bovino, cebola, óleo de soja, sal, alho em pasta, alho em pasta, sal, pimenta do reino, orégano"
+        },
+        {
+          "nome": "Ratatouille",
+          "categoria": "guarnicao",
+          "ingredientes": "tomate, berinjela, abobrinha verde, cebola, pimentão, óleo de soja, sal, pimenta do reino"
+        },
+        {
+          "nome": "Melão",
+          "categoria": "sobremesa",
+          "ingredientes": "melão"
+        },
+        {
+          "nome": "Agrião e beterraba ralada",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Molho de ervas",
+          "categoria": "molho",
+          "ingredientes": "água, cebola, vinagre, azeite de oliva, sal, sálvia, orégano, manjerona, manjericão"
+        }
+      ]
+    },
+    {
+      "dia": "QUARTA-FEIRA",
+      "data": "18/11/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral / Feijão carioca",
+        "Iscas de",
+        "frango ao curry",
+        "COMPLEMENTO: Abobrinha refogada",
+        "Acelga e cenoura ralada",
+        "Molho de mostarda",
+        "Maçã"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base"
+        },
+        {
+          "nome": "Feijão carioca",
+          "categoria": "base",
+          "ingredientes": "feijão carioca, cebola, sal, tempero verde, óleo de soja, alho em pasta, orégano, louro"
+        },
+        {
+          "nome": "Iscas de",
+          "categoria": "carne",
+          "alergenos": {
+            "gluten": true
+          },
+          "ingredientes": "peito de frango, leite, creme de leite, cebola, farinha de trigo, óleo de soja, sal, alho em pasta, curry, pimenta preta moída. Contém glúten e lactose."
+        },
+        {
+          "nome": "frango ao curry",
+          "categoria": "carne",
+          "alergenos": {
+            "gluten": true
+          },
+          "ingredientes": "peito de frango, leite, creme de leite, cebola, farinha de trigo, óleo de soja, sal, alho em pasta, curry, pimenta preta moída. Contém glúten e lactose."
         },
         {
           "nome": "Abobrinha refogada",
           "categoria": "guarnicao",
-          "ingredientes": "abobrinha verde, cebola, sal, alho em pasta, óleo de soja, pimenta"
+          "ingredientes": "abobrinha verde, cebola, sal, alho em pasta, oléo de soja, pimenta"
         },
         {
           "nome": "Maçã",
@@ -96,7 +165,7 @@
           "ingredientes": "maçã"
         },
         {
-          "nome": "Rúcula e beterraba ralada",
+          "nome": "Acelga e cenoura ralada",
           "categoria": "salada"
         },
         {
@@ -107,16 +176,15 @@
       ]
     },
     {
-      "dia": "QUARTA-FEIRA",
-      "data": "11/11/2026",
+      "dia": "QUINTA-FEIRA",
+      "data": "19/11/2026",
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão com vegetais",
-        "Carne moída com cenoura e milho (almoço) /Almôndegas ao molho vermelho",
-        "(jantar)",
-        "COMPLEMENTO: Farofa com azeite de dendê (almoço) / Cenoura cozida (jantar)",
-        "Acelga e rabanete",
+        "Almôndega bovina",
+        "COMPLEMENTO: Batata ao forno (almoço)/ Macarrão integral ao alho e óleo (jantar)",
+        "Agrião e pepino",
         "Molho de ervas",
-        "Laranja"
+        "Banana"
       ],
       "pratos": [
         {
@@ -134,33 +202,35 @@
           "ingredientes": "feijão preto, chuchu, abóbora, batata doce, cebola, sal, óleo de soja, tempero verde, alho em pasta, orégano, louro"
         },
         {
-          "nome": "Carne moída com cenoura e milho",
+          "nome": "Almôndega bovina",
           "categoria": "carne",
-          "refeicao": "almoco"
+          "alergenos": {
+            "gluten": true
+          },
+          "ingredientes": "almôndega bovina (carne bovina, cebola, água, proteína texturizada de soja granulada, farinha de rosca, sal refinado, alho, salsinha, cebolinha, glutamato monossódico, inosinato, guanilato dissódico e aromatizante). Contém glúten."
         },
         {
-          "nome": "Almôndegas ao molho vermelho",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Farofa com azeite de dendê",
+          "nome": "Batata ao forno",
           "categoria": "guarnicao",
           "refeicao": "almoco",
-          "ingredientes": "farinha de mandioca, óleo de soja, azeite de dendê, sal"
+          "ingredientes": "batata inglesa, óleo de soja, sal"
         },
         {
-          "nome": "Cenoura cozida",
+          "nome": "Macarrão integral ao alho e óleo",
           "categoria": "guarnicao",
           "refeicao": "jantar",
-          "ingredientes": "CENOURA, sal"
+          "alergenos": {
+            "gluten": true
+          },
+          "ingredientes": "macarrão de sêmola integral, óleo de soja, tempero verde, sal, alho em pasta. Contém glúten."
         },
         {
-          "nome": "Laranja",
+          "nome": "Banana",
           "categoria": "sobremesa",
-          "ingredientes": "laranja"
+          "ingredientes": "banana"
         },
         {
-          "nome": "Acelga e rabanete",
+          "nome": "Agrião e pepino",
           "categoria": "salada"
         },
         {
@@ -171,64 +241,14 @@
       ]
     },
     {
-      "dia": "QUINTA-FEIRA",
-      "data": "12/11/2026",
-      "itens": [
-        "Arroz parboilizado / Arroz integral / Feijão carioca",
-        "Iscas de carne ao molho de mostarda",
-        "COMPLEMENTO: Brócolis cozido",
-        "Chicória e cenoura ralada",
-        "Vinagrete",
-        "Banana"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz parboilizado",
-          "categoria": "base",
-          "ingredientes": "arroz parboilizado, sal, óleo de soja"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base"
-        },
-        {
-          "nome": "Feijão carioca",
-          "categoria": "base",
-          "ingredientes": "feijão carioca, cebola, sal, tempero verde, óleo de soja, alho em pasta, orégano, louro"
-        },
-        {
-          "nome": "Iscas de carne ao molho de mostarda",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Brócolis cozido",
-          "categoria": "guarnicao",
-          "ingredientes": "brócolis, sal"
-        },
-        {
-          "nome": "Banana",
-          "categoria": "sobremesa",
-          "ingredientes": "banana"
-        },
-        {
-          "nome": "Chicória e cenoura ralada",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Vinagrete",
-          "categoria": "molho",
-          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
-        }
-      ]
-    },
-    {
       "dia": "SEXTA-FEIRA",
-      "data": "13/11/2026",
+      "data": "20/11/2026",
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão",
-        "Frango acebolado com curry (almoço) / Frango ao curry (jantar)",
-        "COMPLEMENTO: Abóbora cozida",
-        "Alface e pepino",
+        "Iscas de",
+        "frango com cebola e milho",
+        "COMPLEMENTO: Legumes refogados II",
+        "Chicória e rabanete",
         "Molho de mostarda",
         "Maçã"
       ],
@@ -240,7 +260,8 @@
         },
         {
           "nome": "Arroz integral",
-          "categoria": "base"
+          "categoria": "base",
+          "ingredientes": "arroz integral, sal, óleo de soja"
         },
         {
           "nome": "Feijão",
@@ -248,24 +269,18 @@
           "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
         },
         {
-          "nome": "Frango acebolado com curry",
+          "nome": "Iscas de",
           "categoria": "carne",
-          "refeicao": "almoco",
-          "ingredientes": "peito de frango, cebola, óleo de soja, sal, alho em pasta, curry, pimenta do reino"
+          "ingredientes": "peito de frango, cebola, milho em conserva, óleo de soja, sal, alho em pasta, pimenta do reino."
         },
         {
-          "nome": "Frango ao curry",
-          "categoria": "carne",
-          "refeicao": "jantar",
-          "alergenos": {
-            "gluten": true
-          },
-          "ingredientes": "peito de frango, leite, creme de leite, cebola, farinha de trigo, sal, óleo de soja, alho em pasta, curry, pimenta preta moída. Contém glúten e lactose."
+          "nome": "frango com cebola e milho",
+          "categoria": "carne"
         },
         {
-          "nome": "Abóbora cozida",
+          "nome": "Legumes refogados II",
           "categoria": "guarnicao",
-          "ingredientes": "abóbora, tempero verde, sal"
+          "ingredientes": "cebola, cenoura, couve folha, tempero verde, sal, óleo de soja, pimenta do reino"
         },
         {
           "nome": "Maçã",
@@ -273,7 +288,7 @@
           "ingredientes": "maçã"
         },
         {
-          "nome": "Alface e pepino",
+          "nome": "Chicória e rabanete",
           "categoria": "salada"
         },
         {
@@ -285,13 +300,61 @@
     },
     {
       "dia": "SÁBADO",
-      "data": "14/11/2026",
+      "data": "21/11/2026",
+      "itens": [
+        "Arroz parboilizado / Arroz integral /",
+        "Feijoada e feijoada vegetariana",
+        "COMPLEMENTO: Farofa colorida",
+        "Couve folha e pepino",
+        "Vinagrete",
+        "Laranja"
+      ],
+      "pratos": [
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "ingredientes": "arroz parboilizado, sal, óleo de soja"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "ingredientes": "arroz integral, sal, óleo de soja"
+        },
+        {
+          "nome": "Feijoada e feijoada vegetariana",
+          "categoria": "vegetariano",
+          "ingredientes": "feijão preto, chuchu, abóbora, batata doce, repolho verde, cebola, sal, tempero verde, óleo de soja, alho em pasta, louro, orégano"
+        },
+        {
+          "nome": "Farofa colorida",
+          "categoria": "guarnicao",
+          "ingredientes": "farinha de mandioca, milho em conserva, cenoura, cebola, oléo de soja, alho em pasta, sal, colorau"
+        },
+        {
+          "nome": "Laranja",
+          "categoria": "sobremesa",
+          "ingredientes": "laranja"
+        },
+        {
+          "nome": "Couve folha e pepino",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Vinagrete",
+          "categoria": "molho",
+          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
+        }
+      ]
+    },
+    {
+      "dia": "DOMINGO",
+      "data": "22/11/2026",
       "itens": [
         "Arroz parboilizado / Arroz integral / Feijão",
-        "Bisteca suína com abacaxi",
-        "COMPLEMENTO: Couve-flor ao molho branco",
-        "Repolho e beterraba ralada",
-        "Vinagrete",
+        "Carne de panela",
+        "COMPLEMENTO: Batata ao forno com ervas",
+        "Abobrinha cozida",
+        "Molho de mostarda",
         "Gelatina"
       ],
       "pratos": [
@@ -311,17 +374,12 @@
           "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
         },
         {
-          "nome": "Bisteca suína com abacaxi",
-          "categoria": "carne",
-          "ingredientes": "bisteca suína, abacaxi, óleo de soja, sal, alho em pasta, pimenta do reino"
+          "nome": "Carne de panela",
+          "categoria": "carne"
         },
         {
-          "nome": "Couve-flor ao molho branco",
-          "categoria": "guarnicao",
-          "alergenos": {
-            "gluten": true
-          },
-          "ingredientes": "couve-flor, leite, cebola, farinha de trigo, sal, tempero verde, alho em pasta, noz moscada. Contém glúten e lactose."
+          "nome": "Batata ao forno com ervas",
+          "categoria": "guarnicao"
         },
         {
           "nome": "Gelatina",
@@ -329,66 +387,14 @@
           "ingredientes": "água, açúcar, gelatina em pó, sal, reguladores de acidez ácido fumárico e citrato de sódio, aromatizantes e corantes (bordeaux s, amarelo crepúsculo fcf, azul brilhante fcf, tartrazina dependendo do sabor)"
         },
         {
-          "nome": "Repolho e beterraba ralada",
-          "categoria": "salada"
-        },
-        {
-          "nome": "Vinagrete",
-          "categoria": "molho",
-          "ingredientes": "água, tomate, cebola, vinagre, tempero verde, sal"
-        }
-      ]
-    },
-    {
-      "dia": "DOMINGO",
-      "data": "15/11/2026",
-      "itens": [
-        "Arroz parboilizado / Arroz integral / Feijão",
-        "Moqueca de peixe",
-        "COMPLEMENTO: Farofa",
-        "Vagem cozida",
-        "Molho de ervas",
-        "Banana"
-      ],
-      "pratos": [
-        {
-          "nome": "Arroz parboilizado",
-          "categoria": "base",
-          "ingredientes": "arroz parboilizado, sal, óleo de soja"
-        },
-        {
-          "nome": "Arroz integral",
-          "categoria": "base",
-          "ingredientes": "arroz integral, sal, óleo de soja"
-        },
-        {
-          "nome": "Feijão",
-          "categoria": "base",
-          "ingredientes": "feijão preto, cebola, sal, óleo de soja, tempero verde, alho, orégano, louro"
-        },
-        {
-          "nome": "Moqueca de peixe",
-          "categoria": "carne"
-        },
-        {
-          "nome": "Farofa",
-          "categoria": "guarnicao",
-          "ingredientes": "farinha de mandioca, oléo de soja, sal, colorau"
-        },
-        {
-          "nome": "Banana",
-          "categoria": "sobremesa",
-          "ingredientes": "banana"
-        },
-        {
-          "nome": "Vagem cozida",
+          "nome": "Abobrinha cozida",
           "categoria": "salada",
-          "ingredientes": "vagem"
+          "ingredientes": "abobrinha verde"
         },
         {
-          "nome": "Molho de ervas",
+          "nome": "Molho de mostarda",
           "categoria": "molho",
-          "ingredientes": "água, cebola, vinagre, azeite de oliva, sal, sálvia, orégano, manjerona, manjericão"
+          "ingredientes": "molho de mostarda, água, azeite de oliva, vinagre, tempero verde, alho em pasta, sal"
         }
       ]
     }
@@ -397,7 +403,7 @@
     "almoco",
     "jantar"
   ],
-  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/11/CARD%C3%81PIO-RESTAURANTE-UNIVERSIT%C3%81RIO-09-15.11.pdf",
+  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/11/CARD%C3%81PIO-RESTAURANTE-UNIVERSIT%C3%81RIO-16-22.11-1.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-11-11T21:30:50.364Z"
+  "atualizadoEm": "2026-11-18T21:52:36.716Z"
 }
