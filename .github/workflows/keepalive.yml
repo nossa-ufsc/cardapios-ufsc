@@ -12,13 +12,15 @@ on:
   schedule:
     - cron: "7 12 * * 1" # toda segunda 09:07 BRT (12:07 UTC) — fora do minuto :00 p/ evitar drop de agendados
 
+permissions:
+  contents: read
+
 jobs:
   keepalive:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    # O push usa a deploy key (SSH), não o GITHUB_TOKEN → o token só precisa de leitura.
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           ssh-key: ${{ secrets.MENU_COMMIT_SSH_KEY }}
           ref: main
