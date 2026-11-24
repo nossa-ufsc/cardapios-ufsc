@@ -33,6 +33,8 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          CONVEX_SITE_URL: ${{ secrets.CONVEX_SITE_URL }}
+          INGEST_API_KEY: ${{ secrets.INGEST_API_KEY }}
         run: bun src/index.ts ${{ matrix.campus }}
       # Só publica o snapshot se o scrape passou (incluindo a validação de sanidade);
       # um artifact de job falho seria o snapshot ANTIGO do checkout, confundindo o debug.

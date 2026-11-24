@@ -10,6 +10,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import type { CampusScraper } from './lib/types.js';
+import { enviarMenuParaConvex } from './lib/convex.js';
 import { salvarMenu } from './lib/supabase.js';
 import { validarMenu, LABELS_POR_CAMPUS } from './lib/validate.js';
 import { hojeBrasilia } from './lib/dates.js';
@@ -73,6 +74,18 @@ async function main() {
   } else {
     await salvarMenu(scraper.campus, menu);
     console.error(`✓ Upsert no Supabase concluído (campus=${scraper.campus}).`);
+
+    // Transição Supabase → Convex: cópia best-effort, não falha o job.
+    try {
+      const status = await enviarMenuParaConvex(scraper.campus, menu);
+      console.error(
+        status === 'enviado'
+          ? `✓ Enviado ao Convex (restaurantKey=${scraper.campus}).`
+          : '• CONVEX_SITE_URL/INGEST_API_KEY ausentes: envio ao Convex pulado.'
+      );
+    } catch (err) {
+      console.error(`⚠ Convex: ${err instanceof Error ? err.message : String(err)}`);
+    }
   }
 
   const arquivo = join(RAIZ, 'data', `${scraper.campus}.json`);
