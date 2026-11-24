@@ -1,10 +1,10 @@
 {
-  "diaInicial": "26/10/2026",
-  "diaFinal": "31/10/2026",
+  "diaInicial": "23/11/2026",
+  "diaFinal": "29/11/2026",
   "cardapio": [
     {
       "dia": "Segunda feira",
-      "data": "26/10/2026",
+      "data": "23/11/2026",
       "itens": [
         "Folhas",
         "Mix legum",
@@ -13,9 +13,8 @@
         "Arroz integral",
         "Feijão vermelho",
         "Farofa",
-        "Macarrão na manteiga",
-        "Sassami na",
-        "Chapa",
+        "Espaguete a primavera",
+        "Sassami na Chapa ao molho mostarda",
         "Lentilha colorida"
       ],
       "pratos": [
@@ -48,11 +47,11 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Macarrão na manteiga",
+          "nome": "Espaguete a primavera",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Sassami na Chapa",
+          "nome": "Sassami na Chapa ao molho mostarda",
           "categoria": "carne"
         },
         {
@@ -63,7 +62,7 @@
     },
     {
       "dia": "Terça feira",
-      "data": "27/10/2026",
+      "data": "24/11/2026",
       "itens": [
         "Mix",
         "Repolho salpicão",
@@ -72,11 +71,9 @@
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Torta Salgada",
-        "Cremosa",
-        "Carne de Panela",
-        "Desfiada",
-        "Grao de bico"
+        "Batata doce dourada",
+        "Lombo Suíno na assado ao m ervas",
+        "Grao de bico bolinho"
       ],
       "pratos": [
         {
@@ -108,26 +105,22 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Torta Salgada",
+          "nome": "Batata doce dourada",
           "categoria": "guarnicao"
         },
         {
-          "nome": "Cremosa",
-          "categoria": "guarnicao"
-        },
-        {
-          "nome": "Carne de Panela Desfiada",
+          "nome": "Lombo Suíno na assado ao m ervas",
           "categoria": "carne"
         },
         {
-          "nome": "Grao de bico",
+          "nome": "Grao de bico bolinho",
           "categoria": "vegetariano"
         }
       ]
     },
     {
       "dia": "Quarta feira",
-      "data": "28/10/2026",
+      "data": "25/11/2026",
       "itens": [
         "Folhas",
         "Tabule",
@@ -136,10 +129,9 @@
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Arroz Biro Biro",
-        "Suíno",
-        "Acebolado",
-        "Proteína soja"
+        "Polenta",
+        "Peixe empanado",
+        "Lentilha Farofa"
       ],
       "pratos": [
         {
@@ -171,22 +163,22 @@
           "categoria": "guarnicao"
         },
         {
-          "nome": "Arroz Biro Biro",
+          "nome": "Polenta",
           "categoria": "carne"
         },
         {
-          "nome": "Suíno Acebolado",
+          "nome": "Peixe empanado",
           "categoria": "carne"
         },
         {
-          "nome": "Proteína soja",
+          "nome": "Lentilha Farofa",
           "categoria": "vegetariano"
         }
       ]
     },
     {
       "dia": "Quinta feira",
-      "data": "29/10/2026",
+      "data": "26/11/2026",
       "itens": [
         "Vinagrete",
         "Folhas",
@@ -194,10 +186,10 @@
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Espaguete a primavera",
-        "Moida ao molho rose",
-        "Quibe assado de",
-        "Grão de Bico"
+        "Purê de Mandioca",
+        "Linguicinha à",
+        "Pizzaiolo",
+        "Panqueca de proteína"
       ],
       "pratos": [
         {
@@ -225,22 +217,22 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Espaguete a primavera",
+          "nome": "Purê de Mandioca",
           "categoria": "sobremesa"
         },
         {
-          "nome": "Moida ao molho rose",
+          "nome": "Linguicinha à Pizzaiolo",
           "categoria": "carne"
         },
         {
-          "nome": "Quibe assado de Grão de Bico",
+          "nome": "Panqueca de proteína",
           "categoria": "vegetariano"
         }
       ]
     },
     {
       "dia": "Sexta feira",
-      "data": "30/10/2026",
+      "data": "27/11/2026",
       "itens": [
         "Mix",
         "Folhas",
@@ -248,9 +240,9 @@
         "Arroz integral",
         "Feijão preto",
         "Farofa",
-        "Purê de Batata",
-        "Empanado de",
-        "Peixe",
+        "Macarrão na",
+        "Manteiga",
+        "Sobrecoxa ao molho",
         "Omelete colorida"
       ],
       "pratos": [
@@ -279,11 +271,15 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Purê de Batata",
+          "nome": "Macarrão na",
           "categoria": "sobremesa"
         },
         {
-          "nome": "Empanado de Peixe",
+          "nome": "Manteiga",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Sobrecoxa ao molho",
           "categoria": "carne"
         },
         {
@@ -294,7 +290,7 @@
     },
     {
       "dia": "Sábado",
-      "data": "31/10/2026",
+      "data": "28/11/2026",
       "itens": [
         "Folhas",
         "Folhas",
@@ -303,8 +299,8 @@
         "Feijão preto",
         "Farofa",
         "Quirera Cremosa",
-        "Linguiçinha",
-        "Lentilha tropeira"
+        "Carne assada",
+        "Grão de bico molho"
       ],
       "pratos": [
         {
@@ -336,26 +332,73 @@
           "categoria": "sobremesa"
         },
         {
-          "nome": "Linguiçinha",
+          "nome": "Carne assada",
           "categoria": "carne"
         },
         {
-          "nome": "Lentilha tropeira",
+          "nome": "Grão de bico molho",
           "categoria": "vegetariano"
         }
       ]
     },
     {
       "dia": "Domingo",
-      "data": "",
-      "itens": []
+      "data": "29/11/2026",
+      "itens": [
+        "Do dia",
+        "Salpicão",
+        "Arroz",
+        "Arroz integral",
+        "Feijão preto",
+        "Farofa",
+        "Panqueca",
+        "Entrevero lentilha com legumes"
+      ],
+      "pratos": [
+        {
+          "nome": "Do dia",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Salpicão",
+          "categoria": "salada"
+        },
+        {
+          "nome": "Arroz",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Feijão preto",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Farofa",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Panqueca",
+          "categoria": "sobremesa"
+        },
+        {
+          "nome": "Entrevero",
+          "categoria": "carne"
+        },
+        {
+          "nome": "lentilha com legumes",
+          "categoria": "vegetariano"
+        }
+      ]
     }
   ],
   "refeicoes": [
     "almoco",
     "jantar"
   ],
-  "fonteUrl": "http://restaurante.paginas.ufsc.br/files/2026/10/Card%C3%A1pio-Outubro-2026.pdf",
+  "fonteUrl": "http://restaurante.paginas.ufsc.br/files/2026/11/Card%C3%A1pio-Novembro-2026.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-11-02T22:52:10.947Z"
+  "atualizadoEm": "2026-11-24T01:35:53.362Z"
 }
