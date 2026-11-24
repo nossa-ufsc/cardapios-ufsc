@@ -49,6 +49,11 @@ export interface MenuItem {
   itens: string[];
   /** v2 — mesmos pratos, estruturados. Presente só quando o parser do campus suporta. */
   pratos?: MenuPrato[];
+  /**
+   * Café da manhã, quando a fonte publica um (Joinville). Fica fora de `itens` e
+   * `pratos`, que são só almoço/jantar — versões antigas do app ignoram o campo.
+   */
+  cafe?: string[];
 }
 
 export interface Menu {
