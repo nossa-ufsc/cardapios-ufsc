@@ -6,37 +6,26 @@
       "dia": "SEGUNDA",
       "data": "23/11/2026",
       "itens": [
-        "Café passado",
-        "Leite Chá de erva doce Pão tipo francês c/ creme vegetal",
-        "Bolo de fubá",
-        "Fruta",
         "Salada de pepino",
         "Salada de acelga",
         "Molho de mostarda",
-        "Arroz Parboilizado Arroz Integral",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Preto",
         "Canjiquinha",
         "Ervilha refogada",
         "Frango ao molho sugo",
         "Fruta"
       ],
+      "cafe": [
+        "Café passado",
+        "Leite",
+        "Chá de erva doce",
+        "Pão tipo francês c/ creme vegetal",
+        "Bolo de fubá",
+        "Fruta"
+      ],
       "pratos": [
-        {
-          "nome": "Café passado",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Leite Chá de erva doce Pão tipo francês c/ creme vegetal",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Bolo de fubá",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
         {
           "nome": "Salada de pepino",
           "categoria": "salada"
@@ -50,7 +39,11 @@
           "categoria": "molho"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -59,7 +52,7 @@
         },
         {
           "nome": "Canjiquinha",
-          "categoria": "outro"
+          "categoria": "guarnicao"
         },
         {
           "nome": "Ervilha refogada",
@@ -79,27 +72,26 @@
       "dia": "TERÇA",
       "data": "24/11/2026",
       "itens": [
-        "Café passado",
-        "Leite Chá cidreira Pão tipo francês c/ geléia Torta salgada com legumes Fruta",
         "Salada duo de beterraba com cenoura ralada",
         "Salada mix de folhas",
         "Molho rosê",
-        "Arroz Parboilizado Arroz Integral",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Carioca",
         "Farofa Crocante",
         "Proteína de soja",
         "Bisteca acebolada",
         "Arroz doce"
       ],
+      "cafe": [
+        "Café passado",
+        "Leite",
+        "Chá cidreira",
+        "Pão tipo francês c/ geléia",
+        "Torta salgada com legumes",
+        "Fruta"
+      ],
       "pratos": [
-        {
-          "nome": "Café passado",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Leite Chá cidreira Pão tipo francês c/ geléia Torta salgada com legumes Fruta",
-          "categoria": "outro"
-        },
         {
           "nome": "Salada duo de beterraba com cenoura ralada",
           "categoria": "salada"
@@ -113,7 +105,11 @@
           "categoria": "molho"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -142,50 +138,44 @@
       "dia": "QUARTA",
       "data": "25/11/2026",
       "itens": [
-        "CAFÉ DA MANHÃ (07:00 às 08:30) Exclusivo para alunos isentos de pagamento.",
-        "Café passado",
-        "Leite Chá de erva doce Pão tipo francês c/ creme vegetal",
-        "Bolo de cenoura",
-        "Fruta ALMOÇO / JANTAR (11:00 às 13:30 / 17:00 às 19:00)",
         "Salada de abobrinha",
-        "Salada de repolho colorido Molho de limão",
-        "Arroz Parboilizado Arroz Integral",
+        "Salada de repolho colorido",
+        "Molho de limão",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Preto",
         "Polentra cremosa",
         "Lentilha refogada",
-        "Coxa de frango ao molho caipira Fruta"
+        "Coxa de frango ao molho caipira",
+        "Fruta"
+      ],
+      "cafe": [
+        "Café passado",
+        "Leite",
+        "Chá de erva doce",
+        "Pão tipo francês c/ creme vegetal",
+        "Bolo de cenoura",
+        "Fruta"
       ],
       "pratos": [
-        {
-          "nome": "CAFÉ DA MANHÃ (07:00 às 08:30) Exclusivo para alunos isentos de pagamento.",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Café passado",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Leite Chá de erva doce Pão tipo francês c/ creme vegetal",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Bolo de cenoura",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Fruta ALMOÇO / JANTAR (11:00 às 13:30 / 17:00 às 19:00)",
-          "categoria": "sobremesa"
-        },
         {
           "nome": "Salada de abobrinha",
           "categoria": "salada"
         },
         {
-          "nome": "Salada de repolho colorido Molho de limão",
+          "nome": "Salada de repolho colorido",
           "categoria": "salada"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Molho de limão",
+          "categoria": "molho"
+        },
+        {
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -194,15 +184,19 @@
         },
         {
           "nome": "Polentra cremosa",
-          "categoria": "outro"
+          "categoria": "guarnicao"
         },
         {
           "nome": "Lentilha refogada",
           "categoria": "vegetariano"
         },
         {
-          "nome": "Coxa de frango ao molho caipira Fruta",
+          "nome": "Coxa de frango ao molho caipira",
           "categoria": "carne"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
         }
       ]
     },
@@ -210,34 +204,26 @@
       "dia": "QUINTA",
       "data": "26/11/2026",
       "itens": [
-        "Café passado",
-        "Leite Chá de hortelã Pão tipo francês c/ geléia",
-        "Torta salgada com PTS",
-        "Fruta",
         "Salada de beterraba cozida",
         "Salada mix de folhas",
         "Molho oriental",
-        "Arroz Parboilizado Arroz Integral",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Vermelho",
-        "Batata doce assada Grão de bico ao molho sugo Carne moída com abóbora cabutiá Docinho"
+        "Batata doce assada",
+        "Grão de bico ao molho sugo",
+        "Frango ao molho xadrez",
+        "Docinho"
+      ],
+      "cafe": [
+        "Café passado",
+        "Leite",
+        "Chá de hortelã",
+        "Pão tipo francês c/ geléia",
+        "Torta salgada com PTS",
+        "Fruta"
       ],
       "pratos": [
-        {
-          "nome": "Café passado",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Leite Chá de hortelã Pão tipo francês c/ geléia",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Torta salgada com PTS",
-          "categoria": "vegetariano"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
         {
           "nome": "Salada de beterraba cozida",
           "categoria": "salada"
@@ -251,7 +237,11 @@
           "categoria": "molho"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -259,8 +249,20 @@
           "categoria": "base"
         },
         {
-          "nome": "Batata doce assada Grão de bico ao molho sugo Carne moída com abóbora cabutiá Docinho",
+          "nome": "Batata doce assada",
+          "categoria": "guarnicao"
+        },
+        {
+          "nome": "Grão de bico ao molho sugo",
+          "categoria": "vegetariano"
+        },
+        {
+          "nome": "Frango ao molho xadrez",
           "categoria": "carne"
+        },
+        {
+          "nome": "Docinho",
+          "categoria": "sobremesa"
         }
       ]
     },
@@ -268,45 +270,44 @@
       "dia": "SEXTA",
       "data": "27/11/2026",
       "itens": [
-        "Café passado",
-        "Leite Chá de erva doce Pão tipo francês c/ creme vegetal",
-        "Bolo de laranja",
-        "Fruta",
         "Salada de tabule",
-        "Salada de acelga com repolho roxo Molho rosê",
-        "Arroz Parboilizado Arroz Integral",
+        "Salada de acelga com repolho roxo",
+        "Molho rosê",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Preto",
         "Aipim cozido",
         "Ervilha refogada",
-        "Frango ao molho Xadrez Fruta"
+        "Carne moída ao molho de cabutiá",
+        "Fruta"
+      ],
+      "cafe": [
+        "Café passado",
+        "Leite",
+        "Chá de erva doce",
+        "Pão tipo francês c/ creme vegetal",
+        "Bolo de laranja",
+        "Fruta"
       ],
       "pratos": [
-        {
-          "nome": "Café passado",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Leite Chá de erva doce Pão tipo francês c/ creme vegetal",
-          "categoria": "outro"
-        },
-        {
-          "nome": "Bolo de laranja",
-          "categoria": "sobremesa"
-        },
-        {
-          "nome": "Fruta",
-          "categoria": "sobremesa"
-        },
         {
           "nome": "Salada de tabule",
           "categoria": "salada"
         },
         {
-          "nome": "Salada de acelga com repolho roxo Molho rosê",
+          "nome": "Salada de acelga com repolho roxo",
           "categoria": "salada"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Molho rosê",
+          "categoria": "molho"
+        },
+        {
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -322,8 +323,12 @@
           "categoria": "vegetariano"
         },
         {
-          "nome": "Frango ao molho Xadrez Fruta",
+          "nome": "Carne moída ao molho de cabutiá",
           "categoria": "carne"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
         }
       ]
     },
@@ -331,21 +336,18 @@
       "dia": "SÁBADO",
       "data": "28/11/2026",
       "itens": [
-        "SEM ATENDIMENTO",
         "Salada de abobrinha com milho verde",
         "Salada de acelga",
         "Molho vinagrete",
-        "Arroz Parboilizado Arroz Integral",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Carioca",
         "Farofa de cenoura",
         "Feijão branco",
-        "Bisteca ao molho oriental Canjica doce"
+        "Bisteca ao molho oriental",
+        "Canjica doce"
       ],
       "pratos": [
-        {
-          "nome": "SEM ATENDIMENTO",
-          "categoria": "outro"
-        },
         {
           "nome": "Salada de abobrinha com milho verde",
           "categoria": "salada"
@@ -359,7 +361,11 @@
           "categoria": "molho"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -372,11 +378,15 @@
         },
         {
           "nome": "Feijão branco",
-          "categoria": "outro"
+          "categoria": "vegetariano"
         },
         {
-          "nome": "Bisteca ao molho oriental Canjica doce",
+          "nome": "Bisteca ao molho oriental",
           "categoria": "carne"
+        },
+        {
+          "nome": "Canjica doce",
+          "categoria": "sobremesa"
         }
       ]
     },
@@ -387,11 +397,13 @@
         "Salada de cenoura ralada",
         "Salada de repolho",
         "Molho verde",
-        "Arroz Parboilizado Arroz Integral",
+        "Arroz Parboilizado",
+        "Arroz Integral",
         "Feijão Preto",
         "Mix de legumes cozidos",
         "Lentilha refogada",
-        "Almôndegas ao molho sugo Fruta"
+        "Almôndegas ao molho sugo",
+        "Fruta"
       ],
       "pratos": [
         {
@@ -407,7 +419,11 @@
           "categoria": "molho"
         },
         {
-          "nome": "Arroz Parboilizado Arroz Integral",
+          "nome": "Arroz Parboilizado",
+          "categoria": "base"
+        },
+        {
+          "nome": "Arroz Integral",
           "categoria": "base"
         },
         {
@@ -416,20 +432,28 @@
         },
         {
           "nome": "Mix de legumes cozidos",
-          "categoria": "outro"
+          "categoria": "guarnicao"
         },
         {
           "nome": "Lentilha refogada",
           "categoria": "vegetariano"
         },
         {
-          "nome": "Almôndegas ao molho sugo Fruta",
+          "nome": "Almôndegas ao molho sugo",
           "categoria": "carne"
+        },
+        {
+          "nome": "Fruta",
+          "categoria": "sobremesa"
         }
       ]
     }
   ],
-  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/11/CARD%C3%81PIO-23-%C3%80-29-DE-NOV.pdf",
+  "refeicoes": [
+    "almoco",
+    "jantar"
+  ],
+  "fonteUrl": "http://rujve.paginas.ufsc.br/files/2026/11/CARD%C3%81PIO-23-%C3%80-29-DE-NOV-ATUALIZADO.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-11-24T01:51:37.967Z"
+  "atualizadoEm": "2026-11-25T23:11:22.738Z"
 }
