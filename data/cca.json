@@ -1,25 +1,25 @@
 {
-  "diaInicial": "16/11/2026",
-  "diaFinal": "19/11/2026",
+  "diaInicial": "23/11/2026",
+  "diaFinal": "27/11/2026",
   "cardapio": [
     {
       "dia": "Segunda-feira",
-      "data": "16/11/2026",
+      "data": "23/11/2026",
       "itens": [
-        "Rúcula",
+        "Alface",
         "Cenoura",
         "Molho de ervas",
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Proteína de soja refogada",
-        "Macarrão com espinafre",
-        "Frango assado",
+        "Proteína de soja",
+        "Creme de aipim",
+        "Almôndegas ao molho escuro",
         "Banana"
       ],
       "pratos": [
         {
-          "nome": "Rúcula",
+          "nome": "Alface",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
@@ -77,34 +77,34 @@
           "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
         },
         {
-          "nome": "Proteína de soja refogada",
+          "nome": "Proteína de soja",
           "categoria": "vegetariano",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Proteína texturizada de soja, cebola, cheiro verde, óleo de soja, chimichurri e sal"
+          "ingredientes": "Proteína texturizada de soja, cebola, cheiro verde, óleo de soja e sal"
         },
         {
-          "nome": "Macarrão com espinafre",
+          "nome": "Creme de aipim",
           "categoria": "guarnicao",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Aipim, água, açafrão, cebola, óleo de soja e sal"
+        },
+        {
+          "nome": "Almôndegas ao molho escuro",
+          "categoria": "carne",
           "alergenos": {
             "gluten": true,
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Macarrão de sêmola com ovos, óleo de soja, espinafre, cebola e sal"
-        },
-        {
-          "nome": "Frango assado",
-          "categoria": "carne",
-          "alergenos": {
-            "gluten": false,
-            "lacteos": false,
-            "origemAnimal": true
-          },
-          "ingredientes": "Cortes de frango, chimichurri, páprica doce, páprica picante e sal"
+          "ingredientes": "Almôndega pré pronta (Carne bovina, água, gordura bovina, proteína de soja, carne de frango, cebola, farinha de rosca, sal, glutamato monossódico, açúcar e aromatizante natural) óleo de soja, cebola, tomate, extrato de tomate, cheiro verde, pimenta calabresa e sal"
         },
         {
           "nome": "Banana",
@@ -119,7 +119,7 @@
     },
     {
       "dia": "Terça-feira",
-      "data": "17/11/2026",
+      "data": "24/11/2026",
       "itens": [
         "Mix de folhas",
         "Pepino",
@@ -127,9 +127,9 @@
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Ervilha",
-        "Farofa de biju",
-        "Suíno ao molho de laranja",
+        "Mix de grãos",
+        "Abóbora",
+        "Frango assado",
         "Laranja"
       ],
       "pratos": [
@@ -193,34 +193,33 @@
           "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
         },
         {
-          "nome": "Ervilha",
+          "nome": "Mix de grãos",
           "categoria": "vegetariano",
           "alergenos": {
-            "gluten": false,
+            "gluten": true,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Ervilha partida, água, óleo de soja, sal, páprica picante, cheiro verde e cebola"
+          "ingredientes": "Grão de bico, trigo em grãos, milho verde, ervilha, cebola, páprica picante, cheiro verde, óleo de soja e sal"
         },
         {
-          "nome": "Farofa de biju",
+          "nome": "Abóbora",
           "categoria": "guarnicao",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
-          },
-          "ingredientes": "Farinha de milho biju, óleo de soja, cebola, páprica picante e sal"
+          }
         },
         {
-          "nome": "Suíno ao molho de laranja",
+          "nome": "Frango assado",
           "categoria": "carne",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Carne suína, sal, pimenta calabresa, chimichurri, páprica doce, laranja pera, alho, cebola e açúcar"
+          "ingredientes": "Cortes de frango desossado, chimichurri, páprica doce, páprica picante e sal"
         },
         {
           "nome": "Laranja",
@@ -235,29 +234,28 @@
     },
     {
       "dia": "Quarta-feira",
-      "data": "18/11/2026",
+      "data": "25/11/2026",
       "itens": [
-        "Mix de folhas",
+        "Rúcula",
         "Beterraba",
         "Molho de ervas",
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Lentilha",
-        "Abóbora cabotiá",
-        "Frango assado",
-        "Banana"
+        "Ervilha",
+        "Farofa simples",
+        "Bisteca suína ao vinagrete",
+        "Maçã"
       ],
       "pratos": [
         {
-          "nome": "Mix de folhas",
+          "nome": "Rúcula",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
-          },
-          "ingredientes": "Rúcula e alface"
+          }
         },
         {
           "nome": "Beterraba",
@@ -277,6 +275,122 @@
             "origemAnimal": false
           },
           "ingredientes": "Água, vinagre, ervas finas e sal"
+        },
+        {
+          "nome": "Arroz parboilizado",
+          "categoria": "base",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Arroz parboilizado, água, óleo de soja e sal"
+        },
+        {
+          "nome": "Arroz integral",
+          "categoria": "base",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Arroz integral, água, óleo de soja e sal"
+        },
+        {
+          "nome": "Feijão",
+          "categoria": "base",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
+        },
+        {
+          "nome": "Ervilha",
+          "categoria": "vegetariano",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Ervilha partida, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
+        },
+        {
+          "nome": "Farofa simples",
+          "categoria": "guarnicao",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Farinha de mandioca, óleo de soja, cebola, colorau, cheiro verde e sal"
+        },
+        {
+          "nome": "Bisteca suína ao vinagrete",
+          "categoria": "carne",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": true
+          },
+          "ingredientes": "Bisteca suína, pimenta calabresa, páprica doce, óleo de soja, cebola, tomate, cheiro verde, pimentão e sal"
+        },
+        {
+          "nome": "Maçã",
+          "categoria": "sobremesa",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          }
+        }
+      ]
+    },
+    {
+      "dia": "Quinta-feira",
+      "data": "26/11/2026",
+      "itens": [
+        "Mix de folhas",
+        "Cenoura",
+        "Molho mostarda agridoce",
+        "Arroz parboilizado",
+        "Arroz integral",
+        "Feijão",
+        "Lentilha",
+        "Batata doce",
+        "Frango assado",
+        "Banana"
+      ],
+      "pratos": [
+        {
+          "nome": "Mix de folhas",
+          "categoria": "salada",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Rúcula e alface"
+        },
+        {
+          "nome": "Cenoura",
+          "categoria": "salada",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          }
+        },
+        {
+          "nome": "Molho mostarda agridoce",
+          "categoria": "molho",
+          "alergenos": {
+            "gluten": false,
+            "lacteos": false,
+            "origemAnimal": false
+          },
+          "ingredientes": "Água, vinagre, mostarda amarela e açúcar mascavo"
         },
         {
           "nome": "Arroz parboilizado",
@@ -316,10 +430,10 @@
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Lentilha, água, óleo de soja, sal, páprica picante, cheiro verde e cebola"
+          "ingredientes": "Lentilha, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
         },
         {
-          "nome": "Abóbora cabotiá",
+          "nome": "Batata doce",
           "categoria": "guarnicao",
           "alergenos": {
             "gluten": false,
@@ -335,7 +449,7 @@
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Cortes de frango, chimichurri, páprica doce, páprica picante e sal"
+          "ingredientes": "Coxas de frango, chimichurri, páprica doce, páprica picante e sal"
         },
         {
           "nome": "Banana",
@@ -349,18 +463,18 @@
       ]
     },
     {
-      "dia": "Quinta-feira",
-      "data": "19/11/2026",
+      "dia": "Sexta-feira",
+      "data": "27/11/2026",
       "itens": [
         "Alface",
-        "Cenoura",
+        "Rabanete",
         "Molho shoyu",
         "Arroz parboilizado",
         "Arroz integral",
         "Feijão",
-        "Proteína de soja refogada",
-        "Farofa simples",
-        "Suíno ao molho escuro",
+        "Lentilha",
+        "Macarrão alho e óleo",
+        "Suíno ensopado",
         "Laranja"
       ],
       "pratos": [
@@ -374,7 +488,7 @@
           }
         },
         {
-          "nome": "Cenoura",
+          "nome": "Rabanete",
           "categoria": "salada",
           "alergenos": {
             "gluten": false,
@@ -423,34 +537,34 @@
           "ingredientes": "Feijão, (podendo variar em preto, carioca ou vermelho), água, óleo de soja, louro em folhas, alho, cebola, sal"
         },
         {
-          "nome": "Proteína de soja refogada",
+          "nome": "Lentilha",
           "categoria": "vegetariano",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": false
           },
-          "ingredientes": "Proteína texturizada de soja, cebola, cheiro verde, óleo de soja, chimichurri e sal"
+          "ingredientes": "Lentilha, água, óleo de soja, sal, páprica picante, cheiro verde, cebola e tomate"
         },
         {
-          "nome": "Farofa simples",
+          "nome": "Macarrão alho e óleo",
           "categoria": "guarnicao",
           "alergenos": {
-            "gluten": false,
+            "gluten": true,
             "lacteos": false,
-            "origemAnimal": false
+            "origemAnimal": true
           },
-          "ingredientes": "Farinha de mandioca, óleo de soja, cebola, colorau e sal"
+          "ingredientes": "Massa de sêmola de trigo com ovos, óleo de soja, alho e sal"
         },
         {
-          "nome": "Suíno ao molho escuro",
+          "nome": "Suíno ensopado",
           "categoria": "carne",
           "alergenos": {
             "gluten": false,
             "lacteos": false,
             "origemAnimal": true
           },
-          "ingredientes": "Carne suína, chimichurri, páprica doce, páprica pimenta calabresa, cebola, tomate, barbecue, shoyu, cheiro verde e sal"
+          "ingredientes": "Carne suína, chimichurri, páprica doce, páprica pimenta calabresa, cebola, tomate, colorau, cheiro verde e sal"
         },
         {
           "nome": "Laranja",
@@ -464,11 +578,6 @@
       ]
     },
     {
-      "dia": "Sexta-feira",
-      "data": "",
-      "itens": []
-    },
-    {
       "dia": "Sábado",
       "data": "",
       "itens": []
@@ -479,7 +588,7 @@
       "itens": []
     }
   ],
-  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/11/Card%C3%A1pio-de-16-a-20.11.2026.pdf",
+  "fonteUrl": "http://siteru.paginas.ufsc.br/files/2026/11/Card%C3%A1pio-de-23-a-27.11.2026.pdf",
   "versao": 2,
-  "atualizadoEm": "2026-11-18T22:16:41.358Z"
+  "atualizadoEm": "2026-11-25T23:01:30.755Z"
 }
