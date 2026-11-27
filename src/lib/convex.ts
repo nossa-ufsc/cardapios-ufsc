@@ -1,5 +1,6 @@
 // Envio ao Convex (backend novo do app): POST {CONVEX_SITE_URL}/ingest/menu com
-// Bearer INGEST_API_KEY — o mesmo esquema do onibus-ufsc.
+// Bearer INGEST_API_KEY — o mesmo esquema do onibus-ufsc. CONVEX_SITE_URL aceita
+// vários deployments separados por vírgula (dev e prod); a mesma chave vale nos dois.
 //
 // TRANSIÇÃO: o Supabase continua sendo o destino principal (o app publicado lê de
 // lá). O Convex recebe uma cópia; sem as envs o envio é pulado, e uma falha só
@@ -11,16 +12,28 @@ export async function enviarMenuParaConvex(
   restaurantKey: string,
   menu: Menu
 ): Promise<'enviado' | 'sem-config'> {
-  const base = process.env.CONVEX_SITE_URL?.replace(/\/$/, '');
+  const bases = convexSiteUrls();
   const chave = process.env.INGEST_API_KEY;
-  if (!base || !chave) return 'sem-config';
+  if (!bases.length || !chave) return 'sem-config';
 
-  const res = await fetch(`${base}/ingest/menu`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', authorization: `Bearer ${chave}` },
-    body: JSON.stringify({ restaurantKey, menu }),
-    signal: AbortSignal.timeout(60_000),
-  });
-  if (!res.ok) throw new Error(`Convex /ingest/menu -> HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  const erros: string[] = [];
+  for (const base of bases) {
+    const res = await fetch(`${base}/ingest/menu`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', authorization: `Bearer ${chave}` },
+      body: JSON.stringify({ restaurantKey, menu }),
+      signal: AbortSignal.timeout(60_000),
+    }).catch((err: unknown) => err as Error);
+    if (res instanceof Error) erros.push(`${base}: ${res.message}`);
+    else if (!res.ok) erros.push(`${base}: HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  }
+  if (erros.length) throw new Error(`Convex /ingest/menu -> ${erros.join(' | ')}`);
   return 'enviado';
+}
+
+function convexSiteUrls(): string[] {
+  return (process.env.CONVEX_SITE_URL ?? '')
+    .split(',')
+    .map((url) => url.trim().replace(/\/$/, ''))
+    .filter(Boolean);
 }
