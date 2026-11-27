@@ -11,6 +11,7 @@ import { extrairSemana, colunasDaSemana, DIAS_MAIUSCULO_FEIRA } from '../lib/tab
 import { indiceDoDia } from '../lib/slots.js';
 import { classificarPorNome, extrairAlergenos, anexarIngredientes, normalizar, prato } from '../lib/categorias.js';
 import { extrairData, anoParaMes, hojeBrasilia, type AnoPadrao } from '../lib/dates.js';
+import { escolherCardapioDaSemana } from '../lib/week.js';
 
 const URL_SITE = 'https://ara.ufsc.br/ru/';
 
@@ -172,12 +173,18 @@ async function scrape(): Promise<Menu> {
       const dec = decodeURIComponent(h);
       return /card[áa]pio|cardapio/i.test(dec);
     });
-  const link = candidatos[candidatos.length - 1];
-  if (!link) throw new Error('Nenhum PDF de cardápio encontrado no site do RU de Araranguá.');
+  if (!candidatos.length) throw new Error('Nenhum PDF de cardápio encontrado no site do RU de Araranguá.');
 
-  const url = resolverUrl(link, URL_SITE);
-  const buf = await fetchBinary(url);
-  return { ...(await parseAraranguaPdf(buf)), fonteUrl: url };
+  // O último link é o mais novo — às vezes já é a semana que vem.
+  return escolherCardapioDaSemana(
+    candidatos.reverse(),
+    async (link) => {
+      const url = resolverUrl(link, URL_SITE);
+      const buf = await fetchBinary(url);
+      return { ...(await parseAraranguaPdf(buf)), fonteUrl: url };
+    },
+    hojeBrasilia()
+  );
 }
 
 export const ararangua: CampusScraper = { campus: 'ararangua', scrape };

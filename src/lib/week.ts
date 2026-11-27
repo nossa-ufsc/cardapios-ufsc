@@ -59,3 +59,37 @@ export function selecionarSemanaAtual(semanas: MenuItem[][], hoje: Date): MenuIt
 
   return futura ?? datadas[datadas.length - 1];
 }
+
+/**
+ * Os sites dos RUs publicam a semana seguinte antes da atual acabar (ex.: na sexta
+ * 27/11/2026 o Trindade e Araranguá já listavam 30/11–06/12). Pegar sempre o link mais
+ * novo apagava o cardápio de hoje no app. Aqui: tenta do mais novo para o mais antigo
+ * e fica com o primeiro que cobre `hoje`; se nenhum cobrir, devolve o mais novo.
+ *
+ * `links` vem do MAIS NOVO para o mais antigo. Só desce para links mais antigos
+ * enquanto o atual começa depois de hoje, e no máximo `limite` downloads.
+ */
+export async function escolherCardapioDaSemana<T extends { diaInicial: string | null; diaFinal: string | null }>(
+  links: string[],
+  carregar: (link: string) => Promise<T>,
+  hoje: Date,
+  limite = 3
+): Promise<T> {
+  const hoje0 = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
+  const maisNovo = await carregar(links[0]);
+
+  let atual = maisNovo;
+  for (let i = 1; i < Math.min(links.length, limite); i++) {
+    const ini = atual.diaInicial ? parseDDMMYYYY(atual.diaInicial) : null;
+    if (!ini || ini <= hoje0) break;
+    try {
+      atual = await carregar(links[i]);
+    } catch {
+      break; // PDF antigo com layout que não parseia: melhor ficar com o mais novo
+    }
+  }
+
+  const ini = atual.diaInicial ? parseDDMMYYYY(atual.diaInicial) : null;
+  const fim = atual.diaFinal ? parseDDMMYYYY(atual.diaFinal) : null;
+  return ini && fim && hoje0 >= ini && hoje0 <= fim ? atual : maisNovo;
+}

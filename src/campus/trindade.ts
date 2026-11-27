@@ -23,7 +23,8 @@ import { fetchBinary } from '../lib/http.js';
 import { extrairItens, agruparEmLinhas, numeroDePaginas, type TextItem } from '../lib/pdf.js';
 import { extrairItensDocx } from '../lib/docx.js';
 import { extrairSemana, DIAS_MAIUSCULO_FEIRA } from '../lib/table.js';
-import { parseDataExtenso, normalizarData, extrairData } from '../lib/dates.js';
+import { parseDataExtenso, normalizarData, extrairData, hojeBrasilia } from '../lib/dates.js';
+import { escolherCardapioDaSemana } from '../lib/week.js';
 import { alocarSlots, inferirDatas, indiceDoDia, type DiaParseado } from '../lib/slots.js';
 import {
   classificarPorNome, inferirPorVizinhos, extrairRefeicao, refeicaoDe, anexarIngredientes,
@@ -399,13 +400,19 @@ async function scrape(): Promise<Menu> {
       const dec = decodeURIComponent(h);
       return !/caf[ée]/i.test(dec);
     });
-  const ultimo = candidatos[candidatos.length - 1];
-  if (!ultimo) throw new Error('Nenhum link de PDF de almoço encontrado no site do RU (Trindade).');
+  if (!candidatos.length) throw new Error('Nenhum link de PDF de almoço encontrado no site do RU (Trindade).');
 
-  const url = resolverUrl(ultimo, URL_SITE);
-  const buf = await fetchBinary(url);
-  const menu = /\.docx$/i.test(url) ? parseTrindadeDocx(buf) : await parseTrindadePdf(buf);
-  return { ...menu, fonteUrl: url };
+  // O último link é o mais novo — às vezes já é a semana que vem.
+  return escolherCardapioDaSemana(
+    candidatos.reverse(),
+    async (link) => {
+      const url = resolverUrl(link, URL_SITE);
+      const buf = await fetchBinary(url);
+      const menu = /\.docx$/i.test(url) ? parseTrindadeDocx(buf) : await parseTrindadePdf(buf);
+      return { ...menu, fonteUrl: url };
+    },
+    hojeBrasilia()
+  );
 }
 
 export const trindade: CampusScraper = { campus: 'florianopolis', scrape };

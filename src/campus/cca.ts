@@ -24,6 +24,8 @@ import { colunasDaSemana } from '../lib/table.js';
 import { alocarSlots, inferirDatas, indiceDoDia, type DiaParseado } from '../lib/slots.js';
 import { classificarPorNome, normalizar, prato } from '../lib/categorias.js';
 import { LABELS_POR_CAMPUS } from '../lib/validate.js';
+import { hojeBrasilia } from '../lib/dates.js';
+import { escolherCardapioDaSemana } from '../lib/week.js';
 
 const URL_SITE = 'https://ru.ufsc.br/cca-2/';
 const LABELS_CCA = LABELS_POR_CAMPUS.cca;
@@ -377,12 +379,18 @@ async function scrape(): Promise<Menu> {
       const dec = decodeURIComponent(h);
       return /card[áa]pio/i.test(dec) && !/caf[ée]/i.test(dec);
     });
-  const primeiro = candidatos[0];
-  if (!primeiro) throw new Error('Nenhum PDF de cardápio encontrado na página do RU CCA.');
+  if (!candidatos.length) throw new Error('Nenhum PDF de cardápio encontrado na página do RU CCA.');
 
-  const url = resolverUrl(primeiro, URL_SITE);
-  const buf = await fetchBinary(url);
-  return { ...(await parseCcaPdf(buf)), fonteUrl: url };
+  // O primeiro é o mais novo — às vezes já é a semana que vem.
+  return escolherCardapioDaSemana(
+    candidatos,
+    async (link) => {
+      const url = resolverUrl(link, URL_SITE);
+      const buf = await fetchBinary(url);
+      return { ...(await parseCcaPdf(buf)), fonteUrl: url };
+    },
+    hojeBrasilia()
+  );
 }
 
 export const cca: CampusScraper = { campus: 'cca', scrape };
